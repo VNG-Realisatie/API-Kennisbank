@@ -17,6 +17,7 @@ Elke standaard zal een eigen repository krijgen. Bijvoorbeeld een repository voo
 
 **branch**
 Om beheerst wijzigingen te kunnen doorvoeren, worden deze op een aparte "aftakking" ontwikkeld en beoordeeld. Pas wanneer er geoordeeld is dat de wijziging gewenst, klaar en goed is, wordt deze feitelijk doorgevoerd op de standaard.
+In Git worden branches dus op een andere manier gebruikt dan in SVN (een andere versiebeheertool). In Git zijn branches tijdelijke "afslagen" met de bedoeling een wijziging te maken, testen en beoordelen, en deze daarna weer samen te voegen met de "master" (in SVN worden branches gebruikt om verschillende versies/releases van een product te kunnen onderhouden).
 Er kunnen tegelijkertijd veel verschillende branches actief zijn, zodat verschillende wijzigingen los van elkaar kunnen worden ontwikkeld, beoordeeld en doorgevoerd (toegepast).
 Voor een standaard die releasematig wordt beheerd en gepubliceerd, zal er voor elke versie (incl. patchversies) een branch worden gemaakt, waarin de wijzigingen voor die versie worden toegepast.
 Voor iemand die een wijziging of toevoeging wil doorvoeren, is het verstandig voor elke wijziging/toevoeging een eigen branch te maken, zodat ook pull requests elk slechts één wijziging/toevoeging bevat.
@@ -188,9 +189,9 @@ Je kan ook GitHub Desktop downloaden en installeren, waarmee je een aantal git/g
 	git config --global user.email voornaam.achternaam@vng.nl
 	```
 	(vervang in de code hierboven "username" door je eigen GitHub gebruikersnaam en "voornaam.achternaam@vng.nl" door je eigen e-mailadres)
-	
-	* Zoek in GitHub de url van de repository die je wilt gebruiken. Je gebruikt de fork van de VNG-Realisatie repository op je eigen account. 
-	Onder tab "Clone" klik op de knop "Clone or download". Selecteer en kopieer de getoonde url. 
+
+	* Zoek in GitHub de url van de repository die je wilt gebruiken. Je gebruikt de fork van de VNG-Realisatie repository op je eigen account.
+	Onder tab "Clone" klik op de knop "Clone or download". Selecteer en kopieer de getoonde url.
 
 	```
 	git clone https://github.com/username/repositorynaam.git
