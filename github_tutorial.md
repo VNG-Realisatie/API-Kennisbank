@@ -159,7 +159,7 @@ Voor het ontwikkelen van een eerste versie (v1.0) van een standaard kan direct o
 		* Vul de release titel en omschrijving en klik op "Publish release".
 
 17. Ik wil een repository toevoegingen
-	* Alleen de "owner" van de GitHub organisatie VNG-Realisatie kan dit werkelijk uitvoeren: Michiel Verhoef (michiel.verhoef@vng.nl)
+	* Alleen de "owner" van de GitHub organisatie VNG-Realisatie kan dit werkelijk uitvoeren: Michiel Verhoef (michiel.verhoef@vng.nl) en/of Robert Melskens (robert.melskens@vng.nl).
 	* Maak bij een repository direct ook een README.md aan!
 	* Denk goed na over een naam en omschrijving van de repository, zodat men deze ook kan vinden.
 	* Vul zo snel mogelijk de README.md met belangrijke informatie:
