@@ -26,8 +26,8 @@ Er is één speciale branch, "master". Dit is de basis, de actueel geldende vers
 Pas wanneer de wijziging klaar is en kan worden gepubliceerd, voeg je de branch met de wijziging samen met de master-branch (dit heet `merge`), zodat de wijzigingen worden doorgevoerd op de master.
 
 **fork**
-Afsplitsing van een repository die apart wordt ontwikkeld. Bijvoorbeeld standaard Regie- Zaakservices 1.0 is gemaakt als fork van Zaak- Documentservices 1.1.
-Wanneer je in GitHub wil bijdragen een repository, maar je een "fork" van die repository. Je hebt dan de vrijheid je eigen "fork" van de repository aan te passen en uit te breiden. Wanneer je daarmee klaar bent kan je de betreffende wijziging aanbieden aan de oorspronkelijke repository via een "pull request".
+Afsplitsing van een repository die apart wordt ontwikkeld.
+Wanneer je in GitHub wil bijdragen aan een repository, maar je een "fork" van die repository. Je hebt dan de vrijheid je eigen "fork" van de repository aan te passen en uit te breiden. Wanneer je daarmee klaar bent kan je de betreffende wijziging aanbieden aan de oorspronkelijke repository via een "pull request".
 
 **staging**
 Wanneer je wijzigingen doorvoert op een document op je eigen laptop of pc, zijn daarmee de wijzigingen nog niet doorgevoerd in git(hub). Voor je wijzigingen kan doorvoeren in het git versiebeheer, moet je aan git vertellen welke gewijzigde of toegevoegde bestanden moeten worden meegenomen. Dit doe je door deze bestanden toe te voegen aan "staging".
@@ -51,15 +51,15 @@ Wanneer je op je eigen laptop/pc werkt aan bestanden, is "origin" de alias voor 
 Wanneer je op je eigen laptop/pc werkt aan bestanden, is "upstream" de alias voor de GitHub (remote) repository van VNG-Realisatie. Dit gebruik je wanneer je de lokale kopie van de repository wilt actualiseren met alle door anderen doorgevoerde wijzigingen (via een `git pull upstream master`).
 
 # GitHub workflow voor open Standaarden
-De workflow voor open co-creatie aan standaarden werkt met via "pull requests". Dit betekent dat je wijzigingen nooit direct maakt op de VNG Realisatie repository, zelfs niet direct op een branch in de VNG Realisatie repository.
-Je doet wijzigingen in je persoonlijke "fork" van de VNG Realisatie repository. Vervolgens biedt je deze wijzigingen aan door een "pull request" te doen, een verzoek aan de beheerder om de wijziging toe te voegen aan de VNG Realisatie repository.
+De workflow voor open co-creatie aan standaarden werkt via "pull requests". Dit betekent dat je wijzigingen nooit direct maakt op de VNG Realisatie repository, zelfs niet direct op een branch in de VNG Realisatie repository.
+Je doet wijzigingen in je persoonlijke "fork" van de VNG Realisatie repository. Vervolgens bied je deze wijzigingen aan door een "pull request" te doen, een verzoek aan de community om de wijziging toe te voegen aan de VNG Realisatie repository. Wanneer de community positief reageert op de pull request, kan de beheerder de pull request goedkeuren en doorvoeren op de repository.
 
 De algemene workflow is:
 1. Maak een issue aan voor de gewenste wijziging of toevoeging.
 2. Anderen kunnen op het issue reageren.
 3. Wanneer uit het issue blijkt dat men positief reageert op de voorgestelde wijziging, en je wilt deze gaan realiseren, geef je dat aan in het issue. Wijs het issue toe aan jezelf (hiervoor moet je lid zijn van de community van de repository, je kan verzoeken je toe te laten voegen via de beheerder van de repository).
 4. Maak (wanneer je dat nog niet hebt) een fork van de repository.
-5. Maak in je fork van de repository een branch aan voor de wijziging. Geef deze branch een naam waaran de wijziging te herkennen is.
+5. Maak in je fork van de repository een branch aan voor de wijziging. Geef deze branch een naam waar de wijziging aan te herkennen is.
 6. Voor de wijzigingen en/of toevoegingen door op deze branch in je fork van de repository.
 7. Controleer op basis van criteria (kwaliteitseisen) op de standaard of de bijdrage goed en compleet is.
 8. Maak een pull request.
@@ -68,15 +68,20 @@ De algemene workflow is:
 10. Wanneer in het commentaar op de pull request (noodzakelijke) verbeteringen worden gevraagd, voer je die door in de betreffende branch op je repository.
 11. Wanneer uit de reacties en reviews blijkt dat de pull request goed is, merged te beheerder van de repository het pull request met release-branch de VNG Realisatie repository. (wanneer gewerkt wordt aan de eerste versie van een standaard kan er ook voor worden gekozen direct op de master te mergen).
 
+# Best practices voor pull requests
+* Meestal is het verstandig eerst een issue te maken vóór je een pull request indient. Je kan dan al polsen of andere gebruikers in de community het eens zijn met je gewenste wijziging. Wanneer het een kleine, concrete bug betreft (bijvoorbeeld een schema wat niet goed parsed of waar iets in ontbreekt) kun je altijd zelf het voortouw nemen en naast een issue geljk een pull request indienen waarin dit probleem opgelost is. Wanneer je niet eerst een issue maakt, loop je een groter risico dat het pull request wordt afgewezen.
+* Houdt pull requests zo klein mogelijk. Dus combineer zo weinig mogelijk verschillende wijzigingen of toevoegingen in één pull request. Dit maakt de discussie over de pull request helder en voorkomt dat het pull request wordt afgewezen over de ene wijziging, terwijl de andere wijziging wel gewenst en goed is.
+
 # Release workflow voor Standaarden
 Standaarden volgen criteria voor versiebeheer en versienummering die voor de (soort) standaard is bepaald.
-Voor het ontwikkelen van een eerste versie (v1.0) van een standaard kan direct op de master worden ontwikkeld. Zodra er een eerste gepubliceerde versie is van de standaard, worden nieuwe versies of patches ontwikkeld vanuit branches voor de versie.
+Voor het ontwikkelen van een eerste versie (v1.0) van een standaard kan direct op de master worden ontwikkeld. Zodra er een eerste gepubliceerde versie is van de standaard, worden nieuwe versies of patches ontwikkeld vanuit branches voor de versie. Wanneer je dus een versie 1.1 wilt gaan ontwikkelen, maak je een branch "v1.1" en merge je pull requests voor deze release naar deze branch (i.p.v. naar de Master).
 
-1. Maak de branch aan voor de versie. De naam van de branch = het versienummer.
+De beheerder van de standaard zal dus de volgende handelingen doen voor een versie van de standaard:
+1. Maak de branch aan voor de versie. De naam van de branch = het versienummer. Bijvoorbeeld "v1.3"
 2. Merge pull requests voor deze versie met deze branch.
 3. Wanneer de versie klaar is:
-	1. Merge je de branch met de master.
-	2. Publiceer je de release op GitHub
+	1. Merge je de branch met de master via een Pull request.
+	2. Publiceer je de release op GitHub.
 
 # Use cases
 ## Werken op je browser in GitHub.com
@@ -157,8 +162,8 @@ Voor het ontwikkelen van een eerste versie (v1.0) van een standaard kan direct o
 		* Vul de release versie (gebruik semantic versioning, begin de versie met "v", bijvoorbeeld "v1.0")
 		* Vul de release titel en omschrijving en klik op "Publish release".
 
-17. Ik wil een repository toevoegingen
-	* Alleen de "owner" van de GitHub organisatie VNG-Realisatie kan dit werkelijk uitvoeren: Michiel Verhoef (michiel.verhoef@vng.nl)
+17. Ik wil een repository toevoegen
+	* Vraag dit aan de beheerder van de GitHub organisatie VNG-Realisatie: Michiel Verhoef (michiel.verhoef@vng.nl)
 	* Maak bij een repository direct ook een README.md aan!
 	* Denk goed na over een naam en omschrijving van de repository, zodat men deze ook kan vinden.
 	* Vul zo snel mogelijk de README.md met belangrijke informatie:
@@ -171,7 +176,9 @@ Voor het ontwikkelen van een eerste versie (v1.0) van een standaard kan direct o
 ## Werken vanuit eigen laptop met eigen tooling
 Soms wil je met je eigen editor documenten (dat kan ook code of schema zijn) bewerken. Bijvoorbeeld in XmlSpy, Eclipse, enz. Dan is het handiger om de bestanden van de repository op je eigen laptop te hebben staan en van daaruit te bewerken. Hieronder staat hoe je de versiebeheertool git kan gebruiken op je eigen laptop of pc, in combinatie met GitHub.
 Beschreven is het gebruik van git vanuit command prompt (CMD) in windows en Terminal op een Mac. Veel tools kennen echter zelf (al dan niet via een plug in) ook voorzieningen om een deel van deze stappen te doen.
-Je kan ook GitHub Desktop downloaden en installeren, waarmee je een aantal git/github dingen kunt doen.
+Er zijn ook verschillende tools om Git en GitHub handelingen te doen. Bijvoorbeeld:
+* GitHub Desktop
+* TortoiseGit
 
 1. Ik wil een lokale werkplek beginnen van een repository
 	* Preconditie: je hebt git (dat is iets anders dan GitHub!) geïnstalleerd op je computer
@@ -188,9 +195,9 @@ Je kan ook GitHub Desktop downloaden en installeren, waarmee je een aantal git/g
 	git config --global user.email voornaam.achternaam@vng.nl
 	```
 	(vervang in de code hierboven "username" door je eigen GitHub gebruikersnaam en "voornaam.achternaam@vng.nl" door je eigen e-mailadres)
-	
-	* Zoek in GitHub de url van de repository die je wilt gebruiken. Je gebruikt de fork van de VNG-Realisatie repository op je eigen account. 
-	Onder tab "Clone" klik op de knop "Clone or download". Selecteer en kopieer de getoonde url. 
+
+	* Zoek in GitHub de url van de repository die je wilt gebruiken. Je gebruikt de fork van de VNG-Realisatie repository op je eigen account.
+	Onder tab "Clone" klik op de knop "Clone or download". Selecteer en kopieer de getoonde url.
 
 	```
 	git clone https://github.com/username/repositorynaam.git
