@@ -175,7 +175,7 @@ Beschreven is het gebruik van git vanuit command prompt (CMD) in windows en Term
 Je kan ook GitHub Desktop downloaden en installeren, waarmee je een aantal git/github dingen kunt doen.
 
 1. Ik wil een lokale werkplek beginnen van een repository
-	* Preconditie: je hebt git (dat is iets anders dan GitHub!) geïnstalleerd op je computer
+	* Preconditie: je hebt git (dat is iets anders dan GitHub!) geïnstalleerd op je computer. Let op, in verband met een aanpassing in de ondersteuning van TLS door GitHub is het noodzakelijk een versie van git te installeren die de TLS 1.2 of hoger ondersteunt. Momenteel is dat versie 2.17.0 (https://github.com/git-for-windows/git/releases).
 	* Preconditie: Om documenten te kunnen bewerken of toevoegen via een push request, moet je eerst een "fork" hebben gemaakt van de VNG Realisatie repository waar je in wilt werken.
 	* Preconditie: 	Om vanuit je lokale laptop te mogen pushen naar een VNG Realisatie repository, moet je een personal access token maken. Dit access token moet als "scope" hebben "repo".
 	Wanneer bij een git commando gevraagd wordt om inlognaam en wachtwoord, vul je niet je wachtwoord in, maar je personal access token.
