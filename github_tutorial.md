@@ -17,6 +17,7 @@ Elke standaard zal een eigen repository krijgen. Bijvoorbeeld een repository voo
 
 **branch**
 Om beheerst wijzigingen te kunnen doorvoeren, worden deze op een aparte "aftakking" ontwikkeld en beoordeeld. Pas wanneer er geoordeeld is dat de wijziging gewenst, klaar en goed is, wordt deze feitelijk doorgevoerd op de standaard.
+In Git worden branches dus op een andere manier gebruikt dan in SVN (een andere versiebeheertool). In Git zijn branches tijdelijke "afslagen" met de bedoeling een wijziging te maken, testen en beoordelen, en deze daarna weer samen te voegen met de "master" (in SVN worden branches gebruikt om verschillende versies/releases van een product te kunnen onderhouden).
 Er kunnen tegelijkertijd veel verschillende branches actief zijn, zodat verschillende wijzigingen los van elkaar kunnen worden ontwikkeld, beoordeeld en doorgevoerd (toegepast).
 Voor een standaard die releasematig wordt beheerd en gepubliceerd, zal er voor elke versie (incl. patchversies) een branch worden gemaakt, waarin de wijzigingen voor die versie worden toegepast.
 Voor iemand die een wijziging of toevoeging wil doorvoeren, is het verstandig voor elke wijziging/toevoeging een eigen branch te maken, zodat ook pull requests elk slechts één wijziging/toevoeging bevat.
@@ -162,8 +163,8 @@ De beheerder van de standaard zal dus de volgende handelingen doen voor een vers
 		* Vul de release versie (gebruik semantic versioning, begin de versie met "v", bijvoorbeeld "v1.0")
 		* Vul de release titel en omschrijving en klik op "Publish release".
 
-17. Ik wil een repository toevoegen
-	* Vraag dit aan de beheerder van de GitHub organisatie VNG-Realisatie: Michiel Verhoef (michiel.verhoef@vng.nl)
+17. Ik wil een repository toevoegingen
+	* Vraag dit aan de beheerder van de GitHub organisatie VNG-Realisatie: Michiel Verhoef (michiel.verhoef@vng.nl) en/of Robert Melskens (robert.melskens@vng.nl).
 	* Maak bij een repository direct ook een README.md aan!
 	* Denk goed na over een naam en omschrijving van de repository, zodat men deze ook kan vinden.
 	* Vul zo snel mogelijk de README.md met belangrijke informatie:
@@ -181,7 +182,7 @@ Er zijn ook verschillende tools om Git en GitHub handelingen te doen. Bijvoorbee
 * TortoiseGit
 
 1. Ik wil een lokale werkplek beginnen van een repository
-	* Preconditie: je hebt git (dat is iets anders dan GitHub!) geïnstalleerd op je computer
+	* Preconditie: je hebt git (dat is iets anders dan GitHub!) geïnstalleerd op je computer. Let op, in verband met een aanpassing in de ondersteuning van TLS door GitHub is het noodzakelijk een versie van git te installeren die de TLS 1.2 of hoger ondersteunt. Momenteel is dat versie 2.17.0 (https://github.com/git-for-windows/git/releases).
 	* Preconditie: Om documenten te kunnen bewerken of toevoegen via een push request, moet je eerst een "fork" hebben gemaakt van de VNG Realisatie repository waar je in wilt werken.
 	* Preconditie: 	Om vanuit je lokale laptop te mogen pushen naar een VNG Realisatie repository, moet je een personal access token maken. Dit access token moet als "scope" hebben "repo".
 	Wanneer bij een git commando gevraagd wordt om inlognaam en wachtwoord, vul je niet je wachtwoord in, maar je personal access token.
