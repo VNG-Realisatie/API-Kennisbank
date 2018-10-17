@@ -8,7 +8,7 @@ Eerst wordt een aantal belangrijke concepten uit Git en GitHub kort uitgelegd. V
 Versiebeheersysteem. Een versiebeheersysteem ondersteunt het beheerst en gecontroleerd doorvoeren van wijzigingen aan een product. Hieruit komen concepten als branches, forks, commits, tags en releases.
 
 **GitHub**
-Online voorziening (www.github.com) gericht op het samen ontwikkelen. Het gebruikt versiebeheertool git, maar biedt daarnaast workflows voor het open ontwikkelen (in ons geval van open standaarden), en tools vooor samenwerking (issues).
+Online voorziening (www.github.com) gericht op het samen ontwikkelen. Het gebruikt versiebeheertool git, maar biedt daarnaast workflows voor het open ontwikkelen (in ons geval van open standaarden), en tools voor samenwerking (issues).
 
 **repository**
 Verzamelbak voor zaken die onder versiebeheer vallen en/of gezamenlijk ontwikkeld worden.
@@ -17,7 +17,7 @@ Elke standaard zal een eigen repository krijgen. Bijvoorbeeld een repository voo
 
 **branch**
 Om beheerst wijzigingen te kunnen doorvoeren, worden deze op een aparte "aftakking" ontwikkeld en beoordeeld. Pas wanneer er geoordeeld is dat de wijziging gewenst, klaar en goed is, wordt deze feitelijk doorgevoerd op de standaard.
-In Git worden branches dus op een andere manier gebruikt dan in SVN (een andere versiebeheertool). In Git zijn branches tijdelijke "afslagen" met de bedoeling een wijziging te maken, testen en beoordelen, en deze daarna weer samen te voegen met de "master" (in SVN worden branches gebruikt om verschillende versies/releases van een product te kunnen onderhouden).
+In Git worden branches dus op een andere manier gebruikt dan we in SVN in de context van de 'Nieuwe Aanpak' (een andere versiebeheertool) gewend zijn. In Git zijn branches tijdelijke "afslagen" met de bedoeling een wijziging te maken, testen en beoordelen, en deze daarna weer samen te voegen met de "master" (in SVN in de context van de 'Nieuwe Aanpak' worden branches gebruikt om verschillende versies/releases van een product te kunnen onderhouden).
 Er kunnen tegelijkertijd veel verschillende branches actief zijn, zodat verschillende wijzigingen los van elkaar kunnen worden ontwikkeld, beoordeeld en doorgevoerd (toegepast).
 Voor een standaard die releasematig wordt beheerd en gepubliceerd, zal er voor elke versie (incl. patchversies) een branch worden gemaakt, waarin de wijzigingen voor die versie worden toegepast.
 Voor iemand die een wijziging of toevoeging wil doorvoeren, is het verstandig voor elke wijziging/toevoeging een eigen branch te maken, zodat ook pull requests elk slechts één wijziging/toevoeging bevat.
@@ -46,7 +46,7 @@ Wanneer je op je eigen laptop/pc werkt aan bestanden van een GitHub repository, 
 Wanneer je wijzigingen hebt doorgevoerd op je eigen "fork" van een repository, maar deze wilt doorgeven aan de repository van VNG Realisatie, dan doe je een "pull request". Je verzoekt dan aan de beheerder van de repository om je voorgestelde wijzigingen/toevoegingen te accepteren en "naar binnen te trekken".
 
 **origin**
-Wanneer je op je eigen laptop/pc werkt aan bestanden, is "origin" de alias voor je eigen GitHub (remote) repository waarop je wijzigingen op kunt doorvoeren (via een `git push -u origin branchnaam`).
+Wanneer je op je eigen laptop/pc werkt aan bestanden, is "origin" de alias voor je eigen GitHub (remote) repository waarop je wijzigingen kunt doorvoeren (via een `git push -u origin branchnaam`).
 
 **upstream**
 Wanneer je op je eigen laptop/pc werkt aan bestanden, is "upstream" de alias voor de GitHub (remote) repository van VNG-Realisatie. Dit gebruik je wanneer je de lokale kopie van de repository wilt actualiseren met alle door anderen doorgevoerde wijzigingen (via een `git pull upstream master`).
@@ -61,7 +61,7 @@ De algemene workflow is:
 3. Wanneer uit het issue blijkt dat men positief reageert op de voorgestelde wijziging, en je wilt deze gaan realiseren, geef je dat aan in het issue. Wijs het issue toe aan jezelf (hiervoor moet je lid zijn van de community van de repository, je kan verzoeken je toe te laten voegen via de beheerder van de repository).
 4. Maak (wanneer je dat nog niet hebt) een fork van de repository.
 5. Maak in je fork van de repository een branch aan voor de wijziging. Geef deze branch een naam waar de wijziging aan te herkennen is.
-6. Voor de wijzigingen en/of toevoegingen door op deze branch in je fork van de repository.
+6. Voer de wijzigingen en/of toevoegingen door op deze branch in je fork van de repository.
 7. Controleer op basis van criteria (kwaliteitseisen) op de standaard of de bijdrage goed en compleet is.
 8. Maak een pull request.
 9. De beheerder kan ervoor kiezen specifieke leden van de community aan te wijzen om een review te doen op de pull request.
@@ -94,9 +94,9 @@ De beheerder van de standaard zal dus de volgende handelingen doen voor een vers
 	* Klik op "Propose new file"
 
 2. Ik wil een (tekst)document wijzigen
-	* Op en het document vanuit tab "Code" door te klikken op de bestandsnaam
+	* Open het document vanuit tab "Code" door te klikken op de bestandsnaam
 	* Klik op het pen-icoon
-	* Voor de toevoegingen of wijzigingen door in de inhoud van het document
+	* Voer de toevoegingen of wijzigingen door in de inhoud van het document
 	* Vul bij "Propose new file" een korte titel voor de toevoegingen of wijzigingen en een uitgebreide toelichting hiervan
 	* Klik op "Propose file change"
 
@@ -128,7 +128,7 @@ De beheerder van de standaard zal dus de volgende handelingen doen voor een vers
 	* Ga naar de bijdrage vanuit tab "Pull requests" door op de titel van de bijdrage (≠ titel van document) te klikken
 	* Ga naar tab "Files changed" (en selecteer zo nodig het gewijzigd bestand?)
 	* Klik op het pen-icoon
-	* Voor de toevoegingen of wijzigingen door in de inhoud van het document
+	* Voer de toevoegingen of wijzigingen door in de inhoud van het document
 	* Vul bij "Commit changes" een korte titel voor de correctie en een uitgebreide toelichting hiervan
 	* Klik op "Commit changes"
 
@@ -139,8 +139,8 @@ De beheerder van de standaard zal dus de volgende handelingen doen voor een vers
 9. Ik wil anderen uitnodigen mijn bijdrage te beoordelen
 	* Kan nu alleen met write access. Volgens https://help.github.com/articles/requesting-a-pull-request-review/ moet iedereen dit kunnen
 
-10. Ik wil een bijdrage van een ander beoordelen dat deze (wat mij betreft) is goedgekeurd
-11. Ik wil een bijdrage van een ander beoordelen dat er gewenste aanpassingen zijn
+10. Ik wil op een bijdrage van een ander aangeven dat deze (wat mij betreft) is goedgekeurd
+11. Ik wil op bijdrage van een ander aangeven dat er gewenste aanpassingen zijn
 
 12. Ik wil een document in mark down schrijven
 	* Zie https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf voor opmaakcodes.
@@ -150,7 +150,8 @@ De beheerder van de standaard zal dus de volgende handelingen doen voor een vers
 14. Ik (beheerder van een repository) wil een pull request afkeuren
 
 15. Ik (beheerder van een repository) wil een wijziging doorvoeren aan een document
-    * Wanneer je iets wilt toevoegen of wijzigen volg je exact dezelfde procedure als ieder ander die iets wil wijzigen of toevoegen.
+    * Ook al ben je beheerder, het aanbrengen van wijzigingen in documenten doe je nooit in de rol van beheerder.
+    * Wanneer je iets wilt toevoegen of wijzigen volg je dus exact dezelfde procedure als ieder ander die iets wil wijzigen of toevoegen.
     * Ook al ben je beheerder, toch dien je wijzigingen in via een pull request, zodat anderen erop kunnen reageren.
     * Dus ook een beheerder commmit nooit direct op de VNG-Realisatie repository.
 
@@ -163,7 +164,7 @@ De beheerder van de standaard zal dus de volgende handelingen doen voor een vers
 		* Vul de release versie (gebruik semantic versioning, begin de versie met "v", bijvoorbeeld "v1.0")
 		* Vul de release titel en omschrijving en klik op "Publish release".
 
-17. Ik wil een repository toevoegingen
+17. Ik wil een repository toevoegen
 	* Vraag dit aan de beheerder van de GitHub organisatie VNG-Realisatie: Michiel Verhoef (michiel.verhoef@vng.nl) en/of Robert Melskens (robert.melskens@vng.nl).
 	* Maak bij een repository direct ook een README.md aan!
 	* Denk goed na over een naam en omschrijving van de repository, zodat men deze ook kan vinden.
