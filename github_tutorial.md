@@ -1,7 +1,7 @@
 # Inleiding
 Dit document is niet gericht op algemeen gebruik van GitHub, maar toegespitst op gebruik voor het ontwikkelen en beheren van open standaarden van VNG Realisatie.
 
-Eerst wordt een aantal belangrijke concepten uit Git en GitHub kort uitgelegd. Vervolgens wordt de workflow voor het voorstellen en doorvoeren van wijzigingen besproken en de workflow voor releases van standaarden. Daarna wordt voor een aantal veel voorkomende situaties ("use cases") uitgelegd hoe dit moet worden gedaan, zowel vanuit GitHub (via de browser) als vanuit je eigen laptop of pc.
+Eerst wordt een aantal belangrijke concepten uit Git en GitHub kort uitgelegd. Vervolgens wordt de workflow voor het voorstellen en doorvoeren van wijzigingen en de workflow voor releases van standaarden vanuit GitHub (via de browser) besproken. Daarna wordt voor een aantal veel voorkomende situaties ("use cases") uitgelegd hoe dit moet worden gedaan, zowel vanuit GitHub (via de browser) als vanuit je eigen laptop of pc.
 
 # Belangrijke concepten in github
 **git**
@@ -17,7 +17,7 @@ Elke standaard zal een eigen repository krijgen. Bijvoorbeeld een repository voo
 
 **branch**
 Om beheerst wijzigingen te kunnen doorvoeren, worden deze op een aparte "aftakking" ontwikkeld en beoordeeld. Pas wanneer er geoordeeld is dat de wijziging gewenst, klaar en goed is, wordt deze feitelijk doorgevoerd op de standaard.
-In Git worden branches dus op een andere manier gebruikt dan we in SVN in de context van de 'Nieuwe Aanpak' (een andere versiebeheertool) gewend zijn. In Git zijn branches tijdelijke "afslagen" met de bedoeling een wijziging te maken, testen en beoordelen, en deze daarna weer samen te voegen met de "master" (in SVN in de context van de 'Nieuwe Aanpak' worden branches gebruikt om verschillende versies/releases van een product te kunnen onderhouden).
+In Git zijn branches tijdelijke "afslagen" met de bedoeling een wijziging te maken, testen en beoordelen, en deze daarna weer samen te voegen met de "master".
 Er kunnen tegelijkertijd veel verschillende branches actief zijn, zodat verschillende wijzigingen los van elkaar kunnen worden ontwikkeld, beoordeeld en doorgevoerd (toegepast).
 Voor een standaard die releasematig wordt beheerd en gepubliceerd, zal er voor elke versie (incl. patchversies) een branch worden gemaakt, waarin de wijzigingen voor die versie worden toegepast.
 Voor iemand die een wijziging of toevoeging wil doorvoeren, is het verstandig voor elke wijziging/toevoeging een eigen branch te maken, zodat ook pull requests elk slechts één wijziging/toevoeging bevat.
@@ -29,6 +29,9 @@ Pas wanneer de wijziging klaar is en kan worden gepubliceerd, voeg je de branch 
 **fork**
 Afsplitsing van een repository die apart wordt ontwikkeld.
 Wanneer je in GitHub wil bijdragen aan een repository, maar je een "fork" van die repository. Je hebt dan de vrijheid je eigen "fork" van de repository aan te passen en uit te breiden. Wanneer je daarmee klaar bent kan je de betreffende wijziging aanbieden aan de oorspronkelijke repository via een "pull request".
+
+**clone**
+*Nog te beschrijven*
 
 **staging**
 Wanneer je wijzigingen doorvoert op een document op je eigen laptop of pc, zijn daarmee de wijzigingen nog niet doorgevoerd in git(hub). Voor je wijzigingen kan doorvoeren in het git versiebeheer, moet je aan git vertellen welke gewijzigde of toegevoegde bestanden moeten worden meegenomen. Dit doe je door deze bestanden toe te voegen aan "staging".
@@ -51,7 +54,7 @@ Wanneer je op je eigen laptop/pc werkt aan bestanden, is "origin" de alias voor 
 **upstream**
 Wanneer je op je eigen laptop/pc werkt aan bestanden, is "upstream" de alias voor de GitHub (remote) repository van VNG-Realisatie. Dit gebruik je wanneer je de lokale kopie van de repository wilt actualiseren met alle door anderen doorgevoerde wijzigingen (via een `git pull upstream master`).
 
-# GitHub workflow voor open Standaarden
+# GitHub workflow (in de browser) voor open Standaarden
 De workflow voor open co-creatie aan standaarden werkt via "pull requests". Dit betekent dat je wijzigingen nooit direct maakt op de VNG Realisatie repository, zelfs niet direct op een branch in de VNG Realisatie repository.
 Je doet wijzigingen in je persoonlijke "fork" van de VNG Realisatie repository. Vervolgens bied je deze wijzigingen aan door een "pull request" te doen, een verzoek aan de community om de wijziging toe te voegen aan de VNG Realisatie repository. Wanneer de community positief reageert op de pull request, kan de beheerder de pull request goedkeuren en doorvoeren op de repository.
 
@@ -94,25 +97,34 @@ De beheerder van de standaard zal dus de volgende handelingen doen voor een vers
 	* Klik op "Propose new file"
 
 2. Ik wil een (tekst)document wijzigen
-	* Open het document vanuit tab "Code" door te klikken op de bestandsnaam
+	* Ga naar de tab "Code"
+	* Kies daar de branch waarin je de wijzigingen wil aanbrengen
+	* Open het document dat je wil aanpassen door te klikken op de bestandsnaam
 	* Klik op het pen-icoon
 	* Voer de toevoegingen of wijzigingen door in de inhoud van het document
-	* Vul bij "Propose new file" een korte titel voor de toevoegingen of wijzigingen en een uitgebreide toelichting hiervan
-	* Klik op "Propose file change"
+	* Commit de wijzigingen in het document door op "Commit changes" te klikken waarbij je de radio button "Commit directly to the nnnnn branch." selecteert. "nnnnn" staat voor de branch waarin je deze wijziging wilde aanbrengen.
 
-3. Ik wil een opmerking maken over een bijdrage van iemand anders
+3. Ik wil een "Pull request" indienen
+	* Open de tab "Pull requests"
+	* Klik op "New pull request"
+	* Selecteer bij "base fork" de repository en bij "base" de branch waar het pull request op moet worden geplaatst
+	* Selecteer bij "head fork" de repository en bij "compare" de branch waarin de wijziging is aangebracht
+	* Klik op "???"
+	* Klik daarna op "???" waarna de pull request is geplaatst
+
+4. Ik wil een opmerking maken over een bijdrage van iemand anders
 	* Ga naar de bijdrage vanuit tab "Pull requests" door op de titel van de bijdrage (≠ titel van document) te klikken
 	* Vul onderaan de pagina bij "Write" het commentaar
 	* Wees altijd opbouwend, correct en vriendelijk. Iemand heeft immers de moeite genomen een bijdrage te leveren.
 	* Klik op de knop "Comment"
 
-4. Ik wil reageren op een opmerking van iemand anders op een pull request
+5. Ik wil reageren op een opmerking van iemand anders op een pull request
 	* Ga naar de bijdrage vanuit tab "Pull requests" door op de titel van de bijdrage (≠ titel van document) te klikken
 	* Klik op het invulveld (Reply…) onder de betreffende opmerking
 	* Vul bij "Write" je reactie op de opmerking
 	* Klik op de knop "Add a single comment" (wat is het verschil met "Start a review"?)
 
-5. Ik wil een opmerking maken over een specifieke wijziging (gewijzigd deel van het document)
+6. Ik wil een opmerking maken over een specifieke wijziging (gewijzigd deel van het document)
 	* Ga naar de bijdrage vanuit tab "Pull requests" door op de titel van de bijdrage (≠ titel van document) te klikken
 	* Ga naar tab "Files changed" (en selecteer zo nodig het gewijzigd bestand?)
 	* Wijs met de muis over de betreffende gewijzigde regel (groen of rood gemarkeerd) tot er een blauw icoon met wit + erin links van de regel verschijnt. Klik op het + icoon
@@ -120,11 +132,11 @@ De beheerder van de standaard zal dus de volgende handelingen doen voor een vers
 	* Wees altijd opbouwend, correct en vriendelijk. Iemand heeft immers de moeite genomen een bijdrage te leveren.
 	* Klik op de knop "Add a single comment" (wat is het verschil met "Start a review"?)
 
-6. Ik wel een correctie doorgeven (doen?) op een bijdrage (pull request) van iemand anders
+7. Ik wil een correctie doorgeven (doen?) op een bijdrage (pull request) van iemand anders
 	* Alleen de indiener van een pull request kan haar/zijn bijdrage aanpassen.
 	* Zie verder bij "Ik wil een opmerking maken over een bijdrage van iemand anders"
 
-7. Ik wil een correctie doen op een bijdrage (pull request) van mijzelf
+8. Ik wil een correctie doen op een bijdrage (pull request) van mijzelf
 	* Ga naar de bijdrage vanuit tab "Pull requests" door op de titel van de bijdrage (≠ titel van document) te klikken
 	* Ga naar tab "Files changed" (en selecteer zo nodig het gewijzigd bestand?)
 	* Klik op het pen-icoon
@@ -132,30 +144,30 @@ De beheerder van de standaard zal dus de volgende handelingen doen voor een vers
 	* Vul bij "Commit changes" een korte titel voor de correctie en een uitgebreide toelichting hiervan
 	* Klik op "Commit changes"
 
-8. Ik wil een pull request intrekken
+9. Ik wil een pull request intrekken
     * Ga naar de bijdrage vanuit tab "Pull requests" door op de titel van de pull request te klikken
     * Vul onderaan de pagina de reden in en klik op "Close pull request"
 
-9. Ik wil anderen uitnodigen mijn bijdrage te beoordelen
+10. Ik wil anderen uitnodigen mijn bijdrage te beoordelen
 	* Kan nu alleen met write access. Volgens https://help.github.com/articles/requesting-a-pull-request-review/ moet iedereen dit kunnen
 
-10. Ik wil op een bijdrage van een ander aangeven dat deze (wat mij betreft) is goedgekeurd
-11. Ik wil op bijdrage van een ander aangeven dat er gewenste aanpassingen zijn
+11. Ik wil op een bijdrage van een ander aangeven dat deze (wat mij betreft) is goedgekeurd
+12. Ik wil op bijdrage van een ander aangeven dat er gewenste aanpassingen zijn
 
-12. Ik wil een document in mark down schrijven
+13. Ik wil een document in mark down schrijven
 	* Zie https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf voor opmaakcodes.
 	* Zie https://guides.github.com/features/mastering-markdown/
 
-13. Ik (beheerder van een repository) wil een pull request goedkeuren en toevoegen aan de repository
-14. Ik (beheerder van een repository) wil een pull request afkeuren
+14. Ik (beheerder van een repository) wil een pull request goedkeuren en toevoegen aan de repository
+15. Ik (beheerder van een repository) wil een pull request afkeuren
 
-15. Ik (beheerder van een repository) wil een wijziging doorvoeren aan een document
+16. Ik (beheerder van een repository) wil een wijziging doorvoeren aan een document
     * Ook al ben je beheerder, het aanbrengen van wijzigingen in documenten doe je nooit in de rol van beheerder.
     * Wanneer je iets wilt toevoegen of wijzigen volg je dus exact dezelfde procedure als ieder ander die iets wil wijzigen of toevoegen.
     * Ook al ben je beheerder, toch dien je wijzigingen in via een pull request, zodat anderen erop kunnen reageren.
     * Dus ook een beheerder commmit nooit direct op de VNG-Realisatie repository.
 
-16. Ik (beheerder van een repository) wil een release maken
+17. Ik (beheerder van een repository) wil een release maken
 	* Maak een branch om alle wijzigingen en toevoegingen van de release in te verzamelen
 	* Als de release af is merge je de branch met de master
 	* Vervolgens publiceer je de release op GitHub:
@@ -164,8 +176,8 @@ De beheerder van de standaard zal dus de volgende handelingen doen voor een vers
 		* Vul de release versie (gebruik semantic versioning, begin de versie met "v", bijvoorbeeld "v1.0")
 		* Vul de release titel en omschrijving en klik op "Publish release".
 
-17. Ik wil een repository toevoegen
-	* Vraag dit aan de beheerder van de GitHub organisatie VNG-Realisatie: Michiel Verhoef (michiel.verhoef@vng.nl) en/of Robert Melskens (robert.melskens@vng.nl).
+18. Ik wil een repository toevoegen
+	* Vraag dit aan de beheerder van de GitHub organisatie VNG-Realisatie: Michiel Verhoef (michiel.verhoef@vng.nl).
 	* Maak bij een repository direct ook een README.md aan!
 	* Denk goed na over een naam en omschrijving van de repository, zodat men deze ook kan vinden.
 	* Vul zo snel mogelijk de README.md met belangrijke informatie:
