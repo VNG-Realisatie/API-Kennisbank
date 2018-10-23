@@ -109,8 +109,14 @@ De beheerder van de standaard zal dus de volgende handelingen doen voor een vers
 	* Klik op "New pull request"
 	* Selecteer bij "base fork" de repository en bij "base" de branch waar het pull request op moet worden geplaatst
 	* Selecteer bij "head fork" de repository en bij "compare" de branch waarin de wijziging is aangebracht
-	* Klik op "???"
-	* Klik daarna op "???" waarna de pull request is geplaatst
+	* Klik op "Create pull request" en ken er een naam aan toe die voldoet aan de volgende conventie:
+	  'fixit [nummer issue]'. Bij aanvaarden van de pull request wordt meteen het issue gesloten
+	* Scroll evt. naar beneden en klik op "Create pull request";
+	* Scroll naar beneden naar "Merge pull request";
+	* Kies een van de 3 opties
+	  * Create a merge commit
+	  * Als je op de dropdown klikt en "Squash and merge" kiest worden alle commits in 1 commit geduwd
+	  * Als je op "Rebase and merge" klikt moet je zelf alle commits 1 voor 1 op je fork toepassen.
 
 4. Ik wil een opmerking maken over een bijdrage van iemand anders
 	* Ga naar de bijdrage vanuit tab "Pull requests" door op de titel van de bijdrage (≠ titel van document) te klikken
@@ -186,6 +192,21 @@ De beheerder van de standaard zal dus de volgende handelingen doen voor een vers
 		* Beschrijf hoe mensen aan de ontwikkeling kunnen bijdragen (contributing guide).
 	* Maak, zover mogelijk een goed begin. Mensen dragen makkelijker bij aan iets dat er al (in enig vorm) is, dan aan een lege repository.
 	* Nodig relevante belanghebbenden (potentiële gebruikers of deelnemers) uit om het "product" in de repository te gebruiken en eraan bij te dragen.
+	
+19. Ik wil voorafgaand aan een nieuwe actie mijn fork updaten.
+	* Open de fork die je wil updaten;
+	* Klik op de tab "Pull Requests";
+	* Klik op "New Pull Request". GitHub vergelijkt nu de originele repository met je fork.
+	  Als het goed is zijn er geen verschillen;
+	* Klik op "switching the base". GitHub vergelijkt nu je fork met de originele repository.
+	  Als er tussentijds wijzigingen zijn aangebracht dan zou je nu wel verschillen moeten zien.
+	* Klik op "Create pull request" en ken er een duidelijke naam aan toe;
+	* Scroll evt. naar beneden en klik op "Create pull request";
+	* Scroll naar beneden naar "Merge pull request";
+	* Kies een van de 3 opties
+	  * Create a merge commit
+	  * Als je op de dropdown klikt en "Squash and merge" kiest worden alle commits in 1 commit geduwd
+	  * Als je op "Rebase and merge" klikt moet je zelf alle commits 1 voor 1 op je fork toe
 
 ## Werken vanuit eigen laptop met eigen tooling
 Soms wil je met je eigen editor documenten (dat kan ook code of schema zijn) bewerken. Bijvoorbeeld in XmlSpy, Eclipse, enz. Dan is het handiger om de bestanden van de repository op je eigen laptop te hebben staan en van daaruit te bewerken. Hieronder staat hoe je de versiebeheertool git kan gebruiken op je eigen laptop of pc, in combinatie met GitHub.
