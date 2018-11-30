@@ -109,8 +109,8 @@ De beheerder van de standaard zal dus de volgende handelingen doen voor een vers
 	* Klik op "New pull request"
 	* Selecteer bij "base fork" de repository en bij "base" de branch waar het pull request op moet worden geplaatst
 	* Selecteer bij "head fork" de repository en bij "compare" de branch waarin de wijziging is aangebracht
-	* Klik op "Create pull request" en ken er een naam aan toe die voldoet aan de volgende conventie:
-	  'fixit [nummer issue]'. Bij aanvaarden van de pull request wordt meteen het issue gesloten
+	* Klik op "Create pull request" en ken er een naam aan toe. **Tip**: Als je de volgende conventie:
+	  'fixes [nummer issue]' toevoegt aan de naam van de pull request wordt bij het aanvaarden van de pull request het issue meteen gesloten. Indien een pull request betrekking heeft op slechts een deel van een issue neem je geen 'Fixes' op omdat het issue nl. nog niet geheel is opgelost als de pull request wordt goedgekeurd en dus niet afgesloten mag worden. Neem in dat geval 'Ref. #' gevolgd door het nummer van het issue op.
 	* Scroll evt. naar beneden en klik op "Create pull request";
 	* Scroll naar beneden naar "Merge pull request";
 	* Kies een van de 3 opties
@@ -206,8 +206,8 @@ De beheerder van de standaard zal dus de volgende handelingen doen voor een vers
 	* Kies een van de 3 opties
 	  * Create a merge commit
 	  * Als je op de dropdown klikt en "Squash and merge" kiest worden alle commits in 1 commit geduwd
-	  * Als je op "Rebase and merge" klikt moet je zelf alle commits 1 voor 1 op je fork toe
-
+	  * Als je op "Rebase and merge" klikt moet je zelf alle commits 1 voor 1 op je fork toe 
+    
 ## Werken vanuit eigen laptop met eigen tooling
 Soms wil je met je eigen editor documenten (dat kan ook code of schema zijn) bewerken. Bijvoorbeeld in XmlSpy, Eclipse, enz. Dan is het handiger om de bestanden van de repository op je eigen laptop te hebben staan en van daaruit te bewerken. Hieronder staat hoe je de versiebeheertool git kan gebruiken op je eigen laptop of pc, in combinatie met GitHub.
 Beschreven is het gebruik van git vanuit command prompt (CMD) in windows en Terminal op een Mac. Veel tools kennen echter zelf (al dan niet via een plug in) ook voorzieningen om een deel van deze stappen te doen.
