@@ -26,10 +26,9 @@ Er kunnen tegelijkertijd veel verschillende branches actief zijn, zodat verschil
 Voor een standaard die releasematig wordt beheerd en gepubliceerd, zal er voor elke versie (incl. patchversies) een branch worden gemaakt, waarin de wijzigingen voor die versie worden toegepast.
 Voor iemand die een wijziging of toevoeging wil doorvoeren, is het verstandig voor elke wijziging/toevoeging een eigen branch te maken, zodat ook pull requests elk slechts één wijziging/toevoeging bevat.
 
-Enkele branches zijn bijzonder, te weten:
-
-* **master** Dit is de basis, de actueel geldende versie van de repository.
-* **develop** Hier vind actieve ontwikkeling plaats aan de volgende, maar nog niet officiele, versie.
+**master branch**
+Er is één speciale branch, "master". Dit is de basis, de actueel geldende versie van de repository. Wijzigingen voeg je niet direct toe op de "master"-branch, maar op een aparte branch voor deze wijziging.
+Pas wanneer de wijziging klaar is en kan worden gepubliceerd, voeg je de branch met de wijziging samen met de master-branch (dit heet `merge`), zodat de wijzigingen worden doorgevoerd op de master.
 
 Wijzigingen voeg je niet direct toe op de "master"-branch, maar op een aparte branch voor deze wijziging, typisch genaamd **feature/XXX**. Pas wanneer de wijziging klaar is en kan worden gepubliceerd, voeg je de branch met de wijziging samen met de master-branch (dit heet `merge`), zodat de wijzigingen worden doorgevoerd op de master.
 
