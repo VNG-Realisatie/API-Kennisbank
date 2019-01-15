@@ -34,7 +34,7 @@ Wijzigingen voeg je niet direct toe op de "master"-branch, maar op een aparte br
 
 **fork**
 Afsplitsing van een repository die apart wordt ontwikkeld.
-Wanneer je in GitHub wil bijdragen aan een repository, maar je een "fork" van die repository. Je hebt dan de vrijheid je eigen "fork" van de repository aan te passen en uit te breiden. Wanneer je daarmee klaar bent kan je de betreffende wijziging aanbieden aan de oorspronkelijke repository via een "pull request".
+Wanneer je in GitHub wil bijdragen aan een repository, maak je een "fork" van die repository. Je hebt dan de vrijheid je eigen "fork" van de repository aan te passen en uit te breiden. Wanneer je daarmee klaar bent kan je de betreffende wijziging aanbieden aan de oorspronkelijke repository via een "pull request".
 
 **clone**
 Door het "clonen" (`git clone`) van een repository haal je deze op de eigen laptop of pc binnen. Deze "kloon" is gekoppeld aan de online versie van de repository (op Github). Met `pull` haal je de nieuwste wijzigingen op uit de online versie, en met `push` stuur je de wijzigingen van je eigen laptop of pc naar de online repository.
