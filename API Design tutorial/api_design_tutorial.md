@@ -47,6 +47,9 @@ relevante naam en alleen de meest elementaire attributen. Zodra er voor het dome
 ontwikkeld wordt het object in oude domein deprecated verklaard en in de eerstvolgende nieuwe versie verwijderd.
 
 ## Polymorphisme
-Binnen de ZGW API's wordt polymorphisme vermeden wat wordt doorgetrokken naar het gegevensmodel. De attributen in een superclass worden opgenomen in 
-de subclasses en de superclass wordt in het gegevensmodel verwijderd. De beargumentatie voor deze keuze is dat polymorphisme de complexiteit verhoogt.
-Binnen HaalCentraal is het gebruikt van superclasses een common practice.
+M.b.t. Polymorphisme bestaat er een verschil in aanpak tussen de projecten.
+
+| Project | Beargumentatie |
+|:------- |:-------------- |
+| ZGW | Binnen de ZGW API's wordt polymorphisme vermeden wat wordt doorgetrokken naar het gegevensmodel. De attributen in een superclass worden opgenomen in de subclasses en de superclass wordt in het gegevensmodel verwijderd. De beargumentatie voor deze keuze is dat polymorphisme de complexiteit verhoogt. |
+| HaalCentraal | Binnen HaalCentraal is het gebruikt van superclasses een common practice o.a. omdat daarmee de werkelijkheid beter weergegeven kan worden. |
