@@ -36,8 +36,7 @@ waarmee het type van de te koppelen class aangegeven kan worden. Deze class zal 
 
 **Kardinaliteit van deze classes**
 
-De kardinaliteit van de associatie naar deze classes kan unbounded zijn, voor de associatie die loopt vanuit de relatieclass geldt dat echter niet.
-Deze is altijd '1..1'. 
+... 
 
 **Relaties met entiteiten uit API-loze domeinen**
 
