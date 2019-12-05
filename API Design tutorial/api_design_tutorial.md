@@ -3,8 +3,9 @@
 Dit document bevat een beschrijving van een aantal design principes. Design principes die zijn toegepast in de huidige API standaardisatie projecten (Zaakgericht Werken en HaalCentraal).
 Sommige van deze principes bestonden wellicht al maar anderen zijn gedurende projecten ontwikkeld en/of aangescherpt.
 
-Dit document heeft een tweeledig doel. 
-1. Ten eerste worden hierin design principes beschreven die toegepast moeten worden bij het ontwerpen van een API standaard.
+Dit document heeft een tweeledig doel.
+
+1. Ten eerste worden hierin design principes beschreven die toegepast moeten worden bij het ontwerpen van een Open API-specificatie teneinde een gegevenslandschap vorm te geven waarin verschillende API's op dezelfde wijze kunnen worden aangesproken.
 2. Ten tweede dient dit document als discussie document aangezien in de huidige API standaardisatie projecten op sommige punten verschillende principes gehanteerd worden.
    Uitgangspunt is dat we uiteindelijk overeenstemming bereiken over het te hanteren principe OF dat we duidelijk gaan beschrijven in welke situatie welk principe gehanteerd gaat worden.
    Zodra overeenstemming is bereikt over de design principes zal dit doel komen te vervallen.
