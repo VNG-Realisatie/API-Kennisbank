@@ -47,13 +47,13 @@ ontwikkeld wordt het object in oude domein deprecated verklaard en in de eerstvo
 
 ## Supertypes / Abstracte klassen
 
-Soms zijn er objecten (ook wel *objecttype* of *conrete klasses* genoemd) die overerven van een ander object omdat ze een gemeenschappelijke basis hebben (ook wel *supertype* of *abstracte klasse* genoemd).
+Soms zijn er objecten (ook wel *objecttype* of *concrete klasses* genoemd) die overerven van een ander object omdat ze een gemeenschappelijke basis hebben (ook wel *supertype* of *abstracte klasse* genoemd).
 
 Zo'n abstracte klasse kan op verschillende manieren worden vertaald naar een API-specificatie in termen van resources. Neem als voorbeeld `Persoon` als abstracte klasse en `Docent` en `Student` als concrete klasses die overerven van `Persoon` (het zijn immers beide personen maar gedeelde en specifieke attributen). Er zijn 3 mogelijkheden voor de vertaling naar een API-specificatie:
 
 1. Niets doen. De abstracte klasse opnemen als concrete resource. Op basis van het voorbeeld krijg je nu 3 resources: `Persoon`, `Docent` en `Student`. Je kan nooit een `Persoon` alleen aanmaken, maar als je een `Student` aanmaakt, moet je ook een `Persoon` aanmaken (en deze koppelen).
 2. Platslaan. Je neemt de resources `Student` en `Docent` op als concrete resources. Deze resources bevatten beide de attributen uit `Persoon`.
-3. Polymophisme. Je neemt alleen `Persoon` op als resource, en op basis van een `type`-attribuut (discriminator met de keuzes `student` en `docent`) wordt bepaald wat de specifieke attributen er in deze resource zitten.
+3. Polymorphisme. Je neemt alleen `Persoon` op als resource, en op basis van een `type`-attribuut (discriminator met de keuzes `student` en `docent`) wordt bepaald wat de specifieke attributen er in deze resource zitten.
 
 | Project | Beargumentatie |
 |:------- |:-------------- |
