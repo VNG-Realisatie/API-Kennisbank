@@ -106,3 +106,19 @@ Zo'n abstracte klasse kan op verschillende manieren worden vertaald naar een API
 |:------- |:-------------- |
 | ZGW | Binnen de ZGW API's wordt polymorphisme vermeden wat wordt doorgetrokken naar het gegevensmodel. De attributen in een superclass worden opgenomen in de subclasses en de superclass wordt in het gegevensmodel verwijderd. De beargumentatie voor deze keuze is dat polymorphisme de complexiteit verhoogt. |
 | HaalCentraal | Binnen HaalCentraal is het gebruikt van superclasses een common practice o.a. omdat daarmee de werkelijkheid beter weergegeven kan worden. |
+
+## Berichtontwerp
+
+In de regel worden er voor alle entiteiten in een domein berichten ontworpen (_Klopt dit of zijn er situaties te benoemen waarbij er voor een entiteit geen berichten zijn?_). Normaliter zijn dat de volgende berichten:
+
+* Get (zowel in de vorm van een collectie entiteiten als in de vorm van een specifieke entiteit)
+* Post
+* Patch
+* Put
+* Delete
+
+Er zijn echter een aantal situaties aan te wijzen waarop niet in alle berichtypes wordt voorzien.
+
+In het geval van een relatie-entiteit wordt niet voorzien in een Patch en Put bericht. Zo'n entiteit mag nl. niet aangepast worden. Het vervangen van een relatie-entiteit door een andere gaat dus altijd gepaard met het verwijderen van een relatie-entiteit en het opvoeren van een nieuwe.
+
+_Zijn er andere situaties denkbaar waarbij een of meer berichten niet van toepassing zijn?_
