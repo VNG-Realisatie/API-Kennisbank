@@ -119,6 +119,7 @@ In de regel worden er voor alle entiteiten in een domein berichten ontworpen (_K
 
 Er zijn echter een aantal situaties aan te wijzen waarop niet in alle berichtypes wordt voorzien.
 
-In het geval van een relatie-entiteit wordt niet voorzien in een Patch en Put bericht. Zo'n entiteit mag nl. niet aangepast worden. Het vervangen van een relatie-entiteit door een andere gaat dus altijd gepaard met het verwijderen van een relatie-entiteit en het opvoeren van een nieuwe.
+In het geval van een relatie-entiteit wordt niet voorzien in een Patch en Put bericht als alle attributen immutable zijn. In dat geval mag zo'n entiteit niet aangepast worden. Het vervangen van een relatie-entiteit door een andere gaat dus altijd gepaard met het verwijderen van een relatie-entiteit en het opvoeren van een nieuwe.
+Indien er meta informatie op een relatie entiteit staat is aanpassing wel toegestaan en kan wel voorzien worden in een Patch en Put bericht.
 
 _Zijn er andere situaties denkbaar waarbij een of meer berichten niet van toepassing zijn?_
