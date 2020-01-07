@@ -34,7 +34,7 @@ natuurlijke dominantie aangewezen kan worden. Voorbeelden hiervan zijn:
 
 (dominante domein in vet)
 
-* **Zaken** en Documenten
+* **Zaken** en Informatieobjecten
 * **Zaken** en Klantinteracties
 * **Besluiten** en Documenten
 
