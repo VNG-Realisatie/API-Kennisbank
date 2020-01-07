@@ -19,10 +19,9 @@ Dit document heeft een tweeledig doel.
 **Motivatie en dominante domeinen**
 
 Bij relaties tussen twee domeinen wil je vanuit beide domeinen de gerelateerde
-gegevens uit het andere domein kunnen opvragen/inkijken. Daarvoor wordt in elk domein een relatie-entiteit gedefinieerd die in feite de representatie van een entiteit in een ander domein is. Zo'n relatie-entiteit kan vervolgens gebruikt worden om aan andere entiteiten binnen het domein te koppelen. Dit is noodzakelijk omdat de relatie tussen de entiteit in het ene domein en de entiteit in het andere domein slechts op logisch niveau kan worden gelegd. Zo'n relatie wordt nooit op technisch niveau gecreëerd. 
+gegevens uit het andere domein kunnen opvragen/inkijken. Daarvoor wordt in elk domein een relatie-entiteit gedefinieerd dat in feite een record van een koppeltabel is. In zo'n relatie-entiteit worden de identifiers van de te koppelen entiteiten vastgelegd. 
 
-In het voorbeeld hieronder zie je dat in het 'Zaken API' domein de relatie entiteit 'zaakverzoek' is gecreëerd wat in feite een representatie is van de entiteit 'verzoek' uit het 'Klantinteracties API' domein. In het 'Klantinteracties API' domein is juist de relatie-entiteit 'objectverzoek' gecreëerd wat een representatie is van de entiteit 'zaak' uit het 'Zaken API' domein.
-De relatie tussen 'zaakverzoek' en 'verzoek' bestaat alleen op logisch niveau en wordt op technisch niveau niet gerealiseerd. Hetzelfde geldt voor de relatie tussen 'objectverzoek' en 'zaak'.
+In het voorbeeld hieronder zie je dat in het 'Zaken API' domein de relatie entiteit 'zaakverzoek' is gecreëerd waarmee een koppeling wordt gedefinieerd tussen de entiteit 'zaak' in hetzelfde domein en de entiteit 'verzoek' in het 'Klantinteracties API' domein. In het 'Klantinteracties API' domein is met hetzelfde doel juist de relatie-entiteit 'objectverzoek' gecreëerd.
 
 ![Voorbeeld relatie-entiteiten](https://github.com/VNG-Realisatie/API-Kennisbank/blob/master/Handreiking%20API%20Design/Relatie-entiteiten.jpg)
 
@@ -98,21 +97,18 @@ geval zal in zo'n klasse die koppelt aan meerdere domeinen ook een attribuut
 worden opgenomen waarmee het type van de te koppelen klassse aangegeven kan
 worden.
 
+>Dit principe kan ook toegepast worden op de naamgevingsconventie die voorgesteld is door Henri Korver. Diens conventie wordt dan:
+>
+>`[naam van de gerelateerde class in het source domein]object`.
+
+
 **Kardinaliteit van deze classes**
 
-Tussen een entiteit en de relatie-entiteit in een andere domein die de entiteit daar representeert is altijd een 1 op 1 koppeling van toepassing. De kardinaliteit aan beide zijde van deze relatie is dus maximaal 1. Aangezien een entiteit in een ander domein niet per definitie hoeft te leiden tot een relatie-entiteit moet de kardinaliteit van de relatie tussen de relatie-entiteit en de entiteit in het andere domein aan de relatie-entiteit zijde (C en G in de onderstaande illustratie) altijd 0..1 zijn. Aan de entiteit zijde (D en H  in de onderstaande illustratie) is deze niet optioneel en dus exact 1.
+Tussen een entiteit en een relatie-entiteit, al dan niet in een ander domein, is altijd een 1 op 1 koppeling van toepassing. De kardinaliteit aan entiteit zijde (A, D, E en H in de onderstaande illustratie) van deze relatie is dus altijd 1. 
+Aangezien een entiteit in een ander domein niet per definitie hoeft te leiden tot een relatie-entiteit is de relatie tussen de relatie-entiteit en de entiteit, al dan niet in een ander domein, aan de relatie-entiteit zijde (B, C, G en F in de onderstaande illustratie) altijd optioneel.
+De maximale kardinaliteit van die relatie kan echter verschillen, daarvoor zijn geen generieke regels te benoemen. Dat moet dus per geval worden bepaald. Wel geldt dat kardinaliteiten van de tegenhanger van een relatie-entiteit een overeenkomst hebben. Zo zal de kardinaliteit van B en G aan de ene kant en C en F aan de andere kant (zie onderstaande illustraties) altijd gelijk aan elkaar zijn.
 
 ![Relatie-entiteiten-en-kardinaliteiten](https://github.com/VNG-Realisatie/API-Kennisbank/blob/master/Handreiking%20API%20Design/Relatie-entiteiten-en-kardinaliteiten.jpg)
-
-Door de kardinaliteit van deze relaties op maximaal 1 te stellen wordt voorkomen dat een meervoudige relatie tussen een entiteit in het ene domein en een entiteit in een ander domein technisch niet gerelaiseerd kan worden. De relatie tussen een relatie-entiteit en de entiteit die deze representeert is immers, zoals al eerder aangegeven, slechts op logisch niveau gelegd. Hoe een meervoudige relatie dan wel gerealiseerd kan worden wordt hieronder beschreven.
-
-Aangezien een entiteit in een ander domein niet per definitie hoeft te leiden tot een relatie-entiteit is de relatie tussen een entiteit en een relatie-entiteit binnen hetzelfde domein (B en F in de bovenstaande illustratie) altijd optioneel aan de relatie-entiteit zijde. 
-* Op het moment dat een entiteit meerdere keren aan een entiteit in een ander domein gekoppeld moet kunnen worden wordt de kardinaliteit van die relatie aan de relatie-entiteit zijde dus 0..*.
-* Op het moment dat een entiteit slechts één keer aan een entiteit in een ander domein gekoppeld mag kunnen worden wordt de kardinaliteit van die relatie aan de relatie-entiteit zijde dus 0..1.
-
-Een relatie-entiteit bestaat altijd bij de gratie van een andere entiteit in hetzelfde domein wat betekent dat in de relatie tussen een relatie-entiteit en die andere entiteit aan de zijde van de andere entiteit (A en E in de bovenstaande illustratie) de kardinaliteit altijd minimaal 1 is.
-* Op het moment dat een entiteit in een ander domein meerdere keren aan een entiteit gekoppeld moet kunnen worden wordt de kardinaliteit van die relatie aan de relatie-entiteit zijde dus 1..*.
-* Op het moment dat een entiteit in een ander domein slechts één keer aan een entiteit gekoppeld mag kunnen worden wordt de kardinaliteit van die relatie aan de relatie-entiteit zijde dus 1.
 
 **Relaties met entiteiten uit API-loze domeinen**
 
