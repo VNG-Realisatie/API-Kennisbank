@@ -1,7 +1,7 @@
 # Inleiding
 
 Dit document bevat een beschrijving van een aantal design principes. Design principes die zijn toegepast in de huidige API standaardisatie projecten (Zaakgericht Werken en HaalCentraal).
-Sommige van deze principes bestonden al maar anderen zijn gedurende projecten ontwikkeld en/of aangescherpt.
+Sommige van deze principes bestonden al maar andere zijn gedurende projecten ontwikkeld en/of aangescherpt.
 
 Deze handreiking bouwt voort op de [API strategie voor de Nederlandse overheid](https://aandeslagmetdeomgevingswet.nl/digitaal-stelsel/documenten/documenten/api-uri-strategie/).
 
