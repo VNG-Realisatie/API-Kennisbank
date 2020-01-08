@@ -54,7 +54,7 @@ Wanneer je op je eigen laptop/pc werkt aan bestanden, is "origin" de alias voor 
 **upstream**
 Wanneer je op je eigen laptop/pc werkt aan bestanden, is "upstream" de alias voor de GitHub (remote) repository van VNG-Realisatie. Dit gebruik je wanneer je de lokale kopie van de repository wilt actualiseren met alle door anderen doorgevoerde wijzigingen (via een `git pull upstream master`).
 
-# GitHub workflow (in de browser) voor open Standaarden
+# GitHub workflow voor open Standaarden
 De workflow voor open co-creatie aan standaarden werkt via "pull requests". Dit betekent dat je wijzigingen nooit direct maakt op de VNG Realisatie repository, zelfs niet direct op een branch in de VNG Realisatie repository.
 Je doet wijzigingen in je persoonlijke "fork" van de VNG Realisatie repository. Vervolgens bied je deze wijzigingen aan door een "pull request" te doen, een verzoek aan de community om de wijziging toe te voegen aan de VNG Realisatie repository. Wanneer de community positief reageert op de pull request, kan de beheerder de pull request goedkeuren en doorvoeren op de repository.
 
@@ -107,16 +107,13 @@ De beheerder van de standaard zal dus de volgende handelingen doen voor een vers
 3. Ik wil een "Pull request" indienen
 	* Open de tab "Pull requests"
 	* Klik op "New pull request"
-	* Selecteer bij "base fork" de repository en bij "base" de branch waar het pull request op moet worden geplaatst
+	* Selecteer bij "base fork" de repository en bij "base" de branch waar het pull request op moet worden geplaatst. Dit is de 'master' branch van de repository bij VNG-Realisatie
 	* Selecteer bij "head fork" de repository en bij "compare" de branch waarin de wijziging is aangebracht
 	* Klik op "Create pull request" en ken er een naam aan toe. **Tip**: Als je de volgende conventie:
 	  'fixes [nummer issue]' toevoegt aan de naam van de pull request wordt bij het aanvaarden van de pull request het issue meteen gesloten. Indien een pull request betrekking heeft op slechts een deel van een issue neem je geen 'Fixes' op omdat het issue nl. nog niet geheel is opgelost als de pull request wordt goedgekeurd en dus niet afgesloten mag worden. Neem in dat geval 'Ref. #' gevolgd door het nummer van het issue op.
 	* Scroll evt. naar beneden en klik op "Create pull request";
-	* Scroll naar beneden naar "Merge pull request";
-	* Kies een van de 3 opties
-	  * Create a merge commit
-	  * Als je op de dropdown klikt en "Squash and merge" kiest worden alle commits in 1 commit geduwd
-	  * Als je op "Rebase and merge" klikt moet je zelf alle commits 1 voor 1 op je fork toepassen.
+	* Kies de eerste van de 3 opties 'Create a merge commit'
+	* Ken reviewers toe aan het pull request.
 
 4. Ik wil een opmerking maken over een bijdrage van iemand anders
 	* Ga naar de bijdrage vanuit tab "Pull requests" door op de titel van de bijdrage (≠ titel van document) te klikken
@@ -203,10 +200,7 @@ De beheerder van de standaard zal dus de volgende handelingen doen voor een vers
 	* Klik op "Create pull request" en ken er een duidelijke naam aan toe;
 	* Scroll evt. naar beneden en klik op "Create pull request";
 	* Scroll naar beneden naar "Merge pull request";
-	* Kies een van de 3 opties
-	  * Create a merge commit
-	  * Als je op de dropdown klikt en "Squash and merge" kiest worden alle commits in 1 commit geduwd
-	  * Als je op "Rebase and merge" klikt moet je zelf alle commits 1 voor 1 op je fork toe 
+	* Kies de eerste van de 3 opties 'Create a merge commit'
     
 ## Werken vanuit eigen laptop met eigen tooling
 Soms wil je met je eigen editor documenten (dat kan ook code of schema zijn) bewerken. Bijvoorbeeld in XmlSpy, Eclipse, enz. Dan is het handiger om de bestanden van de repository op je eigen laptop te hebben staan en van daaruit te bewerken. Hieronder staat hoe je de versiebeheertool git kan gebruiken op je eigen laptop of pc, in combinatie met GitHub.
