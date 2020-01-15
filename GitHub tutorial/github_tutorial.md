@@ -3,6 +3,10 @@ Dit document is niet gericht op algemeen gebruik van GitHub, maar toegespitst op
 
 Eerst wordt een aantal belangrijke concepten uit Git en GitHub kort uitgelegd. Vervolgens wordt de workflow voor het voorstellen en doorvoeren van wijzigingen en de workflow voor releases van standaarden vanuit GitHub (via de browser) besproken. Daarna wordt voor een aantal veel voorkomende situaties ("use cases") uitgelegd hoe dit moet worden gedaan, zowel vanuit GitHub (via de browser) als vanuit je eigen laptop of pc.
 
+Online documentatie:
+* [Wat is Git?](https://guides.github.com/introduction/git-handbook/)
+* [Hoe werkt Github?](https://guides.github.com/introduction/flow/)
+
 # Belangrijke concepten in github
 **git**
 Versiebeheersysteem. Een versiebeheersysteem ondersteunt het beheerst en gecontroleerd doorvoeren van wijzigingen aan een product. Hieruit komen concepten als branches, forks, commits, tags en releases.
@@ -38,6 +42,22 @@ Wanneer je wijzigingen doorvoert op een document op je eigen laptop of pc, zijn 
 
 **commit**
 Wanneer je wijzigingen doorvoert op een document op je eigen laptop of pc, zijn daarmee de wijzigingen nog niet doorgevoerd in git(hub). Om de wijzigingen door te voeren in het git versiebeheer, geef je de opdracht `commit`.
+
+**master branch**
+Er is één speciale branch, "master". Dit is de basis, de actueel geldende versie van de repository. Wijzigingen voeg je niet direct toe op de "master"-branch, maar op een aparte branch voor deze wijziging.
+Pas wanneer de wijziging klaar is en kan worden gepubliceerd, voeg je de branch met de wijziging samen met de master-branch (dit heet `merge`), zodat de wijzigingen worden doorgevoerd op de master.
+
+Wijzigingen voeg je niet direct toe op de "master"-branch, maar op een aparte branch voor deze wijziging, typisch genaamd **feature/XXX**. Pas wanneer de wijziging klaar is en kan worden gepubliceerd, voeg je de branch met de wijziging samen met de master-branch (dit heet `merge`), zodat de wijzigingen worden doorgevoerd op de master.
+
+**fork**
+Afsplitsing van een repository die apart wordt ontwikkeld.
+Wanneer je in GitHub wil bijdragen aan een repository, maak je een "fork" van die repository. Je hebt dan de vrijheid je eigen "fork" van de repository aan te passen en uit te breiden. Wanneer je daarmee klaar bent kan je de betreffende wijziging aanbieden aan de oorspronkelijke repository via een "pull request".
+
+**clone**
+Door het "clonen" (`git clone`) van een repository haal je deze op de eigen laptop of pc binnen. Deze "kloon" is gekoppeld aan de online versie van de repository (op Github). Met `pull` haal je de nieuwste wijzigingen op uit de online versie, en met `push` stuur je de wijzigingen van je eigen laptop of pc naar de online repository.
+
+**commit**
+Wanneer je wijzigingen doorvoert op een document op je eigen laptop of pc, zijn daarmee de wijzigingen nog niet doorgevoerd in git(hub). Om de wijzigingen door te voeren in het git versiebeheer, geef je de opdracht `add` (toevoegen van bestand aan commit) `commit` (set aan wijzigingen doorvoeren). Typisch combineer je dit in 1 commando: `git commit -a -m "dit heb ik gedaan..."` (waar `-a` voor `add` staat en alle gewijzigde bestanden toevoegd, en `-m` gevolgd door een beschrijving van de commit).
 
 **pull**
 Wanneer je op je eigen laptop werkt aan bestanden van een GitHub repository, is het verstandig regelmatig je lokale kopie van de repository bij te werken met alle wijzigingen die misschien door iemand anders zijn doorgevoerd. Je hebt dan de meest actuele toestand van de repository op je laptop/pc staan. Dit doe je door de git opdracht `pull`, waarmee je de laatste wijzigingen "naar binnnen trekt".
@@ -107,12 +127,10 @@ De beheerder van de standaard zal dus de volgende handelingen doen voor een vers
 3. Ik wil een "Pull request" indienen
 	* Open de tab "Pull requests"
 	* Klik op "New pull request"
-<<<<<<< HEAD
 	* Selecteer bij "base fork" de repository en bij "base" de branch waar het pull request op moet worden geplaatst
 	* Selecteer bij "head fork" de repository en bij "compare" de branch waarin de wijziging is aangebracht
 	* Klik op "???"
 	* Klik daarna op "???" waarna de pull request is geplaatst
-=======
 	* Selecteer bij "base fork" de repository en bij "base" de branch waar het pull request op moet worden geplaatst. Dit is de 'master' branch van de repository bij VNG-Realisatie
 	* Selecteer bij "head fork" de repository en bij "compare" de branch waarin de wijziging is aangebracht
 	* Klik op "Create pull request" en ken er een naam aan toe. **Tip**: Als je de volgende conventie:
@@ -120,7 +138,6 @@ De beheerder van de standaard zal dus de volgende handelingen doen voor een vers
 	* Scroll evt. naar beneden en klik op "Create pull request";
 	* Kies de eerste van de 3 opties 'Create a merge commit'
 	* Ken reviewers toe aan het pull request.
->>>>>>> 37dfc9e9c9070271400670713bf1312601fb86d6
 
 4. Ik wil een opmerking maken over een bijdrage van iemand anders
 	* Ga naar de bijdrage vanuit tab "Pull requests" door op de titel van de bijdrage (≠ titel van document) te klikken
