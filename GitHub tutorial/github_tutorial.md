@@ -107,10 +107,20 @@ De beheerder van de standaard zal dus de volgende handelingen doen voor een vers
 3. Ik wil een "Pull request" indienen
 	* Open de tab "Pull requests"
 	* Klik op "New pull request"
+<<<<<<< HEAD
 	* Selecteer bij "base fork" de repository en bij "base" de branch waar het pull request op moet worden geplaatst
 	* Selecteer bij "head fork" de repository en bij "compare" de branch waarin de wijziging is aangebracht
 	* Klik op "???"
 	* Klik daarna op "???" waarna de pull request is geplaatst
+=======
+	* Selecteer bij "base fork" de repository en bij "base" de branch waar het pull request op moet worden geplaatst. Dit is de 'master' branch van de repository bij VNG-Realisatie
+	* Selecteer bij "head fork" de repository en bij "compare" de branch waarin de wijziging is aangebracht
+	* Klik op "Create pull request" en ken er een naam aan toe. **Tip**: Als je de volgende conventie:
+	  'fixes [nummer issue]' toevoegt aan de naam van de pull request wordt bij het aanvaarden van de pull request het issue meteen gesloten. Indien een pull request betrekking heeft op slechts een deel van een issue neem je geen 'Fixes' op omdat het issue nl. nog niet geheel is opgelost als de pull request wordt goedgekeurd en dus niet afgesloten mag worden. Neem in dat geval 'Ref. #' gevolgd door het nummer van het issue op.
+	* Scroll evt. naar beneden en klik op "Create pull request";
+	* Kies de eerste van de 3 opties 'Create a merge commit'
+	* Ken reviewers toe aan het pull request.
+>>>>>>> 37dfc9e9c9070271400670713bf1312601fb86d6
 
 4. Ik wil een opmerking maken over een bijdrage van iemand anders
 	* Ga naar de bijdrage vanuit tab "Pull requests" door op de titel van de bijdrage (≠ titel van document) te klikken
@@ -186,7 +196,19 @@ De beheerder van de standaard zal dus de volgende handelingen doen voor een vers
 		* Beschrijf hoe mensen aan de ontwikkeling kunnen bijdragen (contributing guide).
 	* Maak, zover mogelijk een goed begin. Mensen dragen makkelijker bij aan iets dat er al (in enig vorm) is, dan aan een lege repository.
 	* Nodig relevante belanghebbenden (potentiële gebruikers of deelnemers) uit om het "product" in de repository te gebruiken en eraan bij te dragen.
-
+	
+19. Ik wil voorafgaand aan een nieuwe actie mijn fork updaten.
+	* Open de fork die je wil updaten;
+	* Klik op de tab "Pull Requests";
+	* Klik op "New Pull Request". GitHub vergelijkt nu de originele repository met je fork.
+	  Als het goed is zijn er geen verschillen;
+	* Klik op "switching the base". GitHub vergelijkt nu je fork met de originele repository.
+	  Als er tussentijds wijzigingen zijn aangebracht dan zou je nu wel verschillen moeten zien.
+	* Klik op "Create pull request" en ken er een duidelijke naam aan toe;
+	* Scroll evt. naar beneden en klik op "Create pull request";
+	* Scroll naar beneden naar "Merge pull request";
+	* Kies de eerste van de 3 opties 'Create a merge commit'
+    
 ## Werken vanuit eigen laptop met eigen tooling
 Soms wil je met je eigen editor documenten (dat kan ook code of schema zijn) bewerken. Bijvoorbeeld in XmlSpy, Eclipse, enz. Dan is het handiger om de bestanden van de repository op je eigen laptop te hebben staan en van daaruit te bewerken. Hieronder staat hoe je de versiebeheertool git kan gebruiken op je eigen laptop of pc, in combinatie met GitHub.
 Beschreven is het gebruik van git vanuit command prompt (CMD) in windows en Terminal op een Mac. Veel tools kennen echter zelf (al dan niet via een plug in) ook voorzieningen om een deel van deze stappen te doen.
