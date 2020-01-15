@@ -1,22 +1,16 @@
 # Inleiding
 
 Dit document bevat een beschrijving van een aantal design principes. Design principes die zijn toegepast in de huidige API standaardisatie projecten (Zaakgericht Werken en HaalCentraal).
-Sommige van deze principes bestonden al maar andere zijn gedurende projecten ontwikkeld en/of aangescherpt.
 
-Deze handreiking bouwt voort op de [API strategie voor de Nederlandse overheid](https://aandeslagmetdeomgevingswet.nl/digitaal-stelsel/documenten/documenten/api-uri-strategie/).
+Deze handreiking is een aanvulling danwel aanscherping op de [API strategie voor de Nederlandse overheid](https://docs.geostandaarden.nl/api/API-Strategie/).  Alle API-stratgie design rules zoals beschreven in de API strategie voor de Nederlandse overheid worden geadopteerd tenzij dat in dit document anders is beschreven of aangescherpt.
 
-Dit document heeft een tweeledig doel.
-
-1. Ten eerste worden hierin design principes beschreven die toegepast moeten worden bij het ontwerpen van een Open API-specificatie teneinde een gegevenslandschap vorm te geven waarin verschillende API's op dezelfde wijze kunnen worden aangesproken.
-2. Ten tweede dient dit document als discussie document aangezien in de huidige API standaardisatie projecten op sommige punten verschillende principes gehanteerd worden.
-   Uitgangspunt is dat we uiteindelijk overeenstemming bereiken over het te hanteren principe OF dat we duidelijk gaan beschrijven in welke situatie welk principe gehanteerd gaat worden.
-   Zodra overeenstemming is bereikt over de design principes zal dit doel komen te vervallen.
+Dit document heeft als doel de design-rules en werkwijze vast te leggen zodat API-design binnen het gemeentelijk gegevenslandschap eenduidig wordt uitgevoerd op basis van gezamenlijk vastgestelde design rules.
 
 # Design principes
 
 ## Relaties tussen 2 domeinen
 
-**Motivatie en dominante domeinen**
+**Motivatie**
 
 Bij relaties tussen twee domeinen wil je vanuit beide domeinen de gerelateerde
 gegevens uit het andere domein kunnen opvragen/inkijken. Daarvoor wordt in elk domein een relatie-entiteit gedefinieerd dat in feite een record van een koppeltabel is. In zo'n relatie-entiteit worden de identifiers van de te koppelen entiteiten vastgelegd. 
@@ -25,13 +19,11 @@ In het voorbeeld hieronder zie je dat in het 'Zaken API' domein de relatie entit
 
 ![Voorbeeld relatie-entiteiten](https://github.com/VNG-Realisatie/API-Kennisbank/blob/master/Handreiking%20API%20Design/Relatie-entiteiten.jpg)
 
-Binnen een relatie tussen domeinen wordt altijd één van de domeinen
-als dominant/primair beschouwt. Soms is heel duidelijk welke dat
-is en is dat goed te beargumenteren, andere keren is het een buikgevoel en
-lastiger te beargumenteren, of het is gewoon een keuze omdat er geen
-natuurlijke dominantie aangewezen kan worden. Voorbeelden hiervan zijn:
+**Relaties tussen domeinen**
 
-(dominante domein in vet)
+Bij relaties tussen domeinen wordt altijd één van de domeinen als eigenaar beschouwt. Soms is heel duidelijk welk domein die rol heeft en is dat goed te beargumenteren, andere keren is het een buikgevoel en lastiger te beargumenteren, of het is gewoon een keuze omdat er geen natuurlijke eigenaar aangewezen kan worden. Voorbeelden hiervan zijn:
+
+(eigenaar domein in vet)
 
 * **Zaken** en Informatieobjecten
 * **Zaken** en Klantinteracties
@@ -39,7 +31,7 @@ natuurlijke dominantie aangewezen kan worden. Voorbeelden hiervan zijn:
 
 **Relatieklassen**
 
-Zoals hierboven al aangegeven wordt het feit dat een relatie bestaat tussen objecten in twee verschillende domeinen
+Zoals hierboven al wordt aangegeven wordt het feit dat een relatie bestaat tussen objecten in twee verschillende domeinen
 altijd in beide domeinen vastgelegd met een specifieke resource voor de
 relatieklasse (de relatie-entiteit). In ieder domein zijn de relatieklassen als het ware tegenhangers
 van elkaar. Indien er extra relatie-informatie op de relatieklasse bijgehouden
