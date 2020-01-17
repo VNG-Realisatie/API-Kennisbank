@@ -4,7 +4,10 @@ Dit document bevat een beschrijving van een aantal design principes. Design prin
 
 Deze handreiking is een aanvulling danwel aanscherping op de [API strategie voor de Nederlandse overheid](https://docs.geostandaarden.nl/api/API-Strategie/).  Alle API-stratgie design rules zoals beschreven in de API strategie voor de Nederlandse overheid worden geadopteerd tenzij dat in dit document anders is beschreven of aangescherpt.
 
-Dit document heeft als doel de design-rules en werkwijze vast te leggen zodat API-design binnen het gemeentelijk gegevenslandschap eenduidig wordt uitgevoerd op basis van gezamenlijk vastgestelde design rules.
+Dit document heeft een tweeledig doel:
+
+1. de design-rules en werkwijze vastleggen zodat API-design binnen het gemeentelijk gegevenslandschap eenduidig wordt uitgevoerd op basis van gezamenlijk vastgestelde design rules.
+2. de gebruiker van de API's (de ontwikkelaars) inzicht geven in waarom een bepaalde constructie of werkwijze in de API's gebruikt wordt.
 
 # Design principes
 
@@ -35,7 +38,8 @@ Zoals hierboven al wordt aangegeven wordt het feit dat een relatie bestaat tusse
 altijd in beide domeinen vastgelegd met een specifieke resource voor de
 relatieklasse (de relatie-entiteit). In ieder domein zijn de relatieklassen als het ware tegenhangers
 van elkaar. Indien er extra relatie-informatie op de relatieklasse bijgehouden
-wordt, dan wordt deze _enkel_ in het dominante domein bijgehouden.
+wordt, dan wordt deze _enkel_ in het domein van de eigenaar van de relatie bijgehouden.
+Dat is ook de klasse die benaderbaar is voor comsumers van deze API. De koppetabel in het andere domein moet worden bijgehouden door registratie die "eigenaar" is van de relatieklasse. Daarmee wordt de consumer dus niet belast.
 
 Zo'n relatieklasse moet overigens niet verward worden met een associatieklasse
 waarmee properties aan een associatie gekoppeld kunnen worden.
@@ -45,8 +49,8 @@ bestaan zonder een instantie van de andere. In de relatieklassen zijn op z'n
 minst de URLs van de koppelende resources opgenomen. Dit laat toe om vanuit
 beide kanten op te lijsten welke externe objecten gerelateerd zijn.
 
-Daarnaast loopt de relatie ook altijd vanuit het object in het dominante domein
-naar het object in het recessieve domein. Dat principe beinvloed de naamgeving
+Daarnaast loopt de relatie ook altijd vanuit het object in het domein van de eigenaar
+naar het object in het andere domein. Dat principe beinvloed de naamgeving
 van deze relatieklasses.
 
 De naamgevingsconventie is nl. als volgt:
@@ -56,9 +60,7 @@ Voorbeelden hiervan zijn:
 
 * `zaakverzoek`
 * `zaakcontactmoment`
-* `verzoekinformatieobject`
 * `zaakbesluit`
-* `besluitinformatieobject`
 
 In een gegevensmodel kunnen in dit geval 2 klasses opgenomen zijn met dezelfde
 naam maar elk opgenomen in een ander domein.
