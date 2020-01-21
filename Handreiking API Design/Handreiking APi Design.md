@@ -62,14 +62,7 @@ Voorbeelden hiervan zijn:
 * `zaakcontactmoment`
 * `zaakbesluit`
 
-In een gegevensmodel kunnen in dit geval 2 klasses opgenomen zijn met dezelfde
-naam maar elk opgenomen in een ander domein.
-
->Deze naamgevingsconventie is nog aan discussie onderhevig. Tijdens de webinar voor de ZGW API's van 16 december 2019 heeft Henri Korver een ander voorstel gedaan waarbij de naamgeving de volgende conventie volgt:
->
->`[naam van de gerelateerde class in het source domein][naam van de gerelateerde class in het target domein]`.
->
->Indien besloten wordt deze conventie te gaan volgen is er natuurlijk geen sprake meer van dat in een gegevensmodel 2 klasses opgenomen zijn met dezelfde naam.
+In een gegevensmodel kunnen om bepaalde redenen 2 klasses opgenomen zijn met dezelfde naam maar elk opgenomen in een ander domein. Dit is echter geen ideale situatie die als het even kan voorkomen moet worden. Over het algemeen zal dan ook dat wat beschreven staat in de volgende sectie (Relatieklassen met meerdere objecttypen) gelden.
 
 **Relatieklassen met meerdere objecttypen**
 
@@ -90,11 +83,6 @@ met verschillende namen is `zaakcontactmoment` en `objectcontactmoment`. In dit
 geval zal in zo'n klasse die koppelt aan meerdere domeinen ook een attribuut
 worden opgenomen waarmee het type van de te koppelen klassse aangegeven kan
 worden.
-
->Dit principe kan ook toegepast worden op de naamgevingsconventie die voorgesteld is door Henri Korver. Diens conventie wordt dan:
->
->`[naam van de gerelateerde class in het source domein]object`.
-
 
 **Kardinaliteit van deze classes**
 
