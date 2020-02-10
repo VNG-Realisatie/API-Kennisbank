@@ -1,3 +1,7 @@
+**WAARSCHUWING!**
+
+**Dit document is in ontwikkeling en is daarom nog aan wijzigingen onderhevig.**
+
 # Inleiding
 
 Dit document bevat een beschrijving van een aantal design principes. Design principes die zijn toegepast in de huidige API standaardisatie projecten (Zaakgericht Werken en HaalCentraal).
