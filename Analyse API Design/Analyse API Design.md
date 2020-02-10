@@ -24,7 +24,7 @@ gegevens uit het andere domein kunnen opvragen/inkijken. Daarvoor wordt in elk d
 
 In het voorbeeld hieronder zie je dat in het 'Zaken API' domein de relatie entiteit 'zaakverzoek' is gecreëerd waarmee een koppeling wordt gedefinieerd tussen de entiteit 'zaak' in hetzelfde domein en de entiteit 'verzoek' in het 'Klantinteracties API' domein. In het 'Klantinteracties API' domein is met hetzelfde doel juist de relatie-entiteit 'objectverzoek' gecreëerd.
 
-![Voorbeeld relatie-entiteiten](https://github.com/VNG-Realisatie/API-Kennisbank/blob/master/Handreiking%20API%20Design/Relatie-entiteiten.jpg)
+![Voorbeeld relatie-entiteiten](https://github.com/VNG-Realisatie/API-Kennisbank/blob/master/Analyse%20API%20Design/Relatie-entiteiten.jpg)
 
 **Relaties tussen domeinen**
 
@@ -94,7 +94,7 @@ Tussen een entiteit en een relatie-entiteit, al dan niet in een ander domein, is
 Aangezien een entiteit in een ander domein niet per definitie hoeft te leiden tot een relatie-entiteit is de relatie tussen de relatie-entiteit en de entiteit, al dan niet in een ander domein, aan de relatie-entiteit zijde (B, C, G en F in de onderstaande illustratie) altijd optioneel.
 De maximale kardinaliteit van die relatie kan echter verschillen, daarvoor zijn geen generieke regels te benoemen. Dat moet dus per geval worden bepaald. Wel geldt dat kardinaliteiten van de tegenhanger van een relatie-entiteit een overeenkomst hebben. Zo zal de kardinaliteit van B en G aan de ene kant en C en F aan de andere kant (zie onderstaande illustraties) altijd gelijk aan elkaar zijn.
 
-![Relatie-entiteiten-en-kardinaliteiten](https://github.com/VNG-Realisatie/API-Kennisbank/blob/master/Handreiking%20API%20Design/Relatie-entiteiten-en-kardinaliteiten.jpg)
+![Relatie-entiteiten-en-kardinaliteiten](https://github.com/VNG-Realisatie/API-Kennisbank/blob/master/Analyse%20API%20Design/Relatie-entiteiten-en-kardinaliteiten.jpg)
 
 **Relaties met entiteiten uit API-loze domeinen**
 
