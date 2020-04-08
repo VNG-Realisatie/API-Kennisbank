@@ -103,6 +103,14 @@ In dat geval wordt de entiteit (tijdelijk) binnen het onder handen zijnde domein
 relevante naam en alleen de meest elementaire attributen. Zodra er voor het domein waar het object eigenlijk thuis hoort een eigen API standaard is
 ontwikkeld wordt het object in oude domein deprecated verklaard en in de eerstvolgende nieuwe versie verwijderd.
 
+## Relaties met objecten uit nog niet gestandaardiseerde domeinen
+
+Soms komt het voor dat er vanuit een in bewerking zijnd domein een koppeling moet worden gelegd naar een object in een domein dat nog niet gestandaardiseerd is en waarvoor ook nog geen standaardisatie traject loopt.
+Deze objecten worden daarom voorlopig binnen het in bewerking zijnde domein getrokken waarbij relaties vanuit die objecten naar andere objecten buiten het in bewerking zijnde domein worden genegeerd. Die modelleren we dus niet in het in bewerking zijnde domein.
+Met '**Voorlopig**' bedoelen hier dat zo'n object vervangen kan worden door een koppelende entiteit (zoals in de voorgaande paragraaf beschreven) zodra het object is opgenomen in een eigen informatiemodel en er een eigen API voor bestaat.
+
+Indien zo'n object een n-op-m relatie heeft met andere objecten binnen het in bewerking zijnde domein dan moet tussen die relatie een koppelentiteit worden geplaatst zoals beschreven is in de voorgaande paragraaf.
+
 ## Supertypes / Abstracte klassen
 
 Soms zijn er objecten (ook wel *objecttype* of *concrete klasses* genoemd) die overerven van een ander object omdat ze een gemeenschappelijke basis hebben (ook wel *supertype* of *abstracte klasse* genoemd).
