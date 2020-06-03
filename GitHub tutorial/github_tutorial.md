@@ -213,7 +213,7 @@ De beheerder van de standaard zal dus de volgende handelingen doen voor een vers
 		* Beschrijf hoe mensen aan de ontwikkeling kunnen bijdragen (contributing guide).
 	* Maak, zover mogelijk een goed begin. Mensen dragen makkelijker bij aan iets dat er al (in enig vorm) is, dan aan een lege repository.
 	* Nodig relevante belanghebbenden (potentiële gebruikers of deelnemers) uit om het "product" in de repository te gebruiken en eraan bij te dragen.
-	
+
 19. Ik wil voorafgaand aan een nieuwe actie mijn fork updaten.
 	* Open de fork die je wil updaten;
 	* Klik op de tab "Pull Requests";
@@ -225,6 +225,16 @@ De beheerder van de standaard zal dus de volgende handelingen doen voor een vers
 	* Scroll evt. naar beneden en klik op "Create pull request";
 	* Scroll naar beneden naar "Merge pull request";
 	* Kies de eerste van de 3 opties 'Create a merge commit'
+
+20. Ik wil een release uitbrengen van een repository.
+	* Zorg dat alle pull requests die relevant zijn voor de release gemerged zijn;
+	* Klik op de tab "Code";
+	* Klik de subtab "release". Als er al releases zijn worden die hier getoond;
+	* Klik op "Draft a new release";
+	* Vul de "Tag version" in. We hanteren semantic versioning, dus bv "v1.0.0";
+	* Vul de "Release title" in. bv "versie 1.0.0" ;
+	* Indien gewenst kan er nog en omschrijving worden toegevoegd;
+	* Klik op "Publish release" . Er wordt nu een release aangemaakt en er worden een corresponderende tag aangemaakt van de reposittory. Naar de tag kan worden verwezen vanuit andere repositories.
     
 ## Werken vanuit eigen laptop met eigen tooling
 Soms wil je met je eigen editor documenten (dat kan ook code of schema zijn) bewerken. Bijvoorbeeld in XmlSpy, Eclipse, enz. Dan is het handiger om de bestanden van de repository op je eigen laptop te hebben staan en van daaruit te bewerken. Hieronder staat hoe je de versiebeheertool git kan gebruiken op je eigen laptop of pc, in combinatie met GitHub.
