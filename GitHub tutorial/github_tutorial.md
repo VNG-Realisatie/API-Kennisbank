@@ -1,4 +1,4 @@
-# Inleiding
+# InleidingtesteJohan
 Dit document is niet gericht op algemeen gebruik van GitHub, maar toegespitst op gebruik voor het ontwikkelen en beheren van open standaarden van VNG Realisatie.
 
 Eerst wordt een aantal belangrijke concepten uit Git en GitHub kort uitgelegd. Vervolgens wordt de workflow voor het voorstellen en doorvoeren van wijzigingen en de workflow voor releases van standaarden vanuit GitHub (via de browser) besproken. Daarna wordt voor een aantal veel voorkomende situaties ("use cases") uitgelegd hoe dit moet worden gedaan, zowel vanuit GitHub (via de browser) als vanuit je eigen laptop of pc.
@@ -7,7 +7,7 @@ Online documentatie:
 * [Wat is Git?](https://guides.github.com/introduction/git-handbook/)
 * [Hoe werkt Github?](https://guides.github.com/introduction/flow/)
 
-# Belangrijke concepten in github
+# Belangrijke concepten in githubtest2
 **git**
 Versiebeheersysteem. Een versiebeheersysteem ondersteunt het beheerst en gecontroleerd doorvoeren van wijzigingen aan een product. Hieruit komen concepten als branches, forks, commits, tags en releases.
 
@@ -235,7 +235,7 @@ De beheerder van de standaard zal dus de volgende handelingen doen voor een vers
 	* Vul de "Release title" in. bv "versie 1.0.0" ;
 	* Indien gewenst kan er nog en omschrijving worden toegevoegd;
 	* Klik op "Publish release" . Er wordt nu een release aangemaakt en er worden een corresponderende tag aangemaakt van de reposittory. Naar de tag kan worden verwezen vanuit andere repositories.
-    
+
 ## Werken vanuit eigen laptop met eigen tooling
 Soms wil je met je eigen editor documenten (dat kan ook code of schema zijn) bewerken. Bijvoorbeeld in XmlSpy, Eclipse, enz. Dan is het handiger om de bestanden van de repository op je eigen laptop te hebben staan en van daaruit te bewerken. Hieronder staat hoe je de versiebeheertool git kan gebruiken op je eigen laptop of pc, in combinatie met GitHub.
 Beschreven is het gebruik van git vanuit command prompt (CMD) in windows en Terminal op een Mac. Veel tools kennen echter zelf (al dan niet via een plug in) ook voorzieningen om een deel van deze stappen te doen.
