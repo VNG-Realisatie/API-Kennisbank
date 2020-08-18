@@ -17,7 +17,7 @@ Online voorziening (www.github.com) gericht op het samen ontwikkelen. Het gebrui
 **repository**
 Verzamelbak voor zaken die onder versiebeheer vallen en/of gezamenlijk ontwikkeld worden.
 Een repository betreft één "product" die als zodanig beheerd en gereleased wordt. Voor een repository wordt één of enkele personen als beheerder aangewezen, die verantwoordelijk is voor het beheren van de repository (o.a. beslissen over pull requests, mergen van branches, sluiten van issues).
-Elke standaard zal een eigen repository krijgen. Bijvoorbeeld een repository voor RSGB, een repository voor UGM RSGB, een repository voor RSGB-bevragingen, een repository voor Zaak- Documentservices, enz.
+Elke standaard zal een eigen repository krijgen. Bijvoorbeeld een repository voor BRP bevragen, een repository voor BAG bevragen, een repository voor de Zaken API, een repository voor de Besluiten API, enz.
 
 **branch**
 Om beheerst wijzigingen te kunnen doorvoeren, worden deze op een aparte "aftakking" ontwikkeld en beoordeeld. Pas wanneer er geoordeeld is dat de wijziging gewenst, klaar en goed is, wordt deze feitelijk doorgevoerd op de standaard.
@@ -30,40 +30,36 @@ Voor iemand die een wijziging of toevoeging wil doorvoeren, is het verstandig vo
 Er is één speciale branch, "master". Dit is de basis, de actueel geldende versie van de repository. Wijzigingen voeg je niet direct toe op de "master"-branch, maar op een aparte branch voor deze wijziging.
 Pas wanneer de wijziging klaar is en kan worden gepubliceerd, voeg je de branch met de wijziging samen met de master-branch (dit heet `merge`), zodat de wijzigingen worden doorgevoerd op de master.
 
-**fork**
-Afsplitsing van een repository die apart wordt ontwikkeld.
-Wanneer je in GitHub wil bijdragen aan een repository, maar je een "fork" van die repository. Je hebt dan de vrijheid je eigen "fork" van de repository aan te passen en uit te breiden. Wanneer je daarmee klaar bent kan je de betreffende wijziging aanbieden aan de oorspronkelijke repository via een "pull request".
-
-**clone**
-*Nog te beschrijven*
-
-**staging**
-Wanneer je wijzigingen doorvoert op een document op je eigen laptop of pc, zijn daarmee de wijzigingen nog niet doorgevoerd in git(hub). Voor je wijzigingen kan doorvoeren in het git versiebeheer, moet je aan git vertellen welke gewijzigde of toegevoegde bestanden moeten worden meegenomen. Dit doe je door deze bestanden toe te voegen aan "staging".
-
-**commit**
-Wanneer je wijzigingen doorvoert op een document op je eigen laptop of pc, zijn daarmee de wijzigingen nog niet doorgevoerd in git(hub). Om de wijzigingen door te voeren in het git versiebeheer, geef je de opdracht `commit`.
+> Dit en het volgende concept zijn volgens mij een en dezelfde. Een van beide definities kunnen dus verwijderd worden.
 
 **master branch**
-Er is één speciale branch, "master". Dit is de basis, de actueel geldende versie van de repository. Wijzigingen voeg je niet direct toe op de "master"-branch, maar op een aparte branch voor deze wijziging.
-Pas wanneer de wijziging klaar is en kan worden gepubliceerd, voeg je de branch met de wijziging samen met de master-branch (dit heet `merge`), zodat de wijzigingen worden doorgevoerd op de master.
+Zie de definitie van het concept 'master'.
 
 Wijzigingen voeg je niet direct toe op de "master"-branch, maar op een aparte branch voor deze wijziging, typisch genaamd **feature/XXX**. Pas wanneer de wijziging klaar is en kan worden gepubliceerd, voeg je de branch met de wijziging samen met de master-branch (dit heet `merge`), zodat de wijzigingen worden doorgevoerd op de master.
 
 **fork**
 Afsplitsing van een repository die apart wordt ontwikkeld.
-Wanneer je in GitHub wil bijdragen aan een repository, maak je een "fork" van die repository. Je hebt dan de vrijheid je eigen "fork" van de repository aan te passen en uit te breiden. Wanneer je daarmee klaar bent kan je de betreffende wijziging aanbieden aan de oorspronkelijke repository via een "pull request".
+Wanneer je in GitHub wil bijdragen aan een repository maak je een "fork" van die repository. Je hebt dan de vrijheid je eigen "fork" van de repository aan te passen en uit te breiden. Wanneer je daarmee klaar bent kan je de betreffende wijziging aanbieden aan de oorspronkelijke repository via een "pull request".
 
 **clone**
 Door het "clonen" (`git clone`) van een repository haal je deze op de eigen laptop of pc binnen. Deze "kloon" is gekoppeld aan de online versie van de repository (op Github). Met `pull` haal je de nieuwste wijzigingen op uit de online versie, en met `push` stuur je de wijzigingen van je eigen laptop of pc naar de online repository.
 
+Onze werkwijze schrijft voor dat we alleen de eigen fork clonen.
+
+**staging**
+Wanneer je wijzigingen doorvoert op een document op je eigen laptop of pc, zijn daarmee de wijzigingen nog niet doorgevoerd in git(hub). Voor je wijzigingen kan doorvoeren in het git versiebeheer, moet je aan git vertellen welke gewijzigde of toegevoegde bestanden moeten worden meegenomen. Dit doe je door deze bestanden toe te voegen aan "staging". Dit kan m.b.v. de opdracht `add` (toevoegen van bestand aan commit). 
+
 **commit**
-Wanneer je wijzigingen doorvoert op een document op je eigen laptop of pc, zijn daarmee de wijzigingen nog niet doorgevoerd in git(hub). Om de wijzigingen door te voeren in het git versiebeheer, geef je de opdracht `add` (toevoegen van bestand aan commit) `commit` (set aan wijzigingen doorvoeren). Typisch combineer je dit in 1 commando: `git commit -a -m "dit heb ik gedaan..."` (waar `-a` voor `add` staat en alle gewijzigde bestanden toevoegd, en `-m` gevolgd door een beschrijving van de commit).
+Ook wanneer de gewijzigde documenten op je eigen laptop of pc zijn toegevoegd aan "staging" zijn de wijzigingen nog niet doorgevoerd in git(hub).
+
+Om de wijzigingen daadwerkelijk door te voeren in het git versiebeheer, geef je de opdracht `commit` (set aan wijzigingen doorvoeren). 
+Het toevoegen van bestanden aan 'staging' en het 'committen' kun je in 1 commando combineren: `git commit -a -m "dit heb ik gedaan..."` (waar `-a` voor `add` staat en alle gewijzigde bestanden toevoegd, en `-m` gevolgd door een beschrijving van de commit).
 
 **pull**
 Wanneer je op je eigen laptop werkt aan bestanden van een GitHub repository, is het verstandig regelmatig je lokale kopie van de repository bij te werken met alle wijzigingen die misschien door iemand anders zijn doorgevoerd. Je hebt dan de meest actuele toestand van de repository op je laptop/pc staan. Dit doe je door de git opdracht `pull`, waarmee je de laatste wijzigingen "naar binnnen trekt".
 
 **push**
-Wanneer je op je eigen laptop/pc werkt aan bestanden van een GitHub repository, en je wilt deze doorgeven aan de repository op GitHub, dan stuur je deze via een git opdracht `push` (duwen).
+Wanneer je op je eigen laptop/pc werkt aan bestanden van een GitHub repository en je wilt deze doorgeven aan de repository op GitHub, dan stuur je deze via een git opdracht `push` (duwen).
 
 **Pull request**
 Wanneer je wijzigingen hebt doorgevoerd op je eigen "fork" van een repository, maar deze wilt doorgeven aan de repository van VNG Realisatie, dan doe je een "pull request". Je verzoekt dan aan de beheerder van de repository om je voorgestelde wijzigingen/toevoegingen te accepteren en "naar binnen te trekken".
@@ -216,15 +212,18 @@ De beheerder van de standaard zal dus de volgende handelingen doen voor een vers
 
 19. Ik wil voorafgaand aan een nieuwe actie mijn fork updaten.
 	* Open de fork die je wil updaten;
-	* Klik op de tab "Pull Requests";
-	* Klik op "New Pull Request". GitHub vergelijkt nu de originele repository met je fork.
-	  Als het goed is zijn er geen verschillen;
-	* Klik op "switching the base". GitHub vergelijkt nu je fork met de originele repository.
-	  Als er tussentijds wijzigingen zijn aangebracht dan zou je nu wel verschillen moeten zien.
-	* Klik op "Create pull request" en ken er een duidelijke naam aan toe;
+	* Alleen indien het project aangeeft dat de master branch achterligt op de VNG-Realisatie:master moet er een update plaatsvinden. Klik rechts naast deze melding op "±Compare";
+	* Het volgende scherm toont welke commits uit de head repository (in dit geval dus de fork) nog niet zijn doorgevoerd op de base repository (in dit geval de VNG-Realisatie repository). We willen echter juist weten welke commits uit de VNG-Realisatie repository nog niet zijn doorgevoerd op de fork. Daarom gaan we ze omwisselen.
+	Klik op de button met de 'head repository' en kies daar de VNG-Realisatie repository;
+	* In het menu verdwijnen nu de buttons met de base en head repositories. Er staat nu dus alleen 'base: master  <-- compare: master'. Klik daarboven nu op 'compare across forks';
+	* De buttons met de base en head verschijnen weer en geven nu exact dezelfde repositories aan. Klik nu op de button met de 'base repository' en kies daar je fork;
+	* Je krijgt nu alle commits te zien die de fork achterloopt op de upstream master. Als alles goed is wordt er aangegeven dat een merge mogelijk is ('Able to merge') Klik nu op de groene button "Create pull request" en ken er een duidelijke naam aan toe (bijv. 'Update fork');
 	* Scroll evt. naar beneden en klik op "Create pull request";
 	* Scroll naar beneden naar "Merge pull request";
-	* Kies de eerste van de 3 opties 'Create a merge commit'
+	* Kies in die button de eerste van de 3 opties 'Create a merge commit';
+	* Wijzig indien gewenst de description van de merge en klik op 'Confirm merge'.
+	
+	Zie ook [dit youtube filmpje](https://www.youtube.com/watch?v=YhwBgYPfoVE).
 
 20. Ik wil een release uitbrengen van een repository.
 	* Zorg dat alle pull requests die relevant zijn voor de release gemerged zijn;
