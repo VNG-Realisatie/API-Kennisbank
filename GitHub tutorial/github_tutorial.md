@@ -17,7 +17,7 @@ Online voorziening (www.github.com) gericht op het samen ontwikkelen. Het gebrui
 **repository**
 Verzamelbak voor zaken die onder versiebeheer vallen en/of gezamenlijk ontwikkeld worden.
 Een repository betreft één "product" die als zodanig beheerd en gereleased wordt. Voor een repository wordt één of enkele personen als beheerder aangewezen, die verantwoordelijk is voor het beheren van de repository (o.a. beslissen over pull requests, mergen van branches, sluiten van issues).
-Elke standaard zal een eigen repository krijgen. Bijvoorbeeld een repository voor BRP bevragen, een repository voor BAG bevragen, een repository voor de Zaken API, een repository voor de Besluiten API, enz.
+Elke standaard zal een of meer eigen repositories krijgen. Een belangrijk criteria daarbij is of er sprake dient te zijn van een eigen versieontwikkeling. Ook wanneer voor één standaard zowel een rovider als een consumer worden ontwikkeld komen beide in een eigen repository.
 
 **branch**
 Om beheerst wijzigingen te kunnen doorvoeren, worden deze op een aparte "aftakking" ontwikkeld en beoordeeld. Pas wanneer er geoordeeld is dat de wijziging gewenst, klaar en goed is, wordt deze feitelijk doorgevoerd op de standaard.
