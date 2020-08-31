@@ -1,4 +1,5 @@
 LocatieKadastraalObject:
+
   description: "Waardelijst in deze component :
          [koppelingswijze](http://www.kadaster.nl/schemas/waardelijsten/Koppelingswijze)"
 Naam:
