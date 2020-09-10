@@ -1,1 +1,35 @@
+collections:
+  content:
+    output: true
+    permalink: /:path
+  assets:
+    output: true
+    permalink: /:path
+
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: "content"
+    values:
+      layout: default
+
+markdown: kramdown
+
+exclude:
+  - archief
+  - vendor
+
+plugins:
+  - jekyll-redirect-from
+  - jekyll-remote-theme
+
+remote_theme: VNG-Realisatie/jekyll-theme-vng
+
+github: VNG-Realisatie/gemma-zaken
+
 theme: jekyll-theme-architect
