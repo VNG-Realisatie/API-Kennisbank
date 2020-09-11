@@ -24,7 +24,7 @@ Functionaliteit is daarbij als volgt:
 
 Uitgaande van de volgende collectie:
 
-[{
+```[{
 "id": 1,
 "status": "actief",
 "overheid": {
@@ -39,6 +39,7 @@ Uitgaande van de volgende collectie:
   "naam": "Provincie Gelderland"
 }
 }]
+```
 
 Mag je dus m.b.v. het 'fields' parameter filteren met '/overheid.code=0000' maar ook met '/code=0000'.
 
@@ -56,4 +57,50 @@ Daarmee wordt bedoelt dat uit de waarde exact opgemaakt kan worden welke propert
 voldoen aan de veldwaarde. Bovenstaande overweging komt daar niet mee overeen en de genoemde API Designrule moet hier dan ook nog mee in overeenstemming worden 
 gebracht.
 
-### 
+### Gebruik voor interne links relatieve urls
+Maak binnen berichten zo mogelijk gebruik van relatieve urls.
+Dus niet: 
+
+```"_links" : {
+"adressen" : [
+{
+"href" : "https://www.voorbeeld.nl/v1.1/adressen/0014200010877405"
+},
+{
+"href" : "https://www.voorbeeld.nl/v1.1/adressen/0014200022197986"
+}
+],
+"panden" : [
+{
+"href" : "https://www.voorbeeld.nl/v1.1/panden/0014100010921152"
+}
+],
+"self" : {
+"href" : "https://www.voorbeeld.nl/v1.1/adresseerbareobjecten/0014010011067299"
+```
+
+maar:
+
+```"_links" : {
+"adressen" : [
+{
+"href" : "/adressen/0014200010877405"
+},
+{
+"href" : "/adressen/0014200022197986"
+}
+],
+"panden" : [
+{
+"href" : "/panden/0014100010921152"
+}
+],
+"self" : {
+"href" : "/adresseerbareobjecten/0014010011067299"
+```
+
+_**Ratio**_
+Het voordeel hierrvan is dat er geen vertaling in de berichten hoeft te worden gedaan wanneer de API wordt gebruikt via een servicebus of API gateway.
+
+_**Links**_<br/>
+[Issue 234 HaalCentraal BAG Bevragen](https://github.com/VNG-Realisatie/Haal-Centraal-BAG-bevragen/issues/234)
