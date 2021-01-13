@@ -37,6 +37,26 @@ Voor de Haal Centraal repositories zijn de volgende GitHub Actions workflows ged
 
 ### lint-oas
 
+De lint-oas workflow valideert en resolve de openapi.yaml bestanden in de GitHub repository. De workflow maakt hiervoor gebruik van de npm scripts gedefinieerd in de package.json bestand. Hier is voor gekozen zodat lokaal en remote valideren en resolven op dezelfde manier en met dezelfde versie van de tools gebeurt, zodat het niet kan voorkomen dat je lokaal en remote verschillende resultaten krijgt.
+
+De workflow wordt getriggered:
+
+- wanneer er yaml bestanden in de specificatie map naar GitHub worden gepushed
+- wanneer de lint-oas.yaml bestand naar GitHub wordt gepushed
+- wanneer de **Run workflow** button wordt geklikt
+
+De workflow voert de volgende stappen uit:
+
+- Uitvoeren van `git checkout` van de repo zodat de rest van de workflow stappen acties op de bestanden kan uitvoeren
+- Installeer v12 van `node.js`
+- Installeer de dependencies uit de package.json bestand. Dit is nodig omdat de hierna volgende stappen gebruik maken van de npm scripts gedefinieerd in de package.json bestand
+- Valideer de specificatie/openapi.yaml bestand m.b.v. [Spectral][4]
+- Resolve de specificatie/openapi.yaml bestand m.b.v. [Swagger Codegen][5]. De geresolve-de variant wordt weggeschreven in de specificatie/genereervariant map
+- Valideer de specificatie/genereervariant/openapi.yaml bestand m.b.v. [Spectral][4]
+- Commit & push bij wijzigingen de geresolve-de bestanden (openapi.yaml en openapi.json) naar de GitHub repository
+
 [1]: https://docs.github.com/en/free-pro-team@latest/actions
 [2]: https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows
 [3]: https://github.com/marketplace?type=actions
+[4]: https://stoplight.io/open-source/spectral/
+[5]: https://mvnrepository.com/artifact/io.swagger.codegen.v3/swagger-codegen-cli
