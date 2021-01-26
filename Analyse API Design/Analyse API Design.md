@@ -100,8 +100,10 @@ De maximale kardinaliteit van die relatie kan echter verschillen, daarvoor zijn 
 
 Soms moet er in een domein een relatie gelegd worden met een object in een domein waarvoor nog geen API standaard is.
 In dat geval wordt de entiteit (tijdelijk) binnen het onder handen zijnde domein getrokken. Dat betekent dat er een object wordt gecreeerd met een
-relevante naam en alleen de meest elementaire attributen. Zodra er voor het domein waar het object eigenlijk thuis hoort een eigen API standaard is
+relevante naam en alleen de meest elementaire attributen. Relaties vanuit zo'n object naar andere objecten binnen het eigen domein worden niet gemodelleerd en die andere objecten blijven dan ook in het onder handen zijnde domein buiten beschouwing. Zodra er voor het domein waar het object eigenlijk thuis hoort een eigen API standaard is
 ontwikkeld wordt het object in oude domein deprecated verklaard en in de eerstvolgende nieuwe versie verwijderd.
+
+Indien zo'n object een n-op-m relatie heeft met andere objecten binnen het in bewerking zijnde domein dan moet tussen die relatie een koppelentiteit worden geplaatst zoals beschreven is in het voorgaande deel van deze paragraaf.
 
 ## Supertypes / Abstracte klassen
 
