@@ -205,7 +205,7 @@ Het aanmaken van een repository secret en organization secret gaat ongeveer op d
 Bij de tweede doe je hetzelfde alleen binnen de organization.
 
 Klik nu op 'New repository secret' resp. 'New organization secret'
-Geef de secret een naar waarbij het (vermoedelijk) een goed gebruikt is om snakecase met alleen hoofdletters te gebruiken.
+Geef de secret een naam waarbij het (vermoedelijk) een goed gebruik is om snakecase met alleen hoofdletters te gebruiken.
 Kopieer de eerder verkregen personal access token code in het 'value' veld. Geef bij een organization nog even aan voor welke repositories de secret van toepassing is (repository access).
 Klik tenslotte op 'Add secret'.
 
