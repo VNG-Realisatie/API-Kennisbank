@@ -1,4 +1,4 @@
-# Inleiding
+		# Inleiding
 Dit document is niet gericht op algemeen gebruik van GitHub, maar toegespitst op gebruik voor het ontwikkelen en beheren van open standaarden van VNG Realisatie.
 
 Eerst wordt een aantal belangrijke concepten uit Git en GitHub kort uitgelegd. Vervolgens wordt de workflow voor het voorstellen en doorvoeren van wijzigingen en de workflow voor releases van standaarden vanuit GitHub (via de browser) besproken. Daarna wordt voor een aantal veel voorkomende situaties ("use cases") uitgelegd hoe dit moet worden gedaan, zowel vanuit GitHub (via de browser) als vanuit je eigen laptop of pc.
@@ -72,19 +72,21 @@ Wanneer je op je eigen laptop/pc werkt aan bestanden, is "upstream" de alias voo
 
 
 **lokale files excluden van commits** Hiervoor kan niet de .gitignore worden gebruikt omdat dit bestand ook wordt ingecheckt en dit zou er dan voor zorgen dat de GitHub Actions workflows de gegenereerde bestanden niet kan committen.
-In een git repo is er een .git/info/exclude file die hetzelfde werkt als de .gitignore. Alleen wordt deze niet gecommit waardoor het alleen voor de lokale repo geldt. De volgende regels moeten worden toegevoegd om de gegenereerde bestanden te excluden voor commit.
+In een git repo kan je een .git/info/exclude file opnemen die hetzelfde werkt als de .gitignore. Alleen wordt deze niet gecommit waardoor het alleen voor de lokale repo geldt. De volgende regels moeten worden toegevoegd om de gegenereerde bestanden te excluden voor commit.
 
+Voorbeelden van te excluden mappen en bestanden:
 - specificatie/genereervariant/**
 - code/**
 - test/**
 - openapitools.json
 
-Omdat de gegenereerde bestanden al in git worden getracked, moet een extra actie worden uitgevoerd om de gegenereerde bestanden lokaal niet meer te tracken. Dit moet met de volgende bash statements:
+Omdat de gegenereerde bestanden al in git worden getracked, moet een extra actie worden uitgevoerd om de in de exclude file genoemde bestanden lokaal niet meer te tracken. Dit moet met de volgende bash statements:
 
 - git ls-files -z code | xargs -0 git update-index --assume-unchanged
 - git ls-files -z specificatie/genereervariant | xargs -0 git update-index --assume-unchanged
 
 Om een specifieke file te untracken moet de volgende statement worden gebruikt: git update-index --assume-unchanged <filepath> bijv. git update-index --assume-unchanged test/BRP-Bevragen-postman-collection.json.
+
 Hiermee worden merge conflicts in de gegenereerde bestanden voorkomen.
 
 
