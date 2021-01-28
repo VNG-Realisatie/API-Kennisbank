@@ -168,3 +168,45 @@ Wil je met één statement alle packages updaten naar de meest recente versie, d
 [6]: https://github.com/isaacs/node-mkdirp
 [7]: https://typicode.github.io/husky
 [8]: https://nodejs.org/en/download/
+
+## Configuratie van de secret USER_TOKEN
+
+Een secret is een ge-encrypte omgevingsvariabele. De secret USER_TOKEN is een secret waarin een acces tokens van een gebruiker zijn vastgelegd. 
+Een gebruiker die de benodigde rechten heeft om bewerkingen uit te voeren die de workflow waarin deze secret wordt gebruikt uit moet voeren.
+Om deze secret in te richten moet dus eerst een acces token verworven worden waarna de secret daarmee geconfigureerd kan worden.
+
+### Verwerven acces token
+
+Log in GitHub in met het account waarvan je het acces token wil genereren.
+
+Of dit een persoonlijk account moet zijn of juist een organisatie beheer account is afhankelijk van wie de workflow moet kunnen gebruiken.
+Over het algemeen maken wij in onze repositories geen scripts die voor persoonlijk gebruik zijn maar in een persoonlijke fork zou dit kunnen. 
+De workflows die we in de VNG-Realsatie repositories gebruiken moeten account onafhankelijk gebruikt kunnen worden daarom heeft het de voorkeur om in te loggen met een organisatie beheer account.
+
+Ga daarna naar de account settings. Klik daarvoor op de account avatar en selecteer 'Settings', vervolgens op 'Developer settings' en 'Personal access tokens'.
+Klik vervolgens op 'Generate new token' en geef in het 'Note' veld een korte beschrijving van de functie van het access token. Vervolgens moet je de scope van het access token configureren.
+Voor de secret 'USER_TOKEN' hoeft alleen de checkbox 'repo' aangeklikt te worden. Klik tenslotte onderaan op 'Generate token'.
+
+Er wordt vervolgens een hexadecimale personal access token code gegenereerd die je dient te kopiëren. 
+
+**Let op!** als je het scherm verlaat en je hebt de code niet gekopieerd of tijdelijk ergens bewaard dan kun je deze niet meer ophalen. 
+
+Gelukkig kun je op dezelfde personal access token wel weer een nieuwe code genereren. Dat kan echter een vervelend effect hebben als je de code in meerdere secrets hebt geplaatst.
+Je zult de nieuwe code dan aan al die secrets apart bekend moeten maken.
+
+### Secret configuratie
+
+Een secret kan als domein een repository of een organisatie hebben. 
+In het eerste geval is de omgevings variabele alleen binnen de betreffende repository te gebruiken in het tweede geval in alle repositories van de betreffende organisatie.
+Een repository secret hoeft niet uniek te zijn binnen de verzameling van repositories van die organisatie. Elke repository kan bijv. dus een secret hebben met de naam 'SECRET_KEY'.
+Een repository secret kan zelfs dezelfde naam hebben als een organisation secret. In dat geval overruled het de organization secret.
+
+Het aanmaken van een repository secret en organization secret gaat ongeveer op dezelfde wijze. Bij de eerste klik je binnen de repository of de 'Settings' tab en ga je in het linker menu naar 'Secrets'.
+Bij de tweede doe je hetzelfde alleen binnen de organization.
+
+Klik nu op 'New repository secret' resp. 'New organization secret'
+Geef de secret een naar waarbij het (vermoedelijk) een goed gebruikt is om snakecase met alleen hoofdletters te gebruiken.
+Kopieer de eerder verkregen personal access token code in het 'value' veld. Geef bij een organization nog even aan voor welke repositories de secret van toepassing is (repository access).
+Klik tenslotte op 'Add secret'.
+
+Het secret kan nu gebruikt worden in de workflows.

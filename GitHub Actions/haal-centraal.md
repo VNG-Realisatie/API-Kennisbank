@@ -139,3 +139,6 @@ De workflow voert de volgende stappen uit:
 [7]: https://github.com/postmanlabs/openapi-to-postman
 [8]: https://github.com/marketplace/actions/select-matching-issues
 [9]: ./haal-centraal-npm-beheer.md
+
+Deze workflow maakt gebruik van de secret USER_TOKEN, een ge-encrypte omgevingsvariabele waarin acces tokens zijn vastgelegd waarmee autorisatie verkregen kan worden voor het aanbrengen van wijzigingen op de repository.
+Een beschrijving van het verkrijgen van een access token en de configuratie van deze secret staat beschreven in [Haal Centraal NPM beheer](haal-centraal-npm-beheer.md).
