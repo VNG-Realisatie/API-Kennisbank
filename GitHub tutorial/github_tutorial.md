@@ -1,4 +1,4 @@
-# Inleiding
+		# Inleiding
 Dit document is niet gericht op algemeen gebruik van GitHub, maar toegespitst op gebruik voor het ontwikkelen en beheren van open standaarden van VNG Realisatie.
 
 Eerst wordt een aantal belangrijke concepten uit Git en GitHub kort uitgelegd. Vervolgens wordt de workflow voor het voorstellen en doorvoeren van wijzigingen en de workflow voor releases van standaarden vanuit GitHub (via de browser) besproken. Daarna wordt voor een aantal veel voorkomende situaties ("use cases") uitgelegd hoe dit moet worden gedaan, zowel vanuit GitHub (via de browser) als vanuit je eigen laptop of pc.
@@ -47,12 +47,12 @@ Door het "clonen" (`git clone`) van een repository haal je deze op de eigen lapt
 Onze werkwijze schrijft voor dat we alleen de eigen fork clonen.
 
 **staging**
-Wanneer je wijzigingen doorvoert op een document op je eigen laptop of pc, zijn daarmee de wijzigingen nog niet doorgevoerd in git(hub). Voor je wijzigingen kan doorvoeren in het git versiebeheer, moet je aan git vertellen welke gewijzigde of toegevoegde bestanden moeten worden meegenomen. Dit doe je door deze bestanden toe te voegen aan "staging". Dit kan m.b.v. de opdracht `add` (toevoegen van bestand aan commit). 
+Wanneer je wijzigingen doorvoert op een document op je eigen laptop of pc, zijn daarmee de wijzigingen nog niet doorgevoerd in git(hub). Voor je wijzigingen kan doorvoeren in het git versiebeheer, moet je aan git vertellen welke gewijzigde of toegevoegde bestanden moeten worden meegenomen. Dit doe je door deze bestanden toe te voegen aan "staging". Dit kan m.b.v. de opdracht `add` (toevoegen van bestand aan commit).
 
 **commit**
 Ook wanneer de gewijzigde documenten op je eigen laptop of pc zijn toegevoegd aan "staging" zijn de wijzigingen nog niet doorgevoerd in git(hub).
 
-Om de wijzigingen daadwerkelijk door te voeren in het git versiebeheer, geef je de opdracht `commit` (set aan wijzigingen doorvoeren). 
+Om de wijzigingen daadwerkelijk door te voeren in het git versiebeheer, geef je de opdracht `commit` (set aan wijzigingen doorvoeren).
 Het toevoegen van bestanden aan 'staging' en het 'committen' kun je in 1 commando combineren: `git commit -a -m "dit heb ik gedaan..."` (waar `-a` voor `add` staat en alle gewijzigde bestanden toevoegd, en `-m` gevolgd door een beschrijving van de commit).
 
 **pull**
@@ -69,6 +69,26 @@ Wanneer je op je eigen laptop/pc werkt aan bestanden, is "origin" de alias voor 
 
 **upstream**
 Wanneer je op je eigen laptop/pc werkt aan bestanden, is "upstream" de alias voor de GitHub (remote) repository van VNG-Realisatie. Dit gebruik je wanneer je de lokale kopie van de repository wilt actualiseren met alle door anderen doorgevoerde wijzigingen (via een `git pull upstream master`).
+
+
+**lokale files excluden van commits** Hiervoor kan niet de .gitignore worden gebruikt omdat dit bestand ook wordt ingecheckt en dit zou er dan voor zorgen dat de GitHub Actions workflows de gegenereerde bestanden niet kan committen.
+In een git repo kan je een .git/info/exclude file opnemen die hetzelfde werkt als de .gitignore. Alleen wordt deze niet gecommit waardoor het alleen voor de lokale repo geldt. De volgende regels moeten worden toegevoegd om de gegenereerde bestanden te excluden voor commit.
+
+Voorbeelden van te excluden mappen en bestanden:
+- specificatie/genereervariant/**
+- code/**
+- test/**
+- openapitools.json
+
+Omdat de gegenereerde bestanden al in git worden getracked, moet een extra actie worden uitgevoerd om de in de exclude file genoemde bestanden lokaal niet meer te tracken. Dit moet met de volgende bash statements:
+
+- git ls-files -z code | xargs -0 git update-index --assume-unchanged
+- git ls-files -z specificatie/genereervariant | xargs -0 git update-index --assume-unchanged
+
+Om een specifieke file te untracken moet de volgende statement worden gebruikt: git update-index --assume-unchanged <filepath> bijv. git update-index --assume-unchanged test/BRP-Bevragen-postman-collection.json.
+
+Hiermee worden merge conflicts in de gegenereerde bestanden voorkomen.
+
 
 # GitHub workflow (in de browser) voor open Standaarden
 De workflow voor open co-creatie aan standaarden werkt via "pull requests". Dit betekent dat je wijzigingen nooit direct maakt op de VNG Realisatie repository, zelfs niet direct op een branch in de VNG Realisatie repository.
@@ -222,7 +242,7 @@ De beheerder van de standaard zal dus de volgende handelingen doen voor een vers
 	* Scroll naar beneden naar "Merge pull request";
 	* Kies in die button de eerste van de 3 opties 'Create a merge commit';
 	* Wijzig indien gewenst de description van de merge en klik op 'Confirm merge'.
-	
+
 	Zie ook [dit youtube filmpje](https://www.youtube.com/watch?v=YhwBgYPfoVE).
 
 20. Ik wil een release uitbrengen van een repository.
