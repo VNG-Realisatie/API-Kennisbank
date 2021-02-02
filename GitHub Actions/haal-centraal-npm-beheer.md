@@ -160,6 +160,11 @@ Wil je met één statement alle packages updaten naar de meest recente versie, d
 - `ncu -u`. Met deze statement worden de npm package referenties in een package.json bestand ge-update naar de meest recente versie
 - `npm install`. Met deze statement worden de packages in de node_modules bestand geupdate aan de hand van het package.json bestand
 
+## Commit naar upstream repository
+
+Tijdens het hierboven beschreven proces wordt de folder 'node_modules' lokaal gegenereerd. Deze folder moet NIET gecommit worden naar de upstream repository. Committen naar de eigen fork van die repository wordt daarmee ook afgeraden omdat het dan erg lastig wordt de folder niet naar de upstream repository te committen.
+Je kunt voorkomen dat de betreffende folder gecommit wordt door hem in het '.gitignore' bestand te definiëren of hem simpelweg te verwijderen.
+
 [1]: https://stoplight.io/open-source/spectral/
 [2]: https://mvnrepository.com/artifact/io.swagger.codegen.v3/swagger-codegen-cli
 [3]: https://openapi-generator.tech/
