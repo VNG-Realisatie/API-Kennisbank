@@ -162,7 +162,7 @@ Wil je met één statement alle packages updaten naar de meest recente versie, d
 
 ## Commit naar upstream repository
 
-Tijdens het hierboven beschreven proces wordt de folder 'node_modules' lokaal gegenereerd. Deze folder moet NIET gecommit worden naar de upstream repository omdat het geen asset is van het project. Het vervult slechts lokaal een functie. Committen naar de eigen fork van die repository wordt daarmee ook afgeraden omdat het dan erg lastig wordt de folder niet naar de upstream repository te committen. Hoe je kunt voorkomen dat de betreffende folder gecommit wordt naar upstream kun je [hier][9] nalezen, meer informatie voor de te gebruiken syntax vind he weer [hier][10].
+Tijdens het hierboven beschreven proces wordt de folder 'node_modules' lokaal gegenereerd. Deze folder moet NIET gecommit worden naar de upstream repository omdat het geen asset is van het project. Het vervult slechts lokaal een functie. Committen naar de eigen fork van die repository wordt daarmee ook afgeraden omdat het dan erg lastig wordt de folder niet naar de upstream repository te committen. Hoe je kunt voorkomen dat de betreffende folder gecommit wordt naar upstream kun je [hier][9] nalezen, meer informatie voor de te gebruiken syntax vind je weer [hier][10].
 
 [1]: https://stoplight.io/open-source/spectral/
 [2]: https://mvnrepository.com/artifact/io.swagger.codegen.v3/swagger-codegen-cli
