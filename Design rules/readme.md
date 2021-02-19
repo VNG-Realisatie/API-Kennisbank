@@ -1,4 +1,7 @@
 # Design Rules VNGRealisatie
+
+## Inleiding
+
 In de onderliggende Design Rules zijn de inzichten vastgelegd die zijn opgedaan bij het ontwerpen en specificeren van API's binnen diverse projecten waar VNG Realisatie bij betrokken is.
 Deze Design Rules zijn binnen het team Standaarden besproken en er is consensus bereikt over het feit dat deze Design Rules toegepast worden op API-specificaties die door VNR Realisatie worden gemaakt of in beheer worden genomen.
 
@@ -9,9 +12,11 @@ Op het moment dat een nieuwe versie van een dergelijke  API-specificatie gepland
 
 Een nieuwe versie van een API specificatie met een breaking change houdt dus niet automatisch in dat deze is aangepast aan de Design Rules.
 
+## Landelijke API-strategie
+
 VNG conformeert zich aan de [Design Rules en de Rest-principes van de landelijke API-strategie](https://docs.geostandaarden.nl/api/API-Designrules/). Daar komen de onderstaande punten aan bod.
 
-_2.2 RESTful principles_
+_RESTful principles_
 
 - _API principle: operations are Safe and/or Idempotent_
 - _API principle: do not maintain state information at the server_
@@ -26,13 +31,13 @@ _2.2 RESTful principles_
 - _API principle: Publish documentation in Dutch unless there is existing documentation in English or there is an official English glossary available_
 - _API principle: Include a deprecation schedule when publishing API changes_
 
-_2.3.1 Best practice(s)_
+_Best practice(s)_
 - _API principle: Publish OAS at a base-URI in JSON-format_
 - _API principle: Allow for a (maximum) 1 year deprecation period to a new API version_
 - _API principle: Include only the major version number in the URI_
 
 
-3 Normative API Principles
+_Normative API Principles_
 
 - _3.1 API-01: Operations are Safe and/or Idempotent_
 - _3.2 API-02: Do not maintain state information at the server_
@@ -41,7 +46,7 @@ _2.3.1 Best practice(s)_
 - _3.5 API-05: Use plural nouns to indicate resources_
 - _3.6 API-06: Create relations of nested resources within the endpoint_
 - _3.7 API-09: Implement custom representation if supported_
-- _3.8 API-10: Implement operations that do not fit the CRUD model as sub-resources_ 
+- _3.8 API-10: Implement operations that do not fit the CRUD model as sub-resources_
 - _3.9 API-16: Use OAS 3.0 for documentation_
 - _3.10 API-17: Publish documentation in Dutch unless there is existing documentation in English or there is an official English glossary available_
 - _3.11 API-18: Include a deprecation schedule when publishing API changes_
@@ -50,12 +55,15 @@ _2.3.1 Best practice(s)_
 - _3.14 API-48: Leave off trailing slashes from API endpoints_
 - _3.15 API-51: Publish OAS at the base-URI in JSON-format_
 
+De [niet-normatieve extentions van de landelijke API-strategie](https://docs.geostandaarden.nl/api/API-Designrules/) worden behandeld als richtlijnen bij het opstellen van API-specificaties. Als er binnen VNG Realisatie een aanscherping is gedaan is deze in het volgende hoofdstuk opgenomen als VNG Design Rule. Daarbij wort ook een verwijzing opgenomen naar de betreffende extension.
+
+## VNG Design DesignRules
 
 ## 1. Redundantie in propertynamen wordt verwijderd
 
 Onderstaande Design Rules zijn een verbijzondering van paragraaf 6.1 van de [API DesignRules Extensions](https://docs.geostandaarden.nl/api/API-Strategie-ext/#field-names-in-snake_case-camelcase-uppercamelcase-or-kebab-case).
 
-### DD1.1 Geef een zo duidelijk mogelijke naam
+### DD1.1 Redundantie in propertynamen wordt verwijderd.
 Dit is het geval wanneer in een propertynaam de gegevensgroepnaam of resourcenaam waar deze zich in bevindt wordt herhaald.
 
 Bijvoorbeeld _verblijfstitelIngeschrevenNatuurlijkPersoon_ wordt _verblijfstitel_, _overlijdenIngeschrevenNatuurlijkPersoon_ wordt _overlijden_, _geboorteIngeschrevenNatuurlijkPersoon_ wordt _geboorte_, enz.
@@ -67,29 +75,30 @@ _**Ratio**_
 Datum opname : 17-02-2021
 Datum wijziging : 17-02-2021
 
-### DD1.2 URIs eindigen nooit op een trailing slash (“/”)
+### DR1.2 Redundantie in propertynamen wordt verwijderd.
 
-De URIs die gebruikt worden om collecties van objecten, of individuele objecten op te vragen, eindigen nooit op een trailing slash:
+We benoemen altijd zo duidelijk mogelijk wat iets is.
+Hoofdregel is altijd: propertynamen moeten zoveel mogelijk zelfverklarend zijn (lezen van de description om de betekenis te begrijpen is liefst niet nodig).
+Propertynamen zijn zo kort als mogelijk om toch voldoende duidelijk en onderscheidend te zijn en niet langer dan daarvoor nodig.
 
-Voorbeelden
+Ratio:
 
-Goed
-
-/api/v1/zaken
-/api/v1/zaken?identificatie=12345
-/api/v1/zaken/67890
-Fout
-
-/api/v1/zaken/
-/api/v1/zaken/?identificatie=12345
-/api/v1/zaken/67890/
-
-_**Ratio**_
-
-De DSO heeft hier geen expliciet standpunt over maar alle voorbeelden zijn zonder trailing slash. Daarnaast zijn veel commerciele APIs die dit voorbeeld volgen zoals Google en Facebook. Verschillende bronnen zijn hier wel over verdeeld, zoals REST API tutorial en Wikipedia maar er is gekozen om te kijken naar de praktijk en DSO.
+Het is voor developers van consumer-software van belang om zo snel mogelijk te begrijpen waar de content van het bericht over gaat.
 
 Datum opname : 17-02-2021
 Datum wijziging : 17-02-2021
+
+### DR1.3 Namen van properties zijn in lowerCamelCase
+
+Dit is een verbijzondering van [API-26](https://geonovum.github.io/KP-APIs/API-strategie-extensies/#api-26) uit de landelijke API-strategie Design Rule Extensions.
+
+Ratio: Consistentie in Casing van namen is voor zowel developers als designers prettiger werken.
+
+### DR1.4 Namen van schemacomponenten zijn in UpperCamelCase
+
+Voor de namen van componenten in het schema wordt UpperCamelCase toegepast en bevatten geen underscores.
+
+Ratio: Consistentie in Casing van namen is voor zowel developers als designers prettiger werken.
 
 ## 2. Waarden, Enumeraties en dynamische lijsten
 
