@@ -13,47 +13,42 @@ VNG conformeert zich aan de [Design Rules en de Rest-principes van de landelijke
 
 _2.2 RESTful principles_
 
-_API principle: operations are Safe and/or Idempotent_
+- _API principle: operations are Safe and/or Idempotent_
+- _API principle: do not maintain state information at the server_
+- _API principle: Only apply default HTTP operations_
+- _API principle: Leave off trailing slashes from API endpoints_
+- _API principle: Define interfaces in Dutch unless there is an official English glossary_
+- _API principle: Use plural nouns to indicate resources_
+- _API principle: Create relations of nested resources within the endpoint_
+- _API principle: Implement custom representation if supported_
+- _API principle: Implement operations that do not fit the CRUD model as sub-resources_
+- _API principle: Documentation conforms to OAS v3.0 or newer_
+- _API principle: Publish documentation in Dutch unless there is existing documentation in English or there is an official English glossary available_
+- _API principle: Include a deprecation schedule when publishing API changes_
 
-_API principle: do not maintain state information at the server_
-
-_API principle: Only apply default HTTP operations_
-
-_API principle: Leave off trailing slashes from API endpoints_
-
-_API principle: Define interfaces in Dutch unless there is an official English glossary_
-
-API principle: Use plural nouns to indicate resources
-API principle: Create relations of nested resources within the endpoint
-API principle: Implement custom representation if supported
-API principle: Implement operations that do not fit the CRUD model as sub-resources
-API principle: Documentation conforms to OAS v3.0 or newer
-API principle: Publish documentation in Dutch unless there is existing documentation in English or there is an official English glossary available
-API principle: Include a deprecation schedule when publishing API changes
-
-2.3.1 Best practice(s)
-API principle: Publish OAS at a base-URI in JSON-format
-API principle: Allow for a (maximum) 1 year deprecation period to a new API version
-API principle: Include only the major version number in the URI
+_2.3.1 Best practice(s)_
+- _API principle: Publish OAS at a base-URI in JSON-format_
+- _API principle: Allow for a (maximum) 1 year deprecation period to a new API version_
+- _API principle: Include only the major version number in the URI_
 
 
-3. Normative API Principles
+3 Normative API Principles
 
-3.1 API-01: Operations are Safe and/or Idempotent
-3.2 API-02: Do not maintain state information at the server
-3.3 API-03: Only apply default HTTP operations
-3.4 API-04: Define interfaces in Dutch unless there is an official English glossary
-3.5 API-05: Use plural nouns to indicate resources
-3.6 API-06: Create relations of nested resources within the endpoint
-3.7 API-09: Implement custom representation if supported
-3.8 API-10: Implement operations that do not fit the CRUD model as sub-resources
-3.9 API-16: Use OAS 3.0 for documentation
-3.10 API-17: Publish documentation in Dutch unless there is existing documentation in English or there is an official English glossary available
-3.11 API-18: Include a deprecation schedule when publishing API changes
-3.12 API-19: Allow for a maximum 1 year transition period to a new API version
-3.13 API-20: Include the major version number only in ihe URI
-3.14 API-48: Leave off trailing slashes from API endpoints
-3.15 API-51: Publish OAS at the base-URI in JSON-format_
+- _3.1 API-01: Operations are Safe and/or Idempotent_
+- _3.2 API-02: Do not maintain state information at the server_
+- _3.3 API-03: Only apply default HTTP operations_
+- _3.4 API-04: Define interfaces in Dutch unless there is an official English glossary_
+- _3.5 API-05: Use plural nouns to indicate resources_
+- _3.6 API-06: Create relations of nested resources within the endpoint_
+- _3.7 API-09: Implement custom representation if supported_
+- _3.8 API-10: Implement operations that do not fit the CRUD model as sub-resources_ 
+- _3.9 API-16: Use OAS 3.0 for documentation_
+- _3.10 API-17: Publish documentation in Dutch unless there is existing documentation in English or there is an official English glossary available_
+- _3.11 API-18: Include a deprecation schedule when publishing API changes_
+- _3.12 API-19: Allow for a maximum 1 year transition period to a new API version_
+- _3.13 API-20: Include the major version number only in ihe URI_
+- _3.14 API-48: Leave off trailing slashes from API endpoints_
+- _3.15 API-51: Publish OAS at the base-URI in JSON-format_
 
 
 ## 1. Redundantie in propertynamen wordt verwijderd
