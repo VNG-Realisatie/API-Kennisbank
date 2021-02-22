@@ -5,7 +5,7 @@
 In de onderliggende Design Rules zijn de inzichten vastgelegd die zijn opgedaan bij het ontwerpen en specificeren van API's binnen diverse projecten waar VNG Realisatie bij betrokken is.
 Deze Design Rules zijn binnen het team Standaarden besproken en er is consensus bereikt over het feit dat deze Design Rules toegepast worden op API-specificaties die door VNR Realisatie worden gemaakt of in beheer worden genomen.
 
-Dit is een levende set van Design Rules die beïnvloed kan worden door voortschrijdend inzicht en door technologische ontwikkelingen.
+Dit is een levende set van Design Rules die beïnvloed kan worden door voortschrijdend inzicht en door technologische ontwikkelingen. We houden bij een Design Rule bij wanneer we deze hebben toegevoegd, wanneer die is gewijzigd en indien van toepassing wanneer deze is afgevoerd. Door een opmerking te plaatsen en de datum van afvoeren toe te voegen.
 
 Om die reden kan het zijn dat de specificaties die door VNG Realisatie zijn opgesteld of in beheer zijn genomen niet voldoen aan alle Design Rules.
 Op het moment dat een nieuwe versie van een dergelijke  API-specificatie gepland wordt waarmee breaking changes worden doorgevoerd bepaalt de betreffende designer of dat een kans is om correcties door te voeren waardoor de API weer voldoet aan de onderstaande Design Rules.
@@ -81,9 +81,7 @@ We benoemen altijd zo duidelijk mogelijk wat iets is.
 Hoofdregel is altijd: propertynamen moeten zoveel mogelijk zelfverklarend zijn (lezen van de description om de betekenis te begrijpen is liefst niet nodig).
 Propertynamen zijn zo kort als mogelijk om toch voldoende duidelijk en onderscheidend te zijn en niet langer dan daarvoor nodig.
 
-Ratio:
-
-Het is voor developers van consumer-software van belang om zo snel mogelijk te begrijpen waar de content van het bericht over gaat.
+_**Ratio:**_ Het is voor developers van consumer-software van belang om zo snel mogelijk te begrijpen waar de content van het bericht over gaat.
 
 Datum opname : 17-02-2021
 Datum wijziging : 17-02-2021
@@ -92,13 +90,34 @@ Datum wijziging : 17-02-2021
 
 Dit is een verbijzondering van [API-26](https://geonovum.github.io/KP-APIs/API-strategie-extensies/#api-26) uit de landelijke API-strategie Design Rule Extensions.
 
-Ratio: Consistentie in Casing van namen is voor zowel developers als designers prettiger werken.
+_**Ratio:**_ Consistentie in Casing van namen is voor zowel developers als designers prettiger werken.
+
+Datum opname : 17-02-2021
+Datum wijziging : 17-02-2021
 
 ### DR1.4 Namen van schemacomponenten zijn in UpperCamelCase
 
 Voor de namen van componenten in het schema wordt UpperCamelCase toegepast en bevatten geen underscores.
 
-Ratio: Consistentie in Casing van namen is voor zowel developers als designers prettiger werken.
+_**Ratio:**_ Consistentie in Casing van namen is voor zowel developers als designers prettiger werken.
+
+Datum opname : 17-02-2021
+Datum wijziging : 17-02-2021
+
+### DD1.5 Enumeratie-waarden zijn in snake_case
+
+Voor de waarden van enumeraties wordt snake_case toegepast. Deze bevatten dus alleen kleine letters, cijfers en underscores. Geen spaties, geen speciale tekens en geen hoofdletters.
+
+_**Ratio:**_ In sommige development-omgevingen leveren hoofdletters, spaties of speciale tekens in enumeratie-waarden een probleem op met code-genereren.
+
+Datum opname : 17-02-2021
+Datum wijziging : 17-02-2021
+
+### DD1.6 Namen van endpoints en url's bevatten alleen kleine letters
+
+Voor de namen van endpoints, url's worden alleen kleine letters gebruikt.
+
+_**Ratio:**_ Domein namen zijn case insensitive volgens [RFC 4343](https://tools.ietf.org/html/rfc4343). Om duidelijkheid te creëren over de aanroep van de endpoints wordt de url lower case gedefinieerd.
 
 ## 2. Waarden, Enumeraties en dynamische lijsten
 
