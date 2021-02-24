@@ -102,6 +102,14 @@ Omdat de *openapi2postmanv2* package geen mappen aanmaakt, wordt dit gedaan met 
 
 Dit script wordt bij aanroep van het *oas:generate-postman-collection* script eerst uitgevoerd door het script dezelfde naam (oas:generate-postman-collection) te geven en `pre` aan het begin van de naam toe te voegen.
 
+_**Let op!**_: in het script
+
+``` bash
+"oas:generate-postman-collection": "openapi2postmanv2 -s ./specificatie/genereervariant/openapi.yaml -o ./test/BRK-Bevragen-postman-collection.json --pretty"
+```
+
+bevat de bestandsnaam  `./test/BRK-Bevragen-postman-collection.json` een referentie naar een specifiek project. Dit moet natuurlijk aangepast worden als dit script in een geheel andere repository wordt geïmplementeerd. Let er dan op dat ook de verwijzing naar hetzelfde bestand in het bestand `.github/workflows/generate-postman-collection.yml`
+wordt aangepast.
 #### Genereren van client code
 
 Voor het genereren van client code in .NET (Core en Full Framework versie), JAVA en Python wordt de volgende scripts gebruikt:
