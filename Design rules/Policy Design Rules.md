@@ -9,34 +9,38 @@ Extensions hebben geen officiële status, ze kunnen worden gezien als potentiël
 Het toepassen van Design Rules en Extensions is aan de volgende regels gebonden:
 
 1. Bij het vervaardigen van API specificaties houden we ons aan [de Design Rules zoals gedefinieerd in de Nederlandse API Strategie](https://docs.geostandaarden.nl/api/API-Designrules/);
-2. Daarbij kijken we tevens in hoeverre [de Extensions van de Nederlandse API Strategie](https://docs.geostandaarden.nl/api/API-Strategie-ext/) van toepassing zijn. In een Design Decision van het project waarin de API specificatie wordt vervaardigd beschrijven we aan welke Extensions we ons houden;
-3. Tevens houden we ons aan [de Design Rules van VNG Realisatie](https://github.com/VNG-Realisatie/API-Kennisbank/blob/master/Design%20rules/readme.md);
-4. Tenslotte kijken we ook in hoeverre de Extensions op de Design Rules van VNG Realisatie van toepassing zijn voor het project. Ook hier bschrijven we in een Design Decision van het project weer aan welke Extensions we ons houden;
+2. Tevens houden we ons aan [de Design Rules van VNG Realisatie](https://github.com/VNG-Realisatie/API-Kennisbank/blob/master/Design%20rules/readme.md);
+3. Waar mogelijk volgen we [de Extensions van de Nederlandse API Strategie](https://docs.geostandaarden.nl/api/API-Strategie-ext/) van toepassing zijn. In een Design Decision van het project waarin de API specificatie wordt vervaardigd beschrijven we aan welke Extensions we ons houden;
+
+Als vanuit project-belang wordt overwogen om een Design Rule (landelijk of VNG) niet toe te passen dan worden de argumenten waarom dat binnen het project niet wordt gedaan gedocumenteerd. Die argumenten worden binnen het team besproken.
 
 ## Het toevoegen, wijzigen of verwijderen van VNG Realisatie Design Rules
 
 Zoals al gesteld in [de Design Rules van VNG Realisatie](https://github.com/VNG-Realisatie/API-Kennisbank/blob/master/Design%20rules/readme.md) kunnen Design Rules onderhevig zijn aan voortschrijdend inzicht en technologische ontwikkelingen. 
-Het kan dus noodzakelijk blijken een Design Rule te wijzigen of verwijderen. Ook kan er behoefte aan een nieuwe Design Rule ontstaan. Over het algemeen zal deze behoefte in een project naar voren komen. 
-In dat geval handelen we als volgt:
+Het kan dus noodzakelijk blijken een Design Rule te wijzigen of te verwijderen. Ook kan er behoefte aan een nieuwe Design Rule ontstaan, een behoefte die over het algemeen in een project naar voren zal komen en die daar dan als een Design Decision wordt gedocumenteerd.
 
-1. Er wordt in de onderliggende GitHub repository een issue ingediend met het label 'Design Rule'. 
+Het proces voor het wijzigen, verwijderen van een bestaande of opvoeren van een nieuwe Design Rule is als volgt:
+
+1. Er wordt in de API-Kennisbank repository een issue ingediend met het label 'Design Rule'. 
 2. Indien het om een voorstel voor een nieuwe Design Rule gaat wordt deze zo duidelijk mogelijk beschreven, zo mogelijk voorzien van voorbeelden en ratio;
 3. Indien het om een voorstel tot wijziging gaat wordt beschreven welke Design Rule moet worden gewijzigd, wat die wijziging inhoudt en wat daarvoor de ratio is;
 4. Betreft het een verwijderingsvoorstel dan wordt beschreven welke Design Rule het betreft en wat de reden is van het verzoek;
 5. Het issue wordt assigned aan alle medewerkers van het Kenniscentrum Standaarden;
-6. Het issue wordt geagendeerd als onderwerp van het teamoverleg Kenniscentrum Standaarden waar wordt besloten of het voorstel wordt gehonoreerd. 
-In de periode tussen het opvoeren van het issue en het besluit wordt in de projecten niet vooruitgelopen op dat besluit. 
-Aanpassingen n.a.v. het honoreren van het voorstel worden dus pas aangebracht nadat het voorstel gehonoreerd is.
+6. Indien mogelijk wordt de inhoudelijke discussie digitaal gevoerd en beslecht middels github comments. Als dat niet lukt, dan wordt het issue als onderwerp van het teamoverleg Kenniscentrum Standaarden geagendeerd;
+7. In dat overleg wordt besloten of het voorstel wordt gehonoreerd. 
+
+M.b.t. het wijzigen en verwijderen van Design Rules wordt in de periode tussen het opvoeren van het issue en het besluit in de projecten niet vooruitgelopen op dat besluit. Aanpassingen n.a.v. het honoreren van het voorstel worden dus pas aangebracht nadat het voorstel is gehonoreerd.
+
+Voorwaarde daarvoor is wel een pro-actieve houding in de discussie van de medewerkers van Kenniscentrum Standaarden. Zo'n aanpassing kan voor een project nl. erg urgent zijn, dus het niet vooruitlopen op een beslissing kan problematisch zijn. Als het team het niet eens wordt over de wijziging of verwijdering van de Design Rule mag wel vooruitgelopen worden in een project. In dat geval dient dit feit wel als een Design Decision van je project te worden gedocumenteerd.
 
 ## Voordracht VNG Realisatie Design Rules voor Landelijke API Strategie
 
 Design Rules van VNG Realisatie kunnen door het Kenniscentrum Standaarden worden aangeboden aan de werkgroep 'API design rules' van het Kennisplatform API's.
 Eenieder kan daartoe een verzoek indienen. De te volgen procedure is daarbij als volgt:
 
-1. Er wordt in de onderliggende GitHub repository een issue ingediend met het label 'Design Rule'.
-2. Er wordt beschreven om welke Design Rule het gaat en waarom men van mening is dat de betreffende Design Rule opgetild moet worden naar landelijk niveau.
+1. Er wordt in de API-kennisbank repository een issue ingediend met het label 'Kandidaat DR landelijke API_strategie';
+2. Het voorstel voor de Design Rule, inclusief de ratio wordt beschreven en daarbij wordt tevens de argumentatie waarom deze opgenomen moet worden in de landelijke API-strategie opgenomen;
 3. Het issue wordt assigned aan alle medewerkers van het Kenniscentrum Standaarden;
-4. Het issue wordt geagendeerd als onderwerp van het teamoverleg Kenniscentrum Standaarden waar wordt besloten of het voorstel wordt gehonoreerd. 
-5. Indien het voorstel akkoord wordt bevonden zal de daarvoor verantwoordelijke mederwerker (op dit moment Henri Korver) er voor zorgdragen dat de betreffende Design Rule wordt aangeboden aan de genoemde werkgroep.
-
-Alleen Design Rules van VNG Realisatie kunnen voorgedragen worden als kandidaat Design Rule van de Nederlandse API Strategie. Een Extension van VNG Realisatie kan dus niet voorgedragen worden.
+4. Indien mogelijk wordt de inhoudelijke discussie digitaal gevoerd en beslecht middels github comments. Als dat niet lukt, dan wordt het issue als onderwerp van het teamoverleg Kenniscentrum Standaarden geagendeerd;
+5. In dat overleg wordt besloten of het voorstel wordt gehonoreerd; 
+6. Indien het voorstel akkoord wordt bevonden zal de daarvoor verantwoordelijke medewerker (op dit moment Henri Korver) er voor zorgdragen dat de betreffende Design Rule wordt aangeboden aan de genoemde werkgroep.
