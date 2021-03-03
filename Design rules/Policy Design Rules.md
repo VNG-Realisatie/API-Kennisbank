@@ -25,9 +25,20 @@ Het proces voor het wijzigen, verwijderen van een bestaande of opvoeren van een 
 2. Indien het om een voorstel voor een nieuwe Design Rule gaat wordt deze zo duidelijk mogelijk beschreven, zo mogelijk voorzien van voorbeelden en ratio;
 3. Indien het om een voorstel tot wijziging gaat wordt beschreven welke Design Rule moet worden gewijzigd, wat die wijziging inhoudt en wat daarvoor de ratio is;
 4. Betreft het een verwijderingsvoorstel dan wordt beschreven welke Design Rule het betreft en wat de reden is van het verzoek;
-5. Het issue wordt assigned aan alle medewerkers van het Kenniscentrum Standaarden;
-6. Indien mogelijk wordt de inhoudelijke discussie digitaal gevoerd en beslecht middels github comments. Als dat niet lukt, dan wordt het issue als onderwerp van het teamoverleg Kenniscentrum Standaarden geagendeerd;
-7. In dat overleg wordt besloten of het voorstel wordt gehonoreerd. 
+5. Vervolgens wordt er in een eerste reactie een lijstje met initialen van de medewerkers van het Kenniscentrum Standaarden op deze wijze geplaatst:
+
+> JB: <br/>
+> HK: <br/>
+> RM: <br/>
+> MV: <br/>
+> GJ: <br/>
+> JBi: <br/>
+
+6. Het issue wordt assigned aan alle medewerkers van het Kenniscentrum Standaarden;
+7. Elke medewerker geeft vervolgens z.s.m. in de lijst met initialen achter zijn initialen aan hoe hij over het issue denkt ('Overnemen', 'Bespreken', 'Geen mening', 'Toelichting gewenst). 
+8. Kan iedereen zich vinden in het issue dan wordt het zonder verdere discussie doorgevoerd;
+9. Indien dat niet het geval is dan wordt zo mogelijk de inhoudelijke discussie digitaal gevoerd en beslecht middels github comments. Als dat niet lukt, dan wordt het issue als onderwerp van het teamoverleg Kenniscentrum Standaarden geagendeerd;
+10. In dat overleg wordt besloten of het voorstel wordt gehonoreerd. 
 
 M.b.t. het wijzigen en verwijderen van Design Rules wordt in de periode tussen het opvoeren van het issue en het besluit in de projecten niet vooruitgelopen op dat besluit. Aanpassingen n.a.v. het honoreren van het voorstel worden dus pas aangebracht nadat het voorstel is gehonoreerd.
 
@@ -40,7 +51,18 @@ Eenieder kan daartoe een verzoek indienen. De te volgen procedure is daarbij als
 
 1. Er wordt in de API-kennisbank repository een issue ingediend met het label 'Kandidaat DR landelijke API_strategie';
 2. Het voorstel voor de Design Rule, inclusief de ratio wordt beschreven en daarbij wordt tevens de argumentatie waarom deze opgenomen moet worden in de landelijke API-strategie opgenomen;
-3. Het issue wordt assigned aan alle medewerkers van het Kenniscentrum Standaarden;
-4. Indien mogelijk wordt de inhoudelijke discussie digitaal gevoerd en beslecht middels github comments. Als dat niet lukt, dan wordt het issue als onderwerp van het teamoverleg Kenniscentrum Standaarden geagendeerd;
-5. In dat overleg wordt besloten of het voorstel wordt gehonoreerd; 
-6. Indien het voorstel akkoord wordt bevonden zal de daarvoor verantwoordelijke medewerker (op dit moment Henri Korver) er voor zorgdragen dat de betreffende Design Rule wordt aangeboden aan de genoemde werkgroep.
+3. Vervolgens wordt er in een eerste reactie een lijstje met initialen van de medewerkers van het Kenniscentrum Standaarden op deze wijze geplaatst:
+
+> JB: <br/>
+> HK: <br/>
+> RM: <br/>
+> MV: <br/>
+> GJ: <br/>
+> JBi: <br/>
+
+4. Het issue wordt assigned aan alle medewerkers van het Kenniscentrum Standaarden;
+5. Elke medewerker geeft vervolgens z.s.m. in de lijst met initialen achter zijn initialen aan hoe hij over het issue denkt ('Overnemen', 'Bespreken', 'Geen mening', 'Toelichting gewenst). 
+6. Kan iedereen zich vinden in het issue dan zal de daarvoor verantwoordelijke medewerker (op dit moment Henri Korver) er voor zorgdragen dat de betreffende Design Rule wordt aangeboden aan de genoemde werkgroep;
+7. Indien dat niet het geval is dan wordt zo mogelijk de inhoudelijke discussie digitaal gevoerd en beslecht middels github comments. Als dat niet lukt, dan wordt het issue als onderwerp van het teamoverleg Kenniscentrum Standaarden geagendeerd;
+8. In dat overleg wordt besloten of het voorstel wordt gehonoreerd; 
+9. Indien het voorstel akkoord wordt bevonden zal de daarvoor verantwoordelijke medewerker er voor zorgdragen dat de betreffende Design Rule wordt aangeboden aan de genoemde werkgroep.
