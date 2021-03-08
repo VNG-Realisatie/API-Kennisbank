@@ -58,7 +58,7 @@ Om het gebruiken van de benodigde tools te vergemakkelijken en om de aanroep te 
 "oas:lint-genereervariant": "spectral lint ./specificatie/genereervariant/openapi.yaml"
 ```
 
-Standaard gebruikt Spectral een bestand met naam **.spectral.yml** in de project root als ruleset bestand. Als deze niet bestaat, wordt de [ingebouwde ruleset][9] gebruikt. De Haal Centraal projecten hebben elk een eigen **.spectral.yml** bestand met een verwijzing naar het **.spectral.yml** bestand van de Haal Centraal Common repo. Hiermee wordt bewerkstelligd dat alle Haal Centraal projecten dezelfde ruleset gebruiken, maar is het in elk Haal Centraal project mogelijk om van de standaard ruleset af te wijken. Zie voor het implementeren van eigen rules de [documentatie][10] van Spectral.
+Standaard gebruikt Spectral een bestand met naam **.spectral.yml** in de project root als ruleset bestand. Als deze niet bestaat, wordt de [ingebouwde ruleset][11] gebruikt. De Haal Centraal projecten hebben elk een eigen **.spectral.yml** bestand met een verwijzing naar het **.spectral.yml** bestand van de Haal Centraal Common repo. Hiermee wordt bewerkstelligd dat alle Haal Centraal projecten dezelfde ruleset gebruiken, maar is het in elk Haal Centraal project mogelijk om van de standaard ruleset af te wijken. Zie voor het implementeren van eigen rules de [documentatie][12] van Spectral.
 
 #### Resolven van de externe referenties in het openapi.yaml bestand
 
@@ -173,7 +173,11 @@ Wil je met één statement alle packages updaten naar de meest recente versie, d
 
 - `npm install -g npm-check-updates`. Hiermee wordt de npm-check-updates npm package globaal geïnstalleerd. Met deze npm package wordt alle npm package referenties in een package.json bestand ge-update naar de meest recente versie
 - `ncu -u`. Met deze statement worden de npm package referenties in een package.json bestand ge-update naar de meest recente versie
-- `npm install`. Met deze statement worden de packages in de node_modules bestand geupdate aan de hand van het package.json bestand
+- `npm install`. Met deze statement worden de packages in de node_modules folder geupdate aan de hand van het package.json bestand
+
+## Commit naar upstream repository
+
+Tijdens het hierboven beschreven proces wordt de folder 'node_modules' lokaal gegenereerd. Deze folder moet NIET gecommit worden naar de upstream repository omdat het geen asset is van het project. Het vervult slechts lokaal een functie. Committen naar de eigen fork van die repository wordt daarmee ook afgeraden omdat het dan erg lastig wordt de folder niet naar de upstream repository te committen. Hoe je kunt voorkomen dat de betreffende folder gecommit wordt naar upstream kun je [hier][9] nalezen, meer informatie voor de te gebruiken syntax vind je weer [hier][10].
 
 [1]: https://stoplight.io/open-source/spectral/
 [2]: https://mvnrepository.com/artifact/io.swagger.codegen.v3/swagger-codegen-cli
@@ -183,5 +187,7 @@ Wil je met één statement alle packages updaten naar de meest recente versie, d
 [6]: https://github.com/isaacs/node-mkdirp
 [7]: https://typicode.github.io/husky
 [8]: https://nodejs.org/en/download/
-[9]: https://meta.stoplight.io/docs/spectral/docs/reference/openapi-rules.md
-[10]: https://meta.stoplight.io/docs/spectral/docs/guides/4-custom-rulesets.md
+[9]: https://docs.github.com/en/github/using-git/ignoring-files
+[10]: https://git-scm.com/docs/gitignore
+[11]: https://meta.stoplight.io/docs/spectral/docs/reference/openapi-rules.md
+[12]: https://meta.stoplight.io/docs/spectral/docs/guides/4-custom-rulesets.md
