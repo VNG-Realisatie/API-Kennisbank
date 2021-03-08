@@ -58,6 +58,8 @@ Om het gebruiken van de benodigde tools te vergemakkelijken en om de aanroep te 
 "oas:lint-genereervariant": "spectral lint ./specificatie/genereervariant/openapi.yaml"
 ```
 
+Standaard gebruikt Spectral een bestand met naam **.spectral.yml** in de project root als ruleset bestand. Als deze niet bestaat, wordt de [ingebouwde ruleset][11] gebruikt. De Haal Centraal projecten hebben elk een eigen **.spectral.yml** bestand met een verwijzing naar het **.spectral.yml** bestand van de Haal Centraal Common repo. Hiermee wordt bewerkstelligd dat alle Haal Centraal projecten dezelfde ruleset gebruiken, maar is het in elk Haal Centraal project mogelijk om van de standaard ruleset af te wijken. Zie voor het implementeren van eigen rules de [documentatie][12] van Spectral.
+
 #### Resolven van de externe referenties in het openapi.yaml bestand
 
 Met het volgende script wordt het resolven van het openapi.yaml bestand uitgevoerd. Er worden twee geresolve-de varianten gegenereerd, een yaml en json variant
@@ -101,6 +103,19 @@ Omdat de *openapi2postmanv2* package geen mappen aanmaakt, wordt dit gedaan met 
 ```
 
 Dit script wordt bij aanroep van het *oas:generate-postman-collection* script eerst uitgevoerd door het script dezelfde naam (oas:generate-postman-collection) te geven en `pre` aan het begin van de naam toe te voegen.
+
+<dl>
+  <dt>Let op!</dt>
+  <dd><i>In het script</i>
+
+``` bash
+"oas:generate-postman-collection": "openapi2postmanv2 -s ./specificatie/genereervariant/openapi.yaml -o ./test/BRK-Bevragen-postman-collection.json --pretty"
+```
+
+<i>bevat de bestandsnaam  `./test/BRK-Bevragen-postman-collection.json` een referentie naar een specifiek project. Dit moet natuurlijk aangepast worden als dit script in een geheel andere repository wordt geïmplementeerd. Let er dan op dat ook de verwijzing naar hetzelfde bestand in het bestand `.github/workflows/generate-postman-collection.yml`
+wordt aangepast.</i>
+  </dd>
+</dl>
 
 #### Genereren van client code
 
@@ -174,3 +189,5 @@ Tijdens het hierboven beschreven proces wordt de folder 'node_modules' lokaal ge
 [8]: https://nodejs.org/en/download/
 [9]: https://docs.github.com/en/github/using-git/ignoring-files
 [10]: https://git-scm.com/docs/gitignore
+[11]: https://meta.stoplight.io/docs/spectral/docs/reference/openapi-rules.md
+[12]: https://meta.stoplight.io/docs/spectral/docs/guides/4-custom-rulesets.md
