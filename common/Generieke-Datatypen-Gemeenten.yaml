@@ -4,6 +4,9 @@ info:
   description: |
     De definitie van generieke datatypen die worden gebruikt door gemeentelijke API's.
     Deze datatypen komen overeen met het basismodel Generieke Datatype Gemeenten waarnaar verwezen wordt vanuit informatiemodellen.
+    Bij het opstellen van de JSON schema-componenten worden de naamgevingsconventies van het BSM toegepast.
+    Er zijn dus (verklaarbare) verschillen tussen de namen in het basismodel en dit Json Schema.
+
     Er worden uit dit bestand met herbruikbare componenten geen componenten verwijderd.
     Als een component in de toekomst niet meer hergebruik mag worden dan wordt het deprecated verklaard.
   version: '1.0.0'
@@ -20,6 +23,14 @@ components:
       type: "string"
       minLength: 36
       maxLength: 36
+      pattern: ^[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}$
+      description: |
+                    Een UUID is een nummer van 128 bits (= 16 bytes). UUID wordt weergegeven in 32 hexadecimale cijfers. Deze cijfers zijn ingedeeld in vijf groepen, in ongelijk aantal en gescheiden door koppeltekens: 8-4-4-4-12
+                    In zijn geheel wordt een UUID dus door 36 tekens gevormd, waarvan 32 hexadecimale karakters en vier streepjes:
+
+                    550e8400-e29b-41d4-a716-446655440000
+
+                    https://tools.ietf.org/html/rfc4122
       example: "123e4567-e89b-12d3-a456-426614174000"
     OIN:
       type: "string"
@@ -31,7 +42,7 @@ components:
     DatumOnvolledig:
       type: "object"
       description: |
-                    Gegevens over de datums die mogelijk niet volledig zijn.
+                    Onderdelen van een datum die wel bekend zijn terwijl er geen valide datum samen te stellen is omdat dag of jaar of maand (of een combinatie daarvan) onbekend is.
       properties:
         dag:
           type: "integer"
