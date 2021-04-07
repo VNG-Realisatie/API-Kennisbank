@@ -59,7 +59,7 @@ De [niet-normatieve extentions van de landelijke API-strategie](https://docs.geo
 
 ## VNG Design DesignRules
 
-## 1. Redundantie in propertynamen wordt verwijderd
+## 1. Algemene Design Rules
 
 Onderstaande Design Rules zijn een verbijzondering van paragraaf 6.1 van de [API DesignRules Extensions](https://docs.geostandaarden.nl/api/API-Strategie-ext/#field-names-in-snake_case-camelcase-uppercamelcase-or-kebab-case).
 
@@ -104,7 +104,146 @@ _**Ratio:**_ Consistentie in Casing van namen is voor zowel developers als desig
 Datum opname : 17-02-2021
 Datum wijziging : 17-02-2021
 
-### DD1.5 Enumeratie-waarden zijn in snake_case
+### DD1.5 Namen van endpoints en url's bevatten alleen kleine letters
+
+Voor de namen van endpoints, url's worden alleen kleine letters gebruikt.
+
+_**Ratio:**_ Domein namen zijn case insensitive volgens [RFC 4343](https://tools.ietf.org/html/rfc4343). Om duidelijkheid te creëren over de aanroep van de endpoints wordt de url lower case gedefinieerd.
+
+### DD1.6 Identificatie van een resource zit altijd op het hoogste niveau van de resource
+
+De identificatie van een resource zit  altijd op het hoogste niveau van de resource. Als de identificatie als parameter wordt gebruikt is dat in de vorm en inhoud zoals de identificatie is opgenomen in de resource
+
+### DD1.7 Neem voor properties geen waarden op met een speciale betekenis
+
+We nemen geen waarden op met een speciale betekenis die afwijkt van de normale betekenis van het gegeven.
+
+bijvoorbeeld datum "0000-00-00" om aan te geven dat een datum onbekend is
+bijvoorbeeld landcode "0000" om aan te geven dat het land onbekend is
+
+Ratio: Als er informatie beschikbaar is moet die als zondanig onderkend en gemodelleerd worden.
+
+### DD1.8 De description van een property moet semantisch overeenkomen met de betekenis van het gegeven in een gegevenswoordenboek (infromatiemodel)
+
+We nemen bij een property een description op die semantisch overeenkomt met de beschrijving in het gegevenswoordenboek. Deze kan ingekort, vereenvoudigd, of uitgebreid zijn, maar mag de betekenis van het gegeven niet laten afwijken van de betekenis van het corresponderende gegeven in het gegevenswoordenboek.
+
+De description kan worden weggelaten wanneer evident is dat de gebruikers van de API uit de propertynaam weten wat bedoeld wordt (bijvoorbeeld huisnummer).
+
+_**Ratio:**_ Om de description leesbaar te houden voor developers kan ervoor gekozen worden deze in te korten of
+binnen de context te vereenvoudigen.
+
+### DD1.9 Plaats bij het gebruik van 'allOf' het hergebruikte component als eerste.
+
+Bij het gebruik van 'allOf' staat de component die hergebruikt wordt altijd eerst, en staan de toegevoegde properties als tweede.
+
+Voorbeeld van het correct gebruik van 'allOf':
+
+```NaamPersoon:
+       allOf:
+         - $ref: "#/components/schemas/Naam"
+         - description: "Gegevens over de naam van de persoon"
+           properties:
+             aanhef:
+               type: "string"  
+```
+
+Voorbeeld van _**foutief**_ gebruik van 'allOf':
+```
+ 	NaamPersoon:
+ 	      allOf:
+ 	        - description: "Gegevens over de naam van de persoon"
+ 	          properties:
+ 	            aanhef:
+ 	              type: "string"
+ 	        - $ref: "#/components/schemas/Naam"
+```
+
+_**Ratio:**_ Afwijken van deze regel leidt tot problemen bij het genereren van code uit de API specificaties.
+
+### DD1.10 Bij het gebruik van 'allOf' is er slechts 1 component waarnaar gerefereerd wordt
+
+Bij gebruik van allOf is er altijd exact één component waarnaar gerefereerd wordt en één gedefinieerd object met ten minste één property.
+
+Voorbeeld van het foutief gebruik van allOf:
+
+```
+     NaamPersoon:
+       allOf:
+         - $ref: "#/components/schemas/Naam"
+         - $ref: "#/components/schemas/Aanschrijfwijze"
+         - description: "Gegevens over de naam van de persoon"
+           properties:
+             aanhef:
+               type: "string"
+```
+
+Er wordt hier uit twee componenten overgeërfd wat niet correct is.
+
+Voorbeeld van het foutief gebruik van allOf:
+```
+     NaamPersoon:
+       allOf:
+         - $ref: "#/components/schemas/Naam"
+         - description: "Gegevens over de naam van de persoon"
+```
+
+NaamPersoon heeft geen eigen properties wat niet correct is.
+
+Voorbeeld van correct gebruik van allOf:
+
+```
+     Naam:
+      type: "object"
+      properties:
+        geslachtsnaam:
+          type: "string"
+          description: |
+                        De achternaam van een persoon.
+          example: "Vries"
+        voorletters:
+          type: "string"
+          description: |
+                        De voorletters van de persoon, afgeleid van de voornamen.
+          example: "P.J."
+
+      NaamPersoon:
+       allOf:
+         - $ref: "#/components/schemas/Naam"
+         - description: "Gegevens over de naam van de persoon"
+           properties:
+             aanhef:
+               type: "string"
+             aanschrijfwijze:
+               type: "string"
+```
+
+## 2. Waarden, Enumeraties en dynamische lijsten
+
+### DD2.1 Voor het uitdrukken van tijdsduur gebruiken we de ISO-8601 standaard
+Voor een element van een referentielijst-type, wordt in de response zowel de code als de omschrijving opgenomen. Dit betreft dynamische lijsten (tabellen) met een code en waarde, zoals "Tabel 32 Nationaliteitentabel".
+
+_**Ratio:**_
+
+Dit is een veelgebruikte internationale standaard.
+
+Datum opname : 17-02-2021
+Datum wijziging : 17-02-2021
+
+### DD2.2 Gebruik een boolean voor Ja/Nee of waar/onwaar
+
+Eigenschappen die functioneel alleen de waarde Ja/aan/waar of Nee/uit/onwaar kunnen hebben, worden gedefinieerd als boolean. We gebruiken dus geen enumeratie zoals [J,N] voor dit soort situaties.
+
+_**Ratio**_
+
+Een boolean is technisch eenduidiger en beter verwerkbaar voor developers.
+
+### DD2.3 Dynamische domeinwaarden worden in de query-parameters met de code opgenomen
+
+Voor een query-parameter waarin een entry uit een waardelijst of een landelijke tabel als selectie-criterium wordt gebruikt wordt de code van de entry gebruikt.
+
+_**Ratio:**_ De omschrijving is human readable tekst. Daar kunnen verschillen in staan, bijvoorbeeld hoofd- of kleine letters. Voor een computer een verschil, voor een mens niet. Daarnaast levert het gebruik van codes ook kortere URL's op.
+
+### DD2.4 Enumeratie-waarden zijn in snake_case
 
 Voor de waarden van enumeraties wordt snake_case toegepast. Deze bevatten dus alleen kleine letters, cijfers en underscores. Geen spaties, geen speciale tekens en geen hoofdletters.
 
@@ -113,23 +252,6 @@ _**Ratio:**_ In sommige development-omgevingen leveren hoofdletters, spaties of 
 Datum opname : 17-02-2021
 Datum wijziging : 17-02-2021
 
-### DD1.6 Namen van endpoints en url's bevatten alleen kleine letters
-
-Voor de namen van endpoints, url's worden alleen kleine letters gebruikt.
-
-_**Ratio:**_ Domein namen zijn case insensitive volgens [RFC 4343](https://tools.ietf.org/html/rfc4343). Om duidelijkheid te creëren over de aanroep van de endpoints wordt de url lower case gedefinieerd.
-
-## 2. Waarden, Enumeraties en dynamische lijsten
-
-### DD2.1 Voor het uitdrukken van tijdsduur gebruiken we de ISO-8601 standaard
-Voor een element van een referentielijst-type, wordt in de response zowel de code als de omschrijving opgenomen. Dit betreft dynamische lijsten (tabellen) met een code en waarde, zoals "Tabel 32 Nationaliteitentabel".
-
-_**Ratio**_
-
-Dit is een veelgebruikte internationale standaard.
-
-Datum opname : 17-02-2021
-Datum wijziging : 17-02-2021
 
 ## 3. HAL, embedding en links
 
