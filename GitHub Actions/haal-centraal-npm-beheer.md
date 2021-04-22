@@ -169,9 +169,17 @@ Wil je met één statement alle packages updaten naar de meest recente versie, d
 [7]: https://typicode.github.io/husky
 [8]: https://nodejs.org/en/download/
 
+## Secrets (USER_TOKEN vs GITHUB_TOKEN)
+
+Een secret is een ge-encrypte omgevingsvariabele waarin acces tokens zijn vastgelegd. Deze variabele kan gebruikt worden in een workflow action zodat deze de rechten krijgt om te doen waar deze voor opgesteld is. Een action wordt dus als een gebruiker behandeld. In onze omgevingen maken we gebruik van een tweetal secrets:
+* USER_TOKEN
+* GITHUB_TOKEN
+
+De eerste vertegenwoordigd een specifieke gebruiker en een action die daarmee is uitgerust kan dus alleen handelingen uitvoeren waartoe die betreffende gebruiker ook gerechtigd is. De tweede is niet gekoppeld aan een gebruiker en heeft een aantal standaard rechten die overigens door een admin aangepast kunnen worden. Als je de standaard rechten van die laatste wil gebruiken dan is verder geen configuratie noodzakelijk. Die secret kan dan zondermeer gebruikt worden m.b.v. `${{ secrets.GITHUB_TOKEN }}`.
+
 ## Configuratie van de secret USER_TOKEN
 
-Een secret is een ge-encrypte omgevingsvariabele. De secret USER_TOKEN is een secret waarin een acces tokens van een gebruiker zijn vastgelegd. 
+De secret USER_TOKEN is een secret waarin een acces tokens van een gebruiker zijn vastgelegd. 
 Een gebruiker die de benodigde rechten heeft om bewerkingen uit te voeren die de workflow waarin deze secret wordt gebruikt uit moet voeren.
 Om deze secret in te richten moet dus eerst een acces token verworven worden waarna de secret daarmee geconfigureerd kan worden.
 
