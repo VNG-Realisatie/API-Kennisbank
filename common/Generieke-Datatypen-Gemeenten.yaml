@@ -50,9 +50,9 @@ components:
     MultiLineString:
       $ref: 'http://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/schemas/multilinestringGeoJSON.yaml'
     MultiPolygon:
-      $ref: 'http://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/schemas/multiPolygonGeoJSON.yaml'
+      $ref: 'http://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/schemas/multipolygonGeoJSON.yaml'
     GeoJSONGeometrie:
-      title: GeoJSON Geometry
+      title: GeoJSON Geometrie
       description: Geometrie in GeoJSON formaat (RFC 7946). Een property die dit datatype heeft mag slechts 1 van de opgenomen properties bevatten. Deze constructie vervangt de oneOf vanwege codegeneratie-issues.
       externalDocs:
         description: RFC 7946 - The GeoJSON Format
@@ -70,7 +70,7 @@ components:
         multiLineString:
           $ref: 'http://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/schemas/multilinestringGeoJSON.yaml'
         multiPolygon:
-          $ref: 'http://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/schemas/multiPolygonGeoJSON.yaml'
+          $ref: 'http://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/schemas/multipolygonGeoJSON.yaml'
     DatumOnvolledig:
       type: "object"
       description: |

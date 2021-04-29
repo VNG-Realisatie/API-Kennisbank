@@ -110,11 +110,17 @@ Voor de namen van endpoints, url's worden alleen kleine letters gebruikt.
 
 _**Ratio:**_ Domein namen zijn case insensitive volgens [RFC 4343](https://tools.ietf.org/html/rfc4343). Om duidelijkheid te creëren over de aanroep van de endpoints wordt de url lower case gedefinieerd.
 
+Datum opname : 29-04-2021
+Datum wijziging : 29-04-2021
+
 ### DD1.6 Neem 'tot' of 'totEnMet' op in de naam van een einddatum
 
 Als voor een einddatum geen functioneel duidende naam is (bv. datumOntbindingHuwelijk) neem dan voor einddatums altijd expliciet in de naam de string "tot" of "totEnMet" op.
 
 _**Ratio:**_ Het is niet eenduidig of een einddatum een "tot"-datum is of een "totEnMet"-datum is. Dat is afhankelijk van de functionele context. Door deze postfix te gebruiken maak je het expliciet.
+
+Datum opname : 29-04-2021
+Datum wijziging : 29-04-2021
 
 ## 2. Waarden, Enumeraties en dynamische lijsten
 
@@ -134,11 +140,17 @@ Eigenschappen die functioneel alleen de waarde Ja/aan/waar of Nee/uit/onwaar kun
 
 _**Ratio:**_ Een boolean is technisch eenduidiger en beter verwerkbaar voor developers.
 
+Datum opname : 29-04-2021
+Datum wijziging : 29-04-2021
+
 ### DD2.3 Dynamische domeinwaarden worden in de query-parameters met de code opgenomen
 
 Voor een query-parameter waarin een entry uit een waardelijst of een landelijke tabel als selectie-criterium wordt gebruikt wordt de code van de entry gebruikt.
 
 _**Ratio:**_ De omschrijving is human readable tekst. Daar kunnen verschillen in staan, bijvoorbeeld hoofd- of kleine letters. Voor een computer een verschil, voor een mens niet. Daarnaast levert het gebruik van codes ook kortere URL's op.
+
+Datum opname : 29-04-2021
+Datum wijziging : 29-04-2021
 
 ### DD2.4 Enumeratie-waarden zijn in snake_case
 
@@ -155,6 +167,9 @@ Schema componenten voor dynamische domeinwaarden (referentielijsten zoals "Tabel
 
 _**Ratio:**_ Vaak heeft de property dezelfde naam als de enumeratie die aangemaakt wordt. Onderscheid is dan prettig en soms zelfs nodig i.r.t. codegenratie. Hetzelfde argument geldt voor referentielijsten.
 
+Datum opname : 29-04-2021
+Datum wijziging : 29-04-2021
+
 ## 3. HAL, embedding en links
 
 Het toepassen van het content-type hal+json is een keuze en geen verplichting. Het is aan te raden bij API's waar discoverability (bv. bij bevraging API's) voor de consumer een belangrijk aspect is.
@@ -166,6 +181,9 @@ Onderstaande Design Rules gelden duas alleen **als** er sprake is van het toepas
 
 De identificatie van een resource zit  altijd op het hoogste niveau van de resource. Als de identificatie als parameter wordt gebruikt is dat in de vorm en inhoud zoals de identificatie is opgenomen in de resource.
 
+Datum opname : 29-04-2021
+Datum wijziging : 29-04-2021
+
 ### DD4.2 Neem voor properties geen waarden op met een speciale betekenis
 
 We nemen geen waarden op met een speciale betekenis die afwijkt van de normale betekenis van het gegeven.
@@ -175,6 +193,9 @@ bijvoorbeeld landcode "0000" om aan te geven dat het land onbekend is
 
 Ratio: Als er informatie beschikbaar is moet die als zondanig onderkend en gemodelleerd worden.
 
+Datum opname : 29-04-2021
+Datum wijziging : 29-04-2021
+
 ### DD4.3 De description van een property moet semantisch overeenkomen met de betekenis van het gegeven in een gegevenswoordenboek (infromatiemodel)
 
 We nemen bij een property een description op die semantisch overeenkomt met de beschrijving in het gegevenswoordenboek. Deze kan ingekort, vereenvoudigd, of uitgebreid zijn, maar mag de betekenis van het gegeven niet laten afwijken van de betekenis van het corresponderende gegeven in het gegevenswoordenboek.
@@ -183,6 +204,9 @@ De description kan worden weggelaten wanneer evident is dat de gebruikers van de
 
 _**Ratio:**_ Om de description leesbaar te houden voor developers kan ervoor gekozen worden deze in te korten of
 binnen de context te vereenvoudigen.
+
+Datum opname : 29-04-2021
+Datum wijziging : 29-04-2021
 
 ### DD4.4 Plaats bij het gebruik van 'allOf' het hergebruikte component als eerste.
 
@@ -211,6 +235,9 @@ Voorbeeld van _**foutief**_ gebruik van 'allOf':
 ```
 
 _**Ratio:**_ Afwijken van deze regel leidt tot problemen bij het genereren van code uit de API specificaties.
+
+Datum opname : 29-04-2021
+Datum wijziging : 29-04-2021
 
 ### DD4.5 Bij het gebruik van 'allOf' is er slechts 1 component waarnaar gerefereerd wordt
 
@@ -279,6 +306,4 @@ Datum wijziging: 15-04-2021
 
 ## 5. Historie
 
-
-## 6. Diversen
 x
