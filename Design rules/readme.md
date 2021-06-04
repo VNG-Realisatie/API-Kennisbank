@@ -55,7 +55,7 @@ _Normative API Principles_
 - _3.14 API-48: Leave off trailing slashes from API endpoints_
 - _3.15 API-51: Publish OAS at the base-URI in JSON-format_
 
-De [niet-normatieve extentions van de landelijke API-strategie](https://docs.geostandaarden.nl/api/API-Designrules/) worden behandeld als richtlijnen bij het opstellen van API-specificaties. Als er binnen VNG Realisatie een aanscherping is gedaan is deze in het volgende hoofdstuk opgenomen als VNG Design Rule. Daarbij wort ook een verwijzing opgenomen naar de betreffende extension.
+De [niet-normatieve extensions van de landelijke API-strategie](https://docs.geostandaarden.nl/api/API-Designrules/) worden behandeld als richtlijnen bij het opstellen van API-specificaties. Als er binnen VNG Realisatie een aanscherping is gedaan is deze in het volgende hoofdstuk opgenomen als VNG Design Rule. Daarbij wort ook een verwijzing opgenomen naar de betreffende extension.
 
 ## VNG Design DesignRules
 
