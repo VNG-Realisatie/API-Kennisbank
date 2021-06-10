@@ -14,12 +14,12 @@ Het toepassen van Design Rules en Extensions is aan de volgende regels gebonden:
 
 Als vanuit project-belang wordt overwogen om een Design Rule (landelijk of VNG) niet toe te passen dan worden de argumenten waarom dat binnen het project niet wordt gedaan gedocumenteerd. Die argumenten worden binnen het team besproken.
 
-## Het toevoegen, wijzigen of verwijderen van VNG Realisatie Design Rules
+## Het toevoegen, wijzigen of verwijderen van VNG Realisatie Design Rules en Extensions
 
-Zoals al gesteld in [de Design Rules van VNG Realisatie](https://github.com/VNG-Realisatie/API-Kennisbank/blob/master/Design%20rules/readme.md) kunnen Design Rules onderhevig zijn aan voortschrijdend inzicht en technologische ontwikkelingen. 
-Het kan dus noodzakelijk blijken een Design Rule te wijzigen of te verwijderen. Ook kan er behoefte aan een nieuwe Design Rule ontstaan, een behoefte die over het algemeen in een project naar voren zal komen en die daar dan als een Design Decision wordt gedocumenteerd.
+Zoals al gesteld in [de Design Rules van VNG Realisatie](https://github.com/VNG-Realisatie/API-Kennisbank/blob/master/Design%20rules/readme.md) kunnen Design Rules en Extensions onderhevig zijn aan voortschrijdend inzicht en technologische ontwikkelingen. 
+Het kan dus noodzakelijk blijken een Design Rule of Extension te wijzigen of te verwijderen. Ook kan er behoefte aan een nieuwe Design Rule of Extension ontstaan, een behoefte die over het algemeen in een project naar voren zal komen en die daar dan als een Design Decision wordt gedocumenteerd.
 
-Het proces voor het wijzigen, verwijderen van een bestaande of opvoeren van een nieuwe Design Rule is als volgt:
+Het proces voor het wijzigen, verwijderen van een bestaande of opvoeren van een nieuwe Design Rule of Extension is als volgt:
 
 1. Er wordt in de API-Kennisbank repository een issue ingediend met het label 'Design Rule'. 
 2. Indien het om een voorstel voor een nieuwe Design Rule gaat wordt deze zo duidelijk mogelijk beschreven, zo mogelijk voorzien van voorbeelden en ratio;
@@ -35,10 +35,11 @@ Het proces voor het wijzigen, verwijderen van een bestaande of opvoeren van een 
 > JBi: <br/>
 
 6. Het issue wordt assigned aan alle medewerkers van het Kenniscentrum Standaarden;
-7. Elke medewerker geeft vervolgens z.s.m. in de lijst met initialen achter zijn initialen aan hoe hij over het issue denkt ('Overnemen', 'Bespreken', 'Geen mening', 'Toelichting gewenst). 
-8. Kan iedereen zich vinden in het issue dan wordt het zonder verdere discussie doorgevoerd;
+7. Elke medewerker geeft vervolgens z.s.m. in de lijst met initialen achter zijn initialen aan hoe hij over het issue denkt ('Overnemen', 'Bespreken', 'Geen mening', 'Toelichting gewenst). Daarnaast kan elke medewerker zijn mening ook nog toelichten in een aparte post. Evt. kan daarin ook worden aangegeven dat het betreffende issue alleen als Extension moet worden opgenomen.
+8. Kan iedereen zich vinden in het issue en de status (Design Rule of Extension) dan wordt het zonder verdere discussie doorgevoerd;
 9. Indien dat niet het geval is dan wordt zo mogelijk de inhoudelijke discussie digitaal gevoerd en beslecht middels github comments. Als dat niet lukt, dan wordt het issue als onderwerp van het teamoverleg Kenniscentrum Standaarden geagendeerd;
-10. In dat overleg wordt besloten of het voorstel wordt gehonoreerd. 
+10. In dat overleg wordt besloten of het voorstel wordt gehonoreerd en met welke status (Design Rule of Extension); 
+11. Indien goedgekeurd wordt de Design Rule of de Extension toegevoegd aan [de Design Rules van VNG Realisatie](https://github.com/VNG-Realisatie/API-Kennisbank/blob/master/Design%20rules/readme.md).
 
 M.b.t. het wijzigen en verwijderen van Design Rules wordt in de periode tussen het opvoeren van het issue en het besluit in de projecten niet vooruitgelopen op dat besluit. Aanpassingen n.a.v. het honoreren van het voorstel worden dus pas aangebracht nadat het voorstel is gehonoreerd.
 
