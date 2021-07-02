@@ -10,7 +10,7 @@ Het toepassen van Design Rules en Extensions is aan de volgende regels gebonden:
 
 1. Bij het vervaardigen van API specificaties houden we ons aan [de Design Rules zoals gedefinieerd in de Nederlandse API Strategie](https://docs.geostandaarden.nl/api/API-Designrules/);
 2. Tevens houden we ons aan [de Design Rules van VNG Realisatie](https://github.com/VNG-Realisatie/API-Kennisbank/blob/master/Design%20rules/readme.md);
-3. Waar mogelijk volgen we [de Extensions van de Nederlandse API Strategie](https://docs.geostandaarden.nl/api/API-Strategie-ext/) van toepassing zijn. In een Design Decision van het project waarin de API specificatie wordt vervaardigd beschrijven we aan welke Extensions we ons houden;
+3. Waar mogelijk volgen we [de Extensions van de Nederlandse API Strategie](https://docs.geostandaarden.nl/api/API-Strategie-ext/) en (zodra we daarover beschikken) de Extensions van VNG Realisatie voor zover die van toepassing zijn. In een Design Decision van het project waarin de API specificatie wordt vervaardigd beschrijven we aan welke Extensions we ons houden;
 
 Als vanuit project-belang wordt overwogen om een Design Rule (landelijk of VNG) niet toe te passen dan worden de argumenten waarom dat binnen het project niet wordt gedaan gedocumenteerd. Die argumenten worden binnen het team besproken.
 
@@ -40,6 +40,7 @@ Het proces voor het wijzigen, verwijderen van een bestaande of opvoeren van een 
 9. Indien dat niet het geval is dan wordt zo mogelijk de inhoudelijke discussie digitaal gevoerd en beslecht middels github comments. Als dat niet lukt, dan wordt het issue als onderwerp van het teamoverleg Kenniscentrum Standaarden geagendeerd;
 10. In dat overleg wordt besloten of het voorstel wordt gehonoreerd en met welke status (Design Rule of Extension); 
 11. Indien goedgekeurd wordt de Design Rule of de Extension toegevoegd aan [de Design Rules van VNG Realisatie](https://github.com/VNG-Realisatie/API-Kennisbank/blob/master/Design%20rules/readme.md).
+12. In de zeldzame gevallen waarin we met een Design Rule structureel afwijken van de landelijke Rest-API-strategie is een "Leg uit"-situatie van toepassing. In de Design Rule moet dan heel goed uitgelegd worden waarop we afwijken en waarom deze afwijking van belang is. In zo'n geval moet ook weer de discussie met de rest van de community worden opgestart om te kijken waar deze verschillen in inzicht in zitten en of we de landelijke strategie dan niet iets losser of juist strakker moeten definiëren.
 
 M.b.t. het wijzigen en verwijderen van Design Rules wordt in de periode tussen het opvoeren van het issue en het besluit in de projecten niet vooruitgelopen op dat besluit. Aanpassingen n.a.v. het honoreren van het voorstel worden dus pas aangebracht nadat het voorstel is gehonoreerd.
 
