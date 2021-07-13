@@ -4,7 +4,7 @@ In dit document beschrijven we hoe we in het Kenniscentrum Standaarden van VNG R
 Daarbij doelen we op de eigen Design Rules, de Design Rules die in de Nederlandse API Strategie zijn beschreven maar ook op de Extensions die op beide niveaus beschikbaar zijn.
 Extensions hebben geen officiële status, ze kunnen worden gezien als potentiële Design Rules.
 
-## Toepassing Design Rules
+## Toepassing Design Rules en Extensions
 
 Het toepassen van Design Rules en Extensions is aan de volgende regels gebonden:
 
