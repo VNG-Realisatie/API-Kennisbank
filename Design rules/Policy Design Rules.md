@@ -42,9 +42,7 @@ Het proces voor het wijzigen, verwijderen van een bestaande of opvoeren van een 
 11. Indien goedgekeurd wordt de Design Rule of de Extension toegevoegd aan [de Design Rules van VNG Realisatie](https://github.com/VNG-Realisatie/API-Kennisbank/blob/master/Design%20rules/readme.md).
 12. In de zeldzame gevallen waarin we met een Design Rule structureel afwijken van de landelijke Rest-API-strategie is een "Leg uit"-situatie van toepassing. In de Design Rule moet dan heel goed uitgelegd worden waarop we afwijken en waarom deze afwijking van belang is. In zo'n geval moet ook weer de discussie met de rest van de community worden opgestart om te kijken waar deze verschillen in inzicht in zitten en of we de landelijke strategie dan niet iets losser of juist strakker moeten definiëren.
 
-M.b.t. het wijzigen en verwijderen van Design Rules kan in de periode tussen het opvoeren van het issue en het besluit in de projecten worden vooruitgelopen op dat besluit. In dat geval dient daarover wel uitleg verschaft te worden.
-
-Voorwaarde daarvoor is wel een pro-actieve houding in de discussie van de medewerkers van Kenniscentrum Standaarden. Zo'n aanpassing kan voor een project nl. erg urgent zijn, dus het niet vooruitlopen op een beslissing kan problematisch zijn. Als het team het niet eens wordt over de wijziging of verwijdering van de Design Rule mag wel vooruitgelopen worden in een project. In dat geval dient dit feit wel als een Design Decision van je project te worden gedocumenteerd.
+M.b.t. het wijzigen en verwijderen van Design Rules kan in de periode tussen het opvoeren van het issue en het besluit in de projecten worden vooruitgelopen op dat besluit. In dat geval dient daarover wel uitleg verschaft te worden. In dat geval dient dit feit als een Design Decision van je project te worden gedocumenteerd.
 
 ## Voordracht VNG Realisatie Design Rules voor Landelijke API Strategie
 
