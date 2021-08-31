@@ -74,7 +74,7 @@ components:
     DatumOnvolledig:
       type: "object"
       description: |
-                    Onderdelen van een datum die wel bekend zijn terwijl er geen valide datum samen te stellen is omdat dag of jaar of maand (of een combinatie daarvan) onbekend is.
+                    Onderdelen van een datum die bekend zijn. Als er geen valide datum samen te stellen is omdat dag, jaar of maand (of een combinatie daarvan) onbekend is dan wordt niet in die betreffende onderdelen voorzien.
       properties:
         dag:
           type: "integer"
