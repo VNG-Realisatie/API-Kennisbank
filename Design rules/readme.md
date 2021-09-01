@@ -63,7 +63,7 @@ De [niet-normatieve extensions van de landelijke API-strategie](https://docs.geo
 
 Onderstaande Design Rules zijn een verbijzondering van paragraaf 6.1 van de [API DesignRules Extensions](https://docs.geostandaarden.nl/api/API-Strategie-ext/#field-names-in-snake_case-camelcase-uppercamelcase-or-kebab-case).
 
-### DD1.1 Redundantie in propertynamen wordt verwijderd.
+### DR1.1 Redundantie in propertynamen wordt verwijderd.
 Dit is het geval wanneer in een propertynaam de gegevensgroepnaam of resourcenaam waar deze zich in bevindt wordt herhaald.
 
 Bijvoorbeeld _verblijfstitelIngeschrevenNatuurlijkPersoon_ wordt _verblijfstitel_, _overlijdenIngeschrevenNatuurlijkPersoon_ wordt _overlijden_, _geboorteIngeschrevenNatuurlijkPersoon_ wordt _geboorte_, enz.
@@ -104,7 +104,7 @@ _**Ratio:**_ Consistentie in Casing van namen is voor zowel developers als desig
 Datum opname : 17-02-2021
 Datum wijziging : 17-02-2021
 
-### DD1.5 Namen van endpoints en url's bevatten alleen kleine letters
+### DR1.5 Namen van endpoints en url's bevatten alleen kleine letters
 
 Voor de namen van endpoints, url's worden alleen kleine letters gebruikt.
 
@@ -113,7 +113,7 @@ _**Ratio:**_ Domein namen zijn case insensitive volgens [RFC 4343](https://tools
 Datum opname : 29-04-2021
 Datum wijziging : 29-04-2021
 
-### DD1.6 Neem 'tot' of 'totEnMet' op in de naam van een einddatum
+### DR1.6 Neem 'tot' of 'totEnMet' op in de naam van een einddatum
 
 Als voor een einddatum geen functioneel duidende naam is (bv. datumOntbindingHuwelijk) neem dan voor einddatums altijd expliciet in de naam de string "tot" of "totEnMet" op.
 
@@ -124,7 +124,7 @@ Datum wijziging : 29-04-2021
 
 ## 2. Waarden, Enumeraties en dynamische lijsten
 
-### DD2.1 Voor het uitdrukken van tijdsduur gebruiken we de ISO-8601 standaard
+### DR2.1 Voor het uitdrukken van tijdsduur gebruiken we de ISO-8601 standaard
 Voor een element van een referentielijst-type, wordt in de response zowel de code als de omschrijving opgenomen. Dit betreft dynamische lijsten (tabellen) met een code en waarde, zoals "Tabel 32 Nationaliteitentabel".
 
 _**Ratio:**_
@@ -134,7 +134,7 @@ Dit is een veelgebruikte internationale standaard.
 Datum opname : 17-02-2021
 Datum wijziging : 17-02-2021
 
-### DD2.2 Gebruik een boolean voor Ja/Nee of waar/onwaar
+### DR2.2 Gebruik een boolean voor Ja/Nee of waar/onwaar
 
 Eigenschappen die functioneel alleen de waarde Ja/aan/waar of Nee/uit/onwaar kunnen hebben, worden gedefinieerd als boolean. We gebruiken dus geen enumeratie zoals [J,N] voor dit soort situaties.
 
@@ -143,7 +143,7 @@ _**Ratio:**_ Een boolean is technisch eenduidiger en beter verwerkbaar voor deve
 Datum opname : 29-04-2021
 Datum wijziging : 29-04-2021
 
-### DD2.3 Dynamische domeinwaarden worden in de query-parameters met de code opgenomen
+### DR2.3 Dynamische domeinwaarden worden in de query-parameters met de code opgenomen
 
 Voor een query-parameter waarin een entry uit een waardelijst of een landelijke tabel als selectie-criterium wordt gebruikt wordt de code van de entry gebruikt.
 
@@ -152,7 +152,7 @@ _**Ratio:**_ De omschrijving is human readable tekst. Daar kunnen verschillen in
 Datum opname : 29-04-2021
 Datum wijziging : 29-04-2021
 
-### DD2.4 Enumeratie-waarden zijn in snake_case
+### DR2.4 Enumeratie-waarden zijn in snake_case
 
 Voor de waarden van enumeraties wordt snake_case toegepast. Deze bevatten dus alleen kleine letters, cijfers en underscores. Geen spaties, geen speciale tekens en geen hoofdletters.
 
@@ -161,7 +161,7 @@ _**Ratio:**_ In sommige development-omgevingen leveren hoofdletters, spaties of 
 Datum opname : 17-02-2021
 Datum wijziging : 17-02-2021
 
-### DD2.5 Schema componentnamen voor domeinwaarden en enumeraties krijgen een vaste extensie
+### DR2.5 Schema componentnamen voor domeinwaarden en enumeraties krijgen een vaste extensie
 
 Schema componenten voor dynamische domeinwaarden (referentielijsten zoals "Tabel 32 Nationaliteitentabel") en enumeraties krijgen respectievelijk extensie "Tabel" en "Enum" zonder de toevoeging van underscores.
 
@@ -177,14 +177,14 @@ Onderstaande Design Rules gelden duas alleen **als** er sprake is van het toepas
 
 ## 4. Diversen
 
-### DD4.1 Identificatie van een resource zit altijd op het hoogste niveau van de resource
+### DR4.1 Identificatie van een resource zit altijd op het hoogste niveau van de resource
 
 De identificatie van een resource zit  altijd op het hoogste niveau van de resource. Als de identificatie als parameter wordt gebruikt is dat in de vorm en inhoud zoals de identificatie is opgenomen in de resource.
 
 Datum opname : 29-04-2021
 Datum wijziging : 29-04-2021
 
-### DD4.2 Neem voor properties geen waarden op met een speciale betekenis
+### DR4.2 Neem voor properties geen waarden op met een speciale betekenis
 
 We nemen geen waarden op met een speciale betekenis die afwijkt van de normale betekenis van het gegeven.
 
@@ -196,7 +196,7 @@ Ratio: Als er informatie beschikbaar is moet die als zondanig onderkend en gemod
 Datum opname : 29-04-2021
 Datum wijziging : 29-04-2021
 
-### DD4.3 De description van een property moet semantisch overeenkomen met de betekenis van het gegeven in een gegevenswoordenboek (infromatiemodel)
+### DR4.3 De description van een property moet semantisch overeenkomen met de betekenis van het gegeven in een gegevenswoordenboek (infromatiemodel)
 
 We nemen bij een property een description op die semantisch overeenkomt met de beschrijving in het gegevenswoordenboek. Deze kan ingekort, vereenvoudigd, of uitgebreid zijn, maar mag de betekenis van het gegeven niet laten afwijken van de betekenis van het corresponderende gegeven in het gegevenswoordenboek.
 
@@ -208,7 +208,7 @@ binnen de context te vereenvoudigen.
 Datum opname : 29-04-2021
 Datum wijziging : 29-04-2021
 
-### DD4.4 Plaats bij het gebruik van 'allOf' het hergebruikte component als eerste.
+### DR4.4 Plaats bij het gebruik van 'allOf' het hergebruikte component als eerste.
 
 Bij het gebruik van 'allOf' staat de component die hergebruikt wordt altijd eerst, en staan de toegevoegde properties als tweede.
 
@@ -239,7 +239,7 @@ _**Ratio:**_ Afwijken van deze regel leidt tot problemen bij het genereren van c
 Datum opname : 29-04-2021
 Datum wijziging : 29-04-2021
 
-### DD4.5 Bij het gebruik van 'allOf' is er slechts 1 component waarnaar gerefereerd wordt
+### DR4.5 Bij het gebruik van 'allOf' is er slechts 1 component waarnaar gerefereerd wordt
 
 Bij gebruik van allOf is er altijd exact één component waarnaar gerefereerd wordt en één gedefinieerd object met ten minste één property.
 
