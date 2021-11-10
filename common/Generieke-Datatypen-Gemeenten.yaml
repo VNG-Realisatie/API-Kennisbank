@@ -51,6 +51,9 @@ components:
       $ref: 'http://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/schemas/multilinestringGeoJSON.yaml'
     MultiPolygon:
       $ref: 'http://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/schemas/multipolygonGeoJSON.yaml'
+    Sleutel:       #Toegevoegd voor de waarderingskamer -IMWOZ
+      type: "string"
+      maxlength: 40
     GeoJSONGeometrie:
       title: GeoJSON Geometrie
       description: Geometrie in GeoJSON formaat (RFC 7946). Een property die dit datatype heeft mag slechts 1 van de opgenomen properties bevatten. Deze constructie vervangt de oneOf vanwege codegeneratie-issues.
