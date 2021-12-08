@@ -105,7 +105,25 @@ Polygon:
 #          items:
 #  externalDocs:
 #    url: https://tools.ietf.org/html/rfc7946#section-3.1.6
-  $ref: "http://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/schemas/polygonGeoJSON.yaml"
+  type: object
+  required:
+    - type
+    - coordinates
+  properties:
+    type:
+      type: string
+      enum:
+        - Polygon
+    coordinates:
+      type: array
+      items:
+        type: array
+        minItems: 4
+        items:
+          type: array
+          minItems: 2
+          items:
+            type: number
 
 MultiPolygon:
   description: GeoJSON multi-polygon geometry
