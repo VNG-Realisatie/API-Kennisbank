@@ -29,82 +29,76 @@ Point2D:
   maxItems: 2
   minItems: 2
 Point:
-  description: GeoJSON point geometry
   type: object
-  allOf:
-  - $ref: '#/components/schemas/Geometry'
-  - required:
+  required:
+    - type
     - coordinates
-    type: object
-    properties:
-      coordinates:
-        $ref: '#/components/schemas/Point2D'
-  externalDocs:
-    url: https://tools.ietf.org/html/rfc7946#section-3.1.2
+  properties:
+    type:
+      type: string
+      enum:
+        - Point
+    coordinates:
+      type: array
+      minItems: 2
+      items:
+        type: number
 MultiPoint:
-  description: GeoJSON multi-point geometry
   type: object
-  allOf:
-  - $ref: '#/components/schemas/Geometry'
-  - required:
+  required:
+    - type
     - coordinates
-    type: object
-    properties:
-      coordinates:
+  properties:
+    type:
+      type: string
+      enum:
+        - MultiPoint
+    coordinates:
+      type: array
+      items:
         type: array
-        items:
-          $ref: '#/components/schemas/Point2D'
-  externalDocs:
-    url: https://tools.ietf.org/html/rfc7946#section-3.1.3
-LineString:
-  description: GeoJSON line-string geometry
-  type: object
-  allOf:
-  - $ref: '#/components/schemas/Geometry'
-  - required:
-    - coordinates
-    type: object
-    properties:
-      coordinates:
-        type: array
-        items:
-          $ref: '#/components/schemas/Point2D'
         minItems: 2
-  externalDocs:
-    url: https://tools.ietf.org/html/rfc7946#section-3.1.4
-MultiLineString:
-  description: GeoJSON multi-line-string geometry
+        items:
+          type: number
+LineString:
   type: object
-  allOf:
-  - $ref: '#/components/schemas/Geometry'
-  - required:
+  required:
+    - type
     - coordinates
-    type: object
-    properties:
-      coordinates:
+  properties:
+    type:
+      type: string
+      enum:
+        - LineString
+    coordinates:
+      type: array
+      minItems: 2
+      items:
         type: array
+        minItems: 2
+        items:
+          type: number
+MultiLineString:
+  type: object
+  required:
+    - type
+    - coordinates
+  properties:
+    type:
+      type: string
+      enum:
+        - MultiLineString
+    coordinates:
+      type: array
+      items:
+        type: array
+        minItems: 2
         items:
           type: array
+          minItems: 2
           items:
-            $ref: '#/components/schemas/Point2D'
-  externalDocs:
-    url: https://tools.ietf.org/html/rfc7946#section-3.1.5
+            type: number
 Polygon:
-#  description: GeoJSON polygon geometry
-#  type: object
-#  allOf:
-#  - $ref: '#/components/schemas/Geometry'
-#  - required:
-#    - coordinates
-#    type: object
-#    properties:
-#      coordinates:
-#        type: array
-#        items:
-#          type: array
-#          items:
-#  externalDocs:
-#    url: https://tools.ietf.org/html/rfc7946#section-3.1.6
   type: object
   required:
     - type
@@ -126,46 +120,48 @@ Polygon:
             type: number
 
 MultiPolygon:
-  description: GeoJSON multi-polygon geometry
   type: object
-  allOf:
-  - $ref: '#/components/schemas/Geometry'
-  - required:
+  required:
+    - type
     - coordinates
-    type: object
-    properties:
-      coordinates:
+  properties:
+    type:
+      type: string
+      enum:
+        - MultiPolygon
+    coordinates:
+      type: array
+      items:
         type: array
         items:
           type: array
+          minItems: 4
           items:
             type: array
+            minItems: 2
             items:
-              $ref: '#/components/schemas/Point2D'
-  externalDocs:
-    url: https://tools.ietf.org/html/rfc7946#section-3.1.7
+              type: number
 GeometryCollection:
-  description: GeoJSON multi-polygon geometry
   type: object
-  allOf:
-  - $ref: '#/components/schemas/Geometry'
-  - required:
+  required:
+    - type
     - geometries
-    type: object
-    properties:
-      geometries:
-        type: array
-        items:
-          $ref: '#/components/schemas/Geometry'
-  externalDocs:
-    url: https://tools.ietf.org/html/rfc7946#section-3.1.8
+  properties:
+    type:
+      type: string
+      enum:
+        - GeometryCollection
+    geometries:
+      type: array
+      items:
+        $ref: "https://github.com/VNG-Realisatie/API-Kennisbank/blob/master/common/geojson.yaml#/GeoJSONGeometry"
 GeoJSONGeometry:
   type: object
   oneOf:
-  - $ref: "#/components/schemas/Point"
-  - $ref: "#/components/schemas/MultiPoint"
-  - $ref: "#/components/schemas/LineString"
-  - $ref: "#/components/schemas/MultiLineString"
-  - $ref: "#/components/schemas/Polygon"
-  - $ref: "#/components/schemas/MultiPolygon"
-  - $ref: "#/components/schemas/GeometryCollection"
+  - $ref: "https://github.com/VNG-Realisatie/API-Kennisbank/blob/master/common/geojson.yaml#/Point"
+  - $ref: "https://github.com/VNG-Realisatie/API-Kennisbank/blob/master/common/geojson.yaml#/MultiPoint"
+  - $ref: "https://github.com/VNG-Realisatie/API-Kennisbank/blob/master/common/geojson.yaml#/LineString"
+  - $ref: "https://github.com/VNG-Realisatie/API-Kennisbank/blob/master/common/geojson.yaml#/MultiLineString"
+  - $ref: "https://github.com/VNG-Realisatie/API-Kennisbank/blob/master/common/geojson.yaml#/Polygon"
+  - $ref: "https://github.com/VNG-Realisatie/API-Kennisbank/blob/master/common/geojson.yaml#/MultiPolygon"
+  - $ref: "https://github.com/VNG-Realisatie/API-Kennisbank/blob/master/common/geojson.yaml#/GeometryCollection"
