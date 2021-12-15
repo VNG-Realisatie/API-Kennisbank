@@ -1,0 +1,89 @@
+api-version:
+  name: api-version
+  in: header
+  required: false
+  description: "Bevat de major-versie van de aan te roepen API conform [Landelijke API-strategie](https://geonovum.github.io/KP-APIs/#versioning)."
+  schema:
+    type: integer
+    example: 1
+expand:
+  name: expand
+  in: query
+  required: false
+  description: "Hiermee kun je opgeven welke gerelateerde resources meegeleverd moeten worden, en hun inhoud naar behoefte aanpassen. Hele resources of enkele properties geef je in de expand parameter kommagescheiden op. Properties die je wil ontvangen geef je op met de resource-naam gevolgd door de property naam, met daartussen een punt. In de definitie van het antwoord kun je bij _embedded zien welke gerelateerde resources meegeleverd kunnen worden. Zie [functionele specificaties](https://github.com/VNG-Realisatie/Haal-Centraal-common/blob/v1.3.0/features/expand.feature)."
+  schema:
+    type: string
+fields:
+  name: fields
+  in: query
+  required: false
+  description: "Hiermee kun je de inhoud van de resource naar behoefte aanpassen door een door komma's gescheiden lijst van property namen op te geven. Bij opgave van niet-bestaande properties wordt een 400 Bad Request teruggegeven. Wanneer de fields parameter niet is opgegeven, worden alle properties met een waarde teruggegeven. Zie [functionele specificaties](https://github.com/VNG-Realisatie/Haal-Centraal-common/blob/v1.3.0/features/fields.feature)"
+  schema:
+    type: string
+uuid:
+  name: uuid
+  in: path
+  description: "Een UUID is een nummer van 128 bits (= 16 bytes). UUID wordt weergegeven in 32 ??hexadecimale cijfers. Deze cijfers zijn ingedeeld in vijf groepen, in ongelijk aantal en gescheiden door koppeltekens: 8-4-4-4-12 In zijn geheel wordt een UUID dus door 36 tekens gevormd, waarvan 32 hexadecimale karakters en vier streepjes: 550e8400-e29b-41d4-a716-446655440000"
+  required: true
+  schema:
+    type: string
+    maxLength: 36
+peildatum:
+  name: peildatum
+  in: query
+  description: "De datum waarop de resource wordt opgevraagd."
+  required: false
+  schema:
+    type: string
+    format: date
+    example: "2018-09-09"
+datumVan:
+  name: datumVan
+  in: query
+  description: "De begindatum van de periode waarover de resource wordt opgevraagd."
+  required: false
+  schema:
+    type: string
+    format: date
+    example: "2018-09-09"
+datumTotEnMet:
+  name: datumTotEnMet
+  in: query
+  description: "De einddatum van de periode waarover de resource wordt opgevraagd."
+  required: false
+  schema:
+    type: string
+    format: date
+    example: "2018-10-09"
+page:
+  description: Pagina nummer
+  name: page
+  in: query
+  required: false
+  schema:
+    type: integer
+    minimum: 1
+    default: 1
+pageSize:
+  name: pageSize
+  in: query
+  required: false
+  schema:
+    type: integer
+    minimum: 1
+    maximum: 100
+    default: 20
+contentCrs:
+  name: Content-Crs
+  in: header
+  required: false
+  description: CRS van de meegegeven geometrie. epsg:28992 mapt op het RD New Nederlands coordinatenstelsel.
+  schema:
+    $ref: '#/components/schemas/CrsEnum'
+acceptCrs:
+  name: Accept-Crs
+  in: header
+  required: false
+  description: Gewenste CRS van de coördinaten in de response.
+  schema:
+    $ref: '#/components/schemas/CrsEnum'
