@@ -79,7 +79,10 @@ contentCrs:
   required: false
   description: CRS van de meegegeven geometrie. epsg:28992 mapt op het RD New Nederlands coordinatenstelsel.
   schema:
-    $ref: '#/components/schemas/CrsEnum'
+    type: string
+    enum:
+      - epsg:28992
+    default: epsg:28992
 acceptCrs:
   name: Accept-Crs
   in: header
