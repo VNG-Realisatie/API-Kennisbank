@@ -1,3 +1,8 @@
+---
+layout: page-with-side-nav
+title: API Kennisbank
+---
+
 # API Kennisbank
 
 In deze repository staan afspraken, werkinstructies, tutorials, enz. voor de co-creatie en het beheer van API standaarden bij organisatie VNG-Realisatie.
