@@ -1,4 +1,3 @@
-
 baseurl: "/API-Kennisbank"
 apiname: "API-Kennisbank"
 url: "http://localhost:4000"
@@ -31,7 +30,7 @@ plugins:
 
 remote_theme: VNG-Realisatie/jekyll-theme-vng-realisatie
 
-github: VNG-Realisatie/ODS-Open-Raadsinformatie
+github: VNG-Realisatie/API-kennisbank
 
 theme: jekyll-theme-time-machine
 
