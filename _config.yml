@@ -1,0 +1,39 @@
+baseurl: "/API-Kennisbank"
+apiname: "API-Kennisbank"
+url: "http://localhost:4000"
+# nav is t.b.v. generatie side-navigation menu.
+# Een 'title' zonder path of url genereert slechts een kopje.
+# 'path' vormt tezamen met de baseurl de url waarmee de 'href' wordt gevuld.
+# Indien een 'url' voorradig dan wordt daarmee de 'href' gevuld en dient het path slechts om te bepalen welke link active is.
+# 'target: blank' zorgt er voor dat de link in een nieuw tabblad wordt geöpend.
+nav:
+  - title: API Kennisbank
+    subnav:
+      - title: Main
+        path: /
+  - title: Kennisbank over standaardiseren van API-specificaties
+    subnav:
+#      - title: Getting started
+#        path: /getting-started
+#      - title: User stories
+#        url: https://vng-realisatie.github.io/IMWOZ-bevragingen/user-stories-prod
+#        https://github.com/VNG-Realisatie/IMWOZ-bevragingen/issues?q=is%3Aissue+label%3A%22user+story%22
+#        path: /user-stories
+      - title: Implementatieoverwegingen
+        path: ./API Implementatie/Implementatie overweginge.md
+      - title: Gitflow
+        path: ./Gitflow/Gitflow_implementatie.md
+
+plugins:
+  - jekyll-redirect-from
+  - jekyll-remote-theme
+
+remote_theme: VNG-Realisatie/jekyll-theme-vng-realisatie
+
+github: VNG-Realisatie/API-kennisbank
+
+theme: jekyll-theme-time-machine
+
+project_name: /API-Kennisbank
+
+standard_family: VNG Realisatie
