@@ -1,3 +1,8 @@
+---
+layout: page-with-side-nav
+title: API Kennisbank
+---
+
 # GitFlow implementatie
 
 Dit document is geen tutorial over GitFlow, het beoogd slechts een uitleg te geven over de wijze waarop GitFlow geïmplementeerd is binnen de GitHub repositories van VNG Realisatie. Wil je meer inzicht in GitFlow hebben dan verwijzen we je naar deze [tutorial](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) en deze [cheatsheet](https://danielkummer.github.io/git-flow-cheatsheet/).
