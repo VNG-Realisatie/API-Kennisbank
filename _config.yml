@@ -20,11 +20,11 @@ nav:
 #        https://github.com/VNG-Realisatie/IMWOZ-bevragingen/issues?q=is%3Aissue+label%3A%22user+story%22
 #        path: /user-stories
       - title: Implementatieoverwegingen
-        path: /API Implementatie/Implementatie overwegingen.md
+        path: /API Implementatie/Implementatie overwegingen
       - title: Gitflow
-        path: /GitFlow/GitFlow_implementatie.md
+        path: /GitFlow/GitFlow_implementatie
       - title: VNGR API Design Rules
-        path: /Design rules/inhoud.md
+        path: /Design rules/inhoud
 
 plugins:
   - jekyll-redirect-from
