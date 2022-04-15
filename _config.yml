@@ -24,12 +24,7 @@ nav:
       - title: Gitflow
         path: /GitFlow/GitFlow_implementatie.md
       - title: VNGR API Design Rules
-        subnav:
-        - title: Inleiding
-          path: /Design rules/Inleiding.md
-        - title: Naamgeving
-          path: /Design rules/Naamgeving.md
-        
+        path: /Design rules/Index.md
 
 plugins:
   - jekyll-redirect-from
