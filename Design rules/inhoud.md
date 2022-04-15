@@ -1,3 +1,8 @@
+---
+layout: page-with-side-nav
+title: API Kennisbank
+---
+
 # VNGR API Design Rules
 
 [1. Inleiding](./Design%20rules/Inleiding.md) 
