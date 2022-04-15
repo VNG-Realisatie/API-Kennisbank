@@ -1,4 +1,10 @@
-# Inleiding
+---
+layout: page-with-side-nav
+title: API Kennisbank
+---
+
+
+# Inleiding Design Rules
 
 In de onderliggende Design Rules zijn de inzichten vastgelegd die zijn opgedaan bij het ontwerpen en specificeren van API's binnen diverse projecten waar VNG Realisatie bij betrokken is.
 Deze Design Rules zijn binnen het team Standaarden besproken en er is consensus bereikt over het feit dat deze Design Rules toegepast worden op API-specificaties die door VNR Realisatie worden gemaakt of in beheer worden genomen.
