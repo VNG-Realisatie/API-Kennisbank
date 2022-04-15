@@ -1,8 +1,14 @@
-## 1. Naamgeving
+---
+layout: page-with-side-nav
+title: API Kennisbank
+---
+
+
+# 1. Naamgeving
 
 Onderstaande Design Rules zijn een verbijzondering van paragraaf 6.1 van de [API DesignRules Extensions](https://docs.geostandaarden.nl/api/API-Strategie-ext/#field-names-in-snake_case-camelcase-uppercamelcase-or-kebab-case).
 
-### DR1.1 Redundantie in propertynamen wordt verwijderd.
+## DR1.1 Redundantie in propertynamen wordt verwijderd.
 Dit is het geval wanneer in een propertynaam de gegevensgroepnaam of resourcenaam waar deze zich in bevindt wordt herhaald.
 
 Bijvoorbeeld _verblijfstitelIngeschrevenNatuurlijkPersoon_ wordt _verblijfstitel_, _overlijdenIngeschrevenNatuurlijkPersoon_ wordt _overlijden_, _geboorteIngeschrevenNatuurlijkPersoon_ wordt _geboorte_, enz.
@@ -14,7 +20,7 @@ _**Ratio**_
 Datum opname : 17-02-2021
 Datum wijziging : 17-02-2021
 
-### DR1.2 Gebruik zelfverklarende propertynamen.
+## DR1.2 Gebruik zelfverklarende propertynamen.
 
 We benoemen altijd zo duidelijk mogelijk wat iets is.
 Hoofdregel is altijd: propertynamen moeten zoveel mogelijk zelfverklarend zijn (lezen van de description om de betekenis te begrijpen is liefst niet nodig).
@@ -25,7 +31,7 @@ _**Ratio:**_ Het is voor developers van consumer-software van belang om zo snel 
 Datum opname : 17-02-2021
 Datum wijziging : 17-02-2021
 
-### DR1.3 Namen van properties zijn in lowerCamelCase
+## DR1.3 Namen van properties zijn in lowerCamelCase
 
 Dit is een verbijzondering van [API-26](https://geonovum.github.io/KP-APIs/API-strategie-extensies/#api-26) uit de landelijke API-strategie Design Rule Extensions.
 
@@ -34,7 +40,7 @@ _**Ratio:**_ Consistentie in Casing van namen is voor zowel developers als desig
 Datum opname : 17-02-2021
 Datum wijziging : 17-02-2021
 
-### DR1.4 Namen van schemacomponenten zijn in UpperCamelCase
+## DR1.4 Namen van schemacomponenten zijn in UpperCamelCase
 
 Voor de namen van componenten in het schema wordt UpperCamelCase toegepast en bevatten geen underscores.
 
@@ -43,7 +49,7 @@ _**Ratio:**_ Consistentie in Casing van namen is voor zowel developers als desig
 Datum opname : 17-02-2021
 Datum wijziging : 17-02-2021
 
-### DR1.5 Namen van endpoints en url's bevatten alleen kleine letters
+## DR1.5 Namen van endpoints en url's bevatten alleen kleine letters
 
 Voor de namen van endpoints, url's worden alleen kleine letters gebruikt.
 
@@ -52,7 +58,7 @@ _**Ratio:**_ Domein namen zijn case insensitive volgens [RFC 4343](https://tools
 Datum opname : 29-04-2021
 Datum wijziging : 29-04-2021
 
-### DR1.6 Neem 'tot' of 'totEnMet' op in de naam van een einddatum
+## DR1.6 Neem 'tot' of 'totEnMet' op in de naam van een einddatum
 
 Als voor een einddatum geen functioneel duidende naam is (bv. datumOntbindingHuwelijk) neem dan voor einddatums altijd expliciet in de naam de string "tot" of "totEnMet" op.
 
