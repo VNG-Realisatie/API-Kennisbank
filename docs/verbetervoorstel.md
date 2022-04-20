@@ -1,6 +1,6 @@
 ---
 layout: landing-page
-title: Productvisie Haal Centraal
+title: Verbetervoorstel
 ---
 
 # Verbetering doorgeven
