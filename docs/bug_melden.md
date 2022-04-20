@@ -30,7 +30,7 @@ title: Productvisie Haal Centraal
     <div class="card no-border">
       <div class="card-body">
         <h3 class="card-title">GEMMA Verwerkingenlogging</h3>
-        <p class="card-text"> <a href="https://https://github.com/VNG-Realisatie/gemma-verwerkingenlogging/issues/new?assignees=&labels=bug&template=bug_report.md&title=">Maak een issue aan>></a>
+        <p class="card-text"> <a href="https://github.com/VNG-Realisatie/gemma-verwerkingenlogging/issues/new?assignees=&labels=bug&template=bug_report.md&title=">Maak een issue aan>></a>
         </p>
       </div>
     </div>
@@ -39,7 +39,7 @@ title: Productvisie Haal Centraal
     <div class="card no-border">
       <div class="card-body">
         <h3 class="card-title">IMWOZ-bevragingen</h3>
-        <p class="card-text"><a href="https://https://github.com/VNG-Realisatie/IMWOZ-bevragingen/issues/new?assignees=&labels=bug&template=bug_report.md&title=">Maak een issue aan>></a>
+        <p class="card-text"><a href="https://github.com/VNG-Realisatie/IMWOZ-bevragingen/issues/new?assignees=&labels=bug&template=bug_report.md&title=">Maak een issue aan>></a>
         </p>
         </div>
     </div>
