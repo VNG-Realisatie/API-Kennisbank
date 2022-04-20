@@ -73,7 +73,6 @@ title: Verbetervoorstel
 </div>
 <br>
 
-
 &nbsp;   
 
 &nbsp;   
