@@ -74,7 +74,6 @@ title: Bug melden
 </div>
 <br>
 
-
 &nbsp;   
 
 &nbsp;   
