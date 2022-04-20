@@ -22,7 +22,7 @@ nav:
       - title: Implementatieoverwegingen
         path: /API Implementatie/Implementatie overwegingen
       - title: Gitflow
-        path: /GitFlow/GitFlow_implementatie
+        path: /GitFlow/Gitflow_implementatie
       - title: VNGR API Design Rules
         path: /Design rules/inhoud
 
