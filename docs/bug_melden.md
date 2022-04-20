@@ -1,6 +1,6 @@
 ---
 layout: landing-page
-title: Productvisie Haal Centraal
+title: Bug melden
 ---
 
 # Fout of bug melden
