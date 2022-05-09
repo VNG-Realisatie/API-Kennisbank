@@ -7,7 +7,7 @@ url: "http://localhost:4000"
 # Indien een 'url' voorradig dan wordt daarmee de 'href' gevuld en dient het path slechts om te bepalen welke link active is.
 # 'target: blank' zorgt er voor dat de link in een nieuw tabblad wordt geöpend.
 nav:
-  - title: Kennisbank over standaardiseren van API-specificaties
+  - title: API Kennisbank
     subnav:
       - title: Main
         path: /
@@ -20,11 +20,9 @@ nav:
 #        https://github.com/VNG-Realisatie/IMWOZ-bevragingen/issues?q=is%3Aissue+label%3A%22user+story%22
 #        path: /user-stories
       - title: Implementatieoverwegingen
-        path: /API Implementatie/Implementatie overwegingen
+        path: ./API Implementatie/Implementatie overweginge.md
       - title: Gitflow
-        path: /GitFlow/Gitflow_implementatie
-      - title: VNGR API Design Rules
-        path: /Design rules/inhoud
+        path: ./Gitflow/Gitflow_implementatie.md
 
 plugins:
   - jekyll-redirect-from

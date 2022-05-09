@@ -3,7 +3,7 @@ We zijn heel blij dat je dit leest, want de kwaliteit van onze standaarden wordt
 
 In dit document staat beschreven hoe je kunt bijdragen en welke eisen we daaraan stellen.
 
-Wanneer je nog niet goed weet hoe Git en GitHub werkt, kun je hier iets meer over lezen in onze [tutorial](github_tutorial.md). Hierin staat ook de workflow beschreven voor het voorstellen van wijzigingen (pull request).
+Wanneer je nog niet goed weet hoe Git en GitHub werkt, kun je hier iets meer over lezen in onze [tutorial](GitHub%20tutorial/github_tutorial.md). Hierin staat ook de workflow beschreven voor het voorstellen van wijzigingen (pull request).
 
 Heel belangrijk zijn de omgangsvormen die we hier hanteren. Het moet voor iedereen prettig zijn om een bijdrage te leveren, dus moeten we op een vriendelijke en respectvolle manier met elkaar omgaan. Daarover hebben we een [code of conduct](CODE_OF_CONDUCT.md).
 

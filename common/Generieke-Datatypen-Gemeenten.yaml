@@ -1,0 +1,125 @@
+openapi: 3.0.0
+info:
+  title: Generieke datatypen voor Gemeentelijke APIs onder regie van VNGRealistaie
+  description: |
+    De definitie van generieke datatypen die worden gebruikt door gemeentelijke API's.
+    Deze datatypen komen overeen met het basismodel Generieke Datatype Gemeenten waarnaar verwezen wordt vanuit informatiemodellen.
+    Bij het opstellen van de JSON schema-componenten worden de naamgevingsconventies van het BSM toegepast.
+    Er zijn dus (verklaarbare) verschillen tussen de namen in het basismodel en dit Json Schema.
+
+    Er worden uit dit bestand met herbruikbare componenten geen componenten verwijderd.
+    Als een component in de toekomst niet meer hergebruik mag worden dan wordt het deprecated verklaard.
+  version: '1.0.0'
+  contact:
+    name: Generieke Datatypen Gemeenten.
+    url: https://github.com/VNG-Realisatie/API-Kennisbank/Common
+  license:
+    name: European Union Public License, version 1.2 (EUPL-1.2)
+    url: https://eupl.eu/1.2/nl/
+paths: {}
+components:
+  schemas:
+    UUID:
+      type: "string"
+      minLength: 36
+      maxLength: 36
+      pattern: ^[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}$
+      description: |
+                    Een UUID is een nummer van 128 bits (= 16 bytes). UUID wordt weergegeven in 32 hexadecimale cijfers. Deze cijfers zijn ingedeeld in vijf groepen, in ongelijk aantal en gescheiden door koppeltekens: 8-4-4-4-12
+                    In zijn geheel wordt een UUID dus door 36 tekens gevormd, waarvan 32 hexadecimale karakters en vier streepjes:
+
+                    550e8400-e29b-41d4-a716-446655440000
+
+                    https://tools.ietf.org/html/rfc4122
+      example: "123e4567-e89b-12d3-a456-426614174000"
+    OIN:
+      type: "string"
+      minLength: 20
+      maxLength: 20
+      pattern: ^[0-9]{20}$
+      description: |
+                    Het Organisatie-identificatienummer (OIN) is een uniek nummer dat Logius kan toekennen aan organisaties om zich te kunnen identificeren, authentiseren en of autoriseren bij digitaal berichtenverkeer binnen en met de overheid.
+    Point:
+      $ref: 'http://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/schemas/pointGeoJSON.yaml'
+    LineString:
+      $ref: 'http://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/schemas/linestringGeoJSON.yaml'
+    Polygon:
+      $ref: 'http://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/schemas/polygonGeoJSON.yaml'
+    MultiPoint:
+      $ref: 'http://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/schemas/multipointGeoJSON.yaml'
+    MultiLineString:
+      $ref: 'http://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/schemas/multilinestringGeoJSON.yaml'
+    MultiPolygon:
+      $ref: 'http://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/schemas/multipolygonGeoJSON.yaml'
+    Sleutel:       #Toegevoegd voor de waarderingskamer -IMWOZ
+      type: "string"
+      maxlength: 40
+    GeoJSONGeometrie:
+      title: GeoJSON Geometrie
+      description: Geometrie in GeoJSON formaat (RFC 7946). Een property die dit datatype heeft mag slechts 1 van de opgenomen properties bevatten. Deze constructie vervangt de oneOf vanwege codegeneratie-issues.
+      externalDocs:
+        description: RFC 7946 - The GeoJSON Format
+        url: 'https://tools.ietf.org/html/rfc7946'
+      type: object
+      properties:
+        point:
+          $ref: 'http://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/schemas/pointGeoJSON.yaml'
+        lineString:
+          $ref: 'http://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/schemas/linestringGeoJSON.yaml'
+        polygon:
+          $ref: 'http://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/schemas/polygonGeoJSON.yaml'
+        multiPoint:
+          $ref: 'http://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/schemas/multipointGeoJSON.yaml'
+        multiLineString:
+          $ref: 'http://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/schemas/multilinestringGeoJSON.yaml'
+        multiPolygon:
+          $ref: 'http://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/schemas/multipolygonGeoJSON.yaml'
+    DatumOnvolledig:
+      type: "object"
+      description: |
+                    Onderdelen van een datum die bekend zijn. Als er geen valide datum samen te stellen is omdat dag, jaar of maand (of een combinatie daarvan) onbekend is dan wordt niet in die betreffende onderdelen voorzien.
+      properties:
+        dag:
+          type: "integer"
+          description: |
+                        Als de dag van de datum bekend is wordt dit element gevuld, ook als de volledige datum bekend is.
+          minimum: 1
+          maximum: 31
+          example: 3
+        jaar:
+          type: "integer"
+          description: |
+                        Als het jaar van de datum bekend is wordt dit element gevuld, ook als de volledige datum bekend is.
+          maximum: 9999
+          example: 1989
+        maand:
+          type: "integer"
+          description: |
+                        Als de maand van een datum bekend is wordt dit element gevuld, ook als de volledige datum bekend is.
+          minimum: 1
+          maximum: 12
+          example: 5
+        datum:
+          type: "string"
+          description: |
+                        Als de volledige datum bekend is wordt de datum gevuld die in de date definitie past.
+          format: "date"
+          example: "1989-05-03"
+    NEN3610ID:
+      type: "object"
+      description : |
+                      Identificatiegegevens voor de universeel unieke identificatie van een object.
+      properties:
+        namespace:
+          type: "string"
+          pattern: ^([A-Za-z0-9_\-,\.])+
+          description: |
+                        Unieke verwijzing naar een registratie van objecten.
+        lokaalId:
+          type: "string"
+          description : |
+                          Unieke identificatiecode binnen een registratie.
+        Versie:
+          type: "string"
+          description: |
+                        Versie-aanduiding van een object.
