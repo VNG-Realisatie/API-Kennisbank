@@ -141,4 +141,4 @@ De workflow voert de volgende stappen uit:
 [9]: ./haal-centraal-npm-beheer.md
 
 Deze workflow maakt gebruik van de secret GITHUB_TOKEN, een ge-encrypte omgevingsvariabele waarin acces tokens zijn vastgelegd waarmee autorisatie verkregen kan worden voor het aanbrengen van wijzigingen op de repository.
-Een beschrijving van deze secret staat beschreven in [Haal Centraal NPM beheer](haal-centraal-npm-beheer.md).
+Een beschrijving van deze secret is te vinden in [Haal Centraal NPM beheer](haal-centraal-npm-beheer.md).
