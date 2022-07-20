@@ -65,8 +65,8 @@ title: Verbetervoorstel
   <div class="col">
     <div class="card no-border">
       <div class="card-body">
-        <h3 class="card-title">&nbsp;</h3>
-        <p class="card-text">&nbsp;</p>
+        <h3 class="card-title">Klantinteracties</h3>
+        <p class="card-text"> <a href="https://github.com/VNG-Realisatie/Klantinteracties/issues/new?assignees=&labels=enhancement&template=enhancement.md&title=">Maak een issue aan>></a></p>
       </div>
     </div>
   </div>
