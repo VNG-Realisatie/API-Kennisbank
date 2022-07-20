@@ -14,7 +14,7 @@ title: Hoe kun je bijdragen?
       <div class="card-body">
         <h3 class="card-title">Bug melden</h3>
         <p class="card-text">
-          Je kunt een fout of bug doorgeven in GitHub. <a href="https://vng-realisatie.github.io/API-Kennisbank/bug_melden.html">Lees meer>></a>
+          Je kunt een fout of bug doorgeven in GitHub. <a href="https://vng-realisatie.github.io/API-Kennisbank/docs/bug_melden.html">Lees meer>></a>
         </p>
       </div>
     </div>
@@ -24,7 +24,7 @@ title: Hoe kun je bijdragen?
       <div class="card-body">
         <h3 class="card-title">Verbetervoorstel</h3>
         <p class="card-text">
-        Je kunt een verbetervoorstel doorgeven in GitHub. <a href="https://vng-realisatie.github.io/API-Kennisbank/verbetervoorstel.html">Lees meer>></a>
+        Je kunt een verbetervoorstel doorgeven in GitHub. <a href="https://vng-realisatie.github.io/API-Kennisbank/docs/verbetervoorstel.html">Lees meer>></a>
         </p>
       </div>
     </div>
@@ -33,7 +33,7 @@ title: Hoe kun je bijdragen?
     <div class="card no-border">
       <div class="card-body">
         <h3 class="card-title">Gebruikerswens</h3>
-        <p class="card-text">Je kunt een gebruikerswensdoorgeven in GitHub. <a href="https://vng-realisatie.github.io/API-Kennisbank/gebruikerswens.html">Lees meer>></a>
+        <p class="card-text">Je kunt een gebruikerswensdoorgeven in GitHub. <a href="https://vng-realisatie.github.io/API-Kennisbank/docs/gebruikerswens.html">Lees meer>></a>
         </p>
       </div>
     </div>
