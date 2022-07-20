@@ -13,4 +13,4 @@ Beheerders van deze repo zijn:
 
 
 Je bent welkom hieraan bij te dragen!
-Over de wijze waarop vind je meer in '[Hoe bij te dragen](./CONTRIBUTING.md)'.
+Over de wijze waarop vind je meer in '[Hoe bij te dragen](https://github.com/VNG-Realisatie/API-Kennisbank/blob/master/CONTRIBUTING.md)'.
