@@ -66,3 +66,9 @@ _**Ratio:**_ Het is niet eenduidig of een einddatum een "tot"-datum is of een "t
 
 Datum opname : 29-04-2021
 Datum wijziging : 29-04-2021
+
+## DR1.7 Wanneer pas je enkelvoud of meervoud toe in propery-namen
+
+Als het een propertynaam is die verwijst naar eenb gerelateerde resource dan wanneer wordt de resourcenaam enkelvoud als de gerelateerde resource één keer kan voorkomen. Wanneer de gerelateerde resource meerdere keren kan voorkomen, wordt de resourcenaam in meervoud gebruikt.
+
+Als properties of gegevensgroepen meermaals kunnen voorkomen (arrays) wordt meervoud toegepast. Anders wordt enkelvoud toegepast. 
