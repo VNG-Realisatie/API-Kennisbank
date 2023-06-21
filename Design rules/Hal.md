@@ -1,6 +1,6 @@
 ---
 layout: page-with-side-nav
-title: API Design rules: Hal
+title: API Design rules - Hal
 ---
 
 
