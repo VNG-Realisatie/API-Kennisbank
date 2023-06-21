@@ -1,6 +1,6 @@
 ---
 layout: page-with-side-nav
-title: API Design rules: Diversen
+title: API Design rules - Diversen
 ---
 
 
