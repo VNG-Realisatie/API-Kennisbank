@@ -70,6 +70,8 @@ De doorontwikkeling van StUF-standaarden staat op dit moment stil en in feite zi
 komt tot uitdrukking in het top-menu. API-specificaties zijn te vinden onder het menu-item ‘API-specificaties’ de  StUF-standaarden onder het 
 menu-item ‘StUF standaarden’.
 
+![Top menu](./Top%20menu.png)
+
 Binnen de API-specificaties onderkennen we nog API-specificaties die deel uitmaken van een groep van API-specificaties (bijv. die van ZGW) en 
 API-specificaties die geen deel uitmaken van een groep (bijv. de ORI API-specificatie). We spreken af dat API-specificaties die onderdeel uitmaken 
 van een groep van standaarden niet zelfstandig worden opgenomen onder het menu-item ‘API-specificaties’. In dat geval wordt de groep waartoe deze 
@@ -89,32 +91,7 @@ enkelvoudige van API-specificaties) en welke stadia (‘In Ontwikkeling’ of �
 mate ze dan gewenst zijn. De lichtblauwe ‘Groep’ kolom betreft de gemengde situatie waar er binnen een groep al minimaal een API-specificatie 
 voorkomt die ‘In Gebruik’ is maar er ook minimaal een API-specificatie nog ‘In Ontwikkeling’ is.
 
- 	 	MoSCoW
-N1	N2	IG		IO
-		Enkel	Groep	Groep
-Groep	Enkel
-[Domein]
-M	M	M	M	M
- 	Introductie	M	M	M	C	C
-
- 	Productvisie	M	M	M	S	S
- 	Architectuur	S	S	S	C	C
- 	Informatiemodel	M	M	M	C	C
- 	Documentatie	S	S	S	C	C
- 	FAQ	C	C	C	C	C
- 	 	 			 
-API-specificatie(s) 	M	M	M	C	C
- 	[Naam API-specificatie 1]	M	M	M	C	C
- 	[Naam API-specificatie 2]	-	C	C	C	 -
- 	[Naam API-specificatie n]	-	C	C	C	 -
- 	 	 			 
-[Title]  	-	-	C	C	C
- 	[Subtitle]	-	-	M	M	M
- 	 	 			 
-Over	 M	M	M	S	S
- 	Ontwikkeling	S	S	S	S	S
- 	Contact	M
-M	M	C	C
+![MoSCoW side menu](./MoSCoW-side-menu.JPG)
 
 We doorlopen, voor zover nodig, de diverse menu-items. Waar van toepassing wordt aangegeven als menu-items meerdere keren voor mogen komen.
 
@@ -243,45 +220,12 @@ m.b.v. de MoSCoW methode aangegeven welke paragrafen verplicht zijn en zo niet i
 deze tabel maken we geen onderscheid tussen enkelvoudige API-specificaties en API-specificaties die onderdeel uitmaken 
 van een groep.
 
- 	 	 	 	MoSCoW
-N1	N2	N3	N4	IG	IO
-[Domein]	 	 
- 	...	 	 
- 	Informatiemodel	 	 
- 		Basisterminologie	S
-C
- 		Gegevenswoordenboek	S
-C
- 		Conceptueel Model	S
-C
- 		Logisch Model	S	C
- 	Documentatie	 	 
- 		Algemeen	S
-C
- 		Uitgangspunten	C	C
- 		Cases	C	C
- 		Besluiten	C	C
- 		Aanbevelingen	C	C
- 		Vraagstukken	C	C
- 	…		 	 	 
- 	 	 
-API-specificatie(s)  	 	 
- 	[Naam API-specificatie]	 	 
- 		Release notes	M
-S
-
- 		User stories 	   	C	C
- 		Getting started	S	C
- 		Handelingen	C	C
- 		Informatievragen	C	C
- 		Rules	 	S	C
- 		OAS
-M
-C
- 		
+![MoSCoW pagina content](./MoSCoW-content.JPG)
 
 ### Informatiemodel
-De in deze pagina opgenomen paragrafen kunnen links bevatten naar de werkelijk met dat onderwerp betrekking hebbende documenten. Zo zal de documentatie van een Conceptueel Model over het algemeen niet in deze pagina worden opgenomen maar zal er middels een link worden verwezen naar het betreffende document.
+De in deze pagina opgenomen paragrafen kunnen links bevatten naar de werkelijk met dat onderwerp betrekking hebbende 
+documenten. Zo zal de documentatie van een Conceptueel Model over het algemeen niet in deze pagina worden opgenomen 
+maar zal er middels een link worden verwezen naar het betreffende document.
 
 ***Basisterminologie***<br/>
 Bondige beschrijving van de kern entiteiten in de API-specificatie, in tekst en beeld.
@@ -290,12 +234,16 @@ Bondige beschrijving van de kern entiteiten in de API-specificatie, in tekst en 
 Lijst van in de API-specificatie en daarop aanvullende documentatie gehanteerde termen.
 
 ***Conceptueel Model***<br/>
-Oftewel Conceptueel Informatiemodel. Beschrijving van de modellering van de werkelijkheid binnen het beschouwde domein door middel van de beschrijving van welke informatie (data met betekenis en structuur) een rol speelt. Wederom in tekst en beeld.
+Oftewel Conceptueel Informatiemodel. Beschrijving van de modellering van de werkelijkheid binnen het beschouwde domein 
+door middel van de beschrijving van welke informatie (data met betekenis en structuur) een rol speelt. Wederom in tekst 
+en beeld.
 
-Op termijn zal hiervoor Respec documentatie worden gebruikt gegenereerd uit een door ons in Enterprise Architect vervaardigd SIM. Een opgevraagd Respec document zal zonder de GitHub pages top- en side-menu worden getoond in een nieuw tabblad. 
+Op termijn zal hiervoor Respec documentatie worden gebruikt gegenereerd uit een door ons in Enterprise Architect vervaardigd 
+SIM. Een opgevraagd Respec document zal zonder de GitHub pages top- en side-menu worden getoond in een nieuw tabblad. 
 
 ***Logisch Model***<br/>
-Beschrijft of toont hoe de, in het conceptuele informatiemodel onderscheiden, concepten gebruikt worden bij de interactie tussen systemen en hun gebruikers en tussen systemen onderling. In tekst en/of beeld.
+Beschrijft of toont hoe de, in het conceptuele informatiemodel onderscheiden, concepten gebruikt worden bij de interactie 
+tussen systemen en hun gebruikers en tussen systemen onderling. In tekst en/of beeld.
 
 Suggesties van nog meer op deze pagina op te nemen onderwerpen:
 •	Verwijzing naar de GEMMA bedrijfsobjecten. Zie https://www.gemmaonline.nl/index.php/Bedrijfsobjecten_uit_GGM
@@ -303,9 +251,12 @@ Suggesties van nog meer op deze pagina op te nemen onderwerpen:
 
 ### Documentatie
 ***Algemeen***<br/>
-Overzicht waarin aangegeven wordt welke API-specificatie documentatie aanwezig is, hoe deze is opgezet en zaken zoals onderlinge samenhang. In het geval van de vorm en structuur van documentatie-artefacten kan bijv. gebruik gemaakt worden van coderingen. Indien dat het geval is wordt daarover op deze pagina uitleg gegeven. Bijv.:
+Overzicht waarin aangegeven wordt welke API-specificatie documentatie aanwezig is, hoe deze is opgezet en zaken zoals 
+onderlinge samenhang. In het geval van de vorm en structuur van documentatie-artefacten kan bijv. gebruik gemaakt worden 
+van coderingen. Indien dat het geval is wordt daarover op deze pagina uitleg gegeven. Bijv.:
 
-Starten artefacten met een ‘B’, dan is sprake van een besluit, ‘A’ staat voor aanbeveling, daarna volgen altijd vier cijfers etc…
+Starten artefacten met een ‘B’, dan is sprake van een besluit, ‘A’ staat voor aanbeveling, daarna volgen altijd vier 
+cijfers etc…
 
 Hier wordt geen link opgenomen naar de niet bij de API-specificatie horende aanvullende documentatie.
 
@@ -316,22 +267,27 @@ Beschrijving van wat als basis voor de ontwikkeling van de API-specificatie(s) i
 Beschrijving van situaties waarin de API-specificatie(s) toepasbaar zijn.
 
 ***Besluiten***<br/>
-Tijdens de ontwikkeling van API-specificatie(s) kunnen er issues naar voren komen waarover een besluit moet worden genomen. Deze besluiten worden onder dit kopje toegelicht. Het is belangrijk dat er niet alleen wordt beschreven wat er is besloten maar ook waarom daartoe is besloten evt. met een beschrijving van alle in overweging genomen alternatieven.
+Tijdens de ontwikkeling van API-specificatie(s) kunnen er issues naar voren komen waarover een besluit moet worden genomen. 
+Deze besluiten worden onder dit kopje toegelicht. Het is belangrijk dat er niet alleen wordt beschreven wat er is besloten 
+maar ook waarom daartoe is besloten evt. met een beschrijving van alle in overweging genomen alternatieven.
 
 ***Aanbevelingen***<br/> 
 Bevat adviezen door de ontwikkelaars of Product Owner m.b.t. de toepassing of implementatie van de API-specificatie(s). …
 
 ***Vraagstukken***<br/> 
-Beschrijving van de problemen waarvoor in de API-specificatie(s) nog geen oplossing is opgenomen. Idealiter wordt in een van de volgende versies van de API-specificatie(s) wel in een oplossing voorzien.
+Beschrijving van de problemen waarvoor in de API-specificatie(s) nog geen oplossing is opgenomen. Idealiter wordt in een van 
+de volgende versies van de API-specificatie(s) wel in een oplossing voorzien.
 
 ### [Naam API-specificatie]
 ***Release notes***<br/>
-Beschrijving van de doorgevoerde wijzigingen (incl. De opgeloste fouten) die zijn aangebracht op de API-specificatie excl. de Release notes zelf. Let op! Dit is geen uitputtende lijst van alle wijzigingen in alle bestanden.
+Beschrijving van de doorgevoerde wijzigingen (incl. De opgeloste fouten) die zijn aangebracht op de API-specificatie excl. de 
+Release notes zelf. Let op! Dit is geen uitputtende lijst van alle wijzigingen in alle bestanden.
 
 ***User stories***<br/>
 Lijst van alle user stories die met de betreffende release van de API-specificatie zijn geïmplementeerd.
 
-In principe kan zo’n lijst m.b.v. GitHub gegenereerd worden maar daarvoor is wel een standaard werkwijze noodzakelijk. Bepaald moet worden of we van deze mogelijkheid gebruik willen maken en zo ja of dat dan optioneel is.
+In principe kan zo’n lijst m.b.v. GitHub gegenereerd worden maar daarvoor is wel een standaard werkwijze noodzakelijk. Bepaald 
+moet worden of we van deze mogelijkheid gebruik willen maken en zo ja of dat dan optioneel is.
 
 ***Handelingen***<br/>
 [Nog te voorzien in een goede definitie]
@@ -340,21 +296,33 @@ In principe kan zo’n lijst m.b.v. GitHub gegenereerd worden maar daarvoor is w
 [Nog te voorzien in een goede definitie]
 
 ***Regels***<br/>
-Beschrijvingen van het gedrag dat de API moet vertonen in de vorm van gedrags-, afleidings- beperkingsregels, etc. Ook wel aanvullende specificaties genoemd. Een mogelijke vorm is Gherkin.
+Beschrijvingen van het gedrag dat de API moet vertonen in de vorm van gedrags-, afleidings- beperkingsregels, etc. Ook wel 
+aanvullende specificaties genoemd. Een mogelijke vorm is Gherkin.
 
 ***OAS***<br/>
-Dit bevat voor elke versie van de OAS een link naar de Redoc en Swagger interface. Tevens wordt hierin links opgenomen naar de diverse versies van het raw Yaml bestand.
+Dit bevat voor elke versie van de OAS een link naar de Redoc en Swagger interface. Tevens wordt hierin links opgenomen naar 
+de diverse versies van het raw Yaml bestand.
 
-Een opgevraagd Redoc en Swagger document zal zonder de GitHub pages top- en side-menu worden getoond in een nieuw tabblad.Techniek
+Een opgevraagd Redoc en Swagger document zal zonder de GitHub pages top- en side-menu worden getoond in een nieuw tabblad.
+
+## Techniek
 Om hetgeen hierboven is geschetst toe te kunnen passen moet met het volgende rekening gehouden worden. 
 
 ### GitHub Pages Repository
-Het is technisch mogelijk om alle de documentatie van een bij een groep horende API-specificatie onder te brengen in de GitHub repository waarin die API-specificatie ook beheerd wordt. Dat is echter bewerkelijk en foutgevoelig. In elke repository moet immers het hele side-menu worden geconfigureerd en dus ook de links naar de documenten. De kans is groot dat de side-menu’s van een groep van API-specificaties dan van elkaar af gaan wijken of dat links niet goed werken. Ook moeten wijzigingen in het side-menu dan op alle respositories worden aangebracht. Onderhoud kost dus meer tijd en energie dan strikt noodzakelijk. 
+Het is technisch mogelijk om alle de documentatie van een bij een groep horende API-specificatie onder te brengen in de GitHub 
+repository waarin die API-specificatie ook beheerd wordt. Dat is echter bewerkelijk en foutgevoelig. In elke repository moet 
+immers het hele side-menu worden geconfigureerd en dus ook de links naar de documenten. De kans is groot dat de side-menu’s 
+van een groep van API-specificaties dan van elkaar af gaan wijken of dat links niet goed werken. Ook moeten wijzigingen in 
+het side-menu dan op alle respositories worden aangebracht. Onderhoud kost dus meer tijd en energie dan strikt noodzakelijk. 
 
-Advies is dan ook om de documentatie van alle in een groep aanwezige API-specificaties binnen één GitHub repository op te slaan en daarvoor in ieder geval elke API-specificatie in de ‘docs’ folder een eigen folder te geven. Dat is de meest eenvoudige manier. De enige uitzondering daarop zijn de OAS bestanden die wel in hun eigen GitHub repository kunnen blijven staan wat weer zeer handig is voor het beheer daarop.
+Advies is dan ook om de documentatie van alle in een groep aanwezige API-specificaties binnen één GitHub repository op te slaan 
+en daarvoor in ieder geval elke API-specificatie in de ‘docs’ folder een eigen folder te geven. Dat is de meest eenvoudige manier. 
+De enige uitzondering daarop zijn de OAS bestanden die wel in hun eigen GitHub repository kunnen blijven staan wat weer zeer handig 
+is voor het beheer daarop.
 
 ### Redoc en Swagger
-Om te garanderen dat de Redoc en Swagger documenten in een nieuw tabblad zonder top- en side-menu worden getoond moeten voor elke release de volgende links in resp. de Redoc en Swagger paragrafen worden geplaatst:
+Om te garanderen dat de Redoc en Swagger documenten in een nieuw tabblad zonder top- en side-menu worden getoond moeten voor elke 
+release de volgende links in resp. de Redoc en Swagger paragrafen worden geplaatst:
 
 [Linktekst](http://redocly.github.io/redoc/?url=raw link naar het gewenste ‘openapi.yaml’ bestand){:target="_blank"}
 
@@ -362,14 +330,18 @@ Om te garanderen dat de Redoc en Swagger documenten in een nieuw tabblad zonder 
 
 Een voorbeeld:
 
-[ReDoc](http://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/VNG-Realisatie/gemma-verwerkingenlogging/master/docs/api-write/oas-specification/logging-verwerkingen-api/openapi.yaml){:target="_blank"}
+&lsqb;ReDoc&rsqb;&lpar;http:&sol;/redocly.github.io/redoc/?url=https://raw.githubusercontent.com/VNG-Realisatie/gemma-verwerkingenlogging/master/docs/api-write/oas-specification/logging-verwerkingen-api/openapi.yaml){:target="_blank"}
 
 ### Template repository
-In de template repository API-specificatie-template-repository is o.a. de in dit document geschetste structuur uitgewerkt. Deze repository kan gebruikt worden om een nieuwe repository te genereren. Zie daarvoor de link in het README.md bestand van die repository. Een verzoek daartoe kun je indienen bij de VNG-R GitHub administrators. 
+In de template repository API-specificatie-template-repository is o.a. de in dit document geschetste structuur uitgewerkt. Deze repository 
+kan gebruikt worden om een nieuwe repository te genereren. Zie daarvoor de link in het README.md bestand van die repository. Een verzoek 
+daartoe kun je indienen bij de VNG-R GitHub administrators. 
 
-De hieronder getoonde, in genoemde template repository uitgewerkte structuur, kun je ook naar reeds bestaande repositories kopiëren en daarna naar eigen smaak aanpassen.
+De hieronder getoonde, in genoemde template repository uitgewerkte structuur, kun je ook naar reeds bestaande repositories kopiëren en 
+daarna naar eigen smaak aanpassen.
 
- 
+![Repository structuur](./Repository%20structuur.png) 
 
 In deze structuur worden ook de template md documenten opgenomen met daarin de in dit document voor die md documenten voorgestelde onderwerpen.
-De redacteur van de GitHub Pages repository of de PO van de API-specificatie heeft dan een leidraad, is zich bewust van wat hij nog moet documenteren en van wat hij besluit om juist niet op te nemen.
+De redacteur van de GitHub Pages repository of de PO van de API-specificatie heeft dan een leidraad, is zich bewust van wat hij nog moet 
+documenteren en van wat hij besluit om juist niet op te nemen.
