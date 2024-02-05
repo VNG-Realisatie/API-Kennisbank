@@ -51,6 +51,12 @@ aanscherpt zoals:
 *	Rules;
 *	Informatiemodel;
 
+### Gestandaardiseerde API-specificatie
+In het woord 'API-standaard' lopen twee zaken door elkaar. Het WAT (API-specificatie) en de STATUS (tot standaard verklaard). Vaak gebruiken we het als synoniem 
+voor API-specificatie wat niet handig is aangezien niet iedere specificatie al tot standaard ‘is verheven’. API-standaarden worden door het College 
+van Dienstverlening of het Forum Standaardisatie vastgesteld. We kiezen er daarom voor ‘API-standaarden’ aan te duiden als ‘gestandaardiseerde 
+API-specificaties’. Niet-gestandaardiseerde specificaties zijn ‘gewoon’ ‘API-specificaties’.
+
 ### Ondersteunende API-documentatie
 Deze documentatie is aanvullend op de API-specificatie en staat over het algemeen eveneens in GitHub. Hiertoe kan behoren:
 *	Uitgangspunten;
@@ -61,12 +67,6 @@ Deze documentatie is aanvullend op de API-specificatie en staat over het algemee
 *	Testbestanden
 *	User Stories
 *	Release notes
-
-### Gestandaardiseerde API-specificatie
-In het woord 'API-standaard' lopen twee zaken door elkaar. Het WAT (API-specificatie) en de STATUS (tot standaard verklaard). Vaak gebruiken we het als synoniem 
-voor API-specificatie wat niet handig is aangezien niet iedere specificatie al tot standaard ‘is verheven’. API-standaarden worden door het College 
-van Dienstverlening of het Forum Standaardisatie vastgesteld. We kiezen er daarom voor ‘API-standaarden’ aan te duiden als ‘gestandaardiseerde 
-API-specificaties’. Niet-gestandaardiseerde specificaties zijn ‘gewoon’ ‘API-specificaties’.
 
 ## Navigatiestructuur
 
