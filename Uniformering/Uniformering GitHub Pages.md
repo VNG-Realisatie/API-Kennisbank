@@ -164,7 +164,8 @@ de titel de meervouds ‘s’.
 Indien er nog geen ‘In Gebruik’ versies van een (van de) API-specificatie(s) bestaat dan is dit menu-item optioneel.
 
 ***[Naam API-specificatie]***<br/>
-Bevat een korte eenduidige naam van de API-specificatie. In de naam komt de term ‘API’ of zelfs API-specificatie’ niet voor. Dus niet ‘Zaken 
+Bevat een korte eenduidige naam van de API-specificatie. In feite is dit de in GEMMA bij de standaard of specificatie aangegeven verkorte notatie. 
+In de naam komt de term ‘API’ of zelfs API-specificatie’ niet voor. Dus niet ‘Zaken 
 API-specificatie’ maar kortweg ‘Zaken’. Het menu-item geeft toegang tot de ‘In Gebruik’ of, als deze nog niet voorhanden is, de meest recente 
 ‘In Ontwikkeling’ versie van de API-specificatie.
 
