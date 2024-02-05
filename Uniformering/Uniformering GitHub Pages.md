@@ -208,9 +208,11 @@ Bevat een overzicht van alle contactinformatie en links naar sites met aanvullen
     * Bericht ontwerper(s)
     * Business analist
 
-### Nog niet ondergebrachte informatie
-*	Licentietekst
-*	Omgangsvormen
+***Omgangsvormen***<br/>
+Beschrijft hoe we bij de (door)ontwikkeling met elkaar omgaan teneinde een omgeving te creëren waarin ieders inbreng gewaardeerd wordt. 
+
+***Licentie***<br/>
+Beschrijft onder welke licentie de specificatie valt en voor welke onderdelen dat geldt.
 
 ## Pagina content
 Informatie op het 3e en evt. 4e niveau wordt zoals gezegd niet in het side-menu getoond maar op de bijbehorende pagina 
