@@ -51,6 +51,12 @@ aanscherpt zoals:
 *	Rules;
 *	Informatiemodel;
 
+### Gestandaardiseerde API-specificatie
+In het woord 'API-standaard' lopen twee zaken door elkaar. Het WAT (API-specificatie) en de STATUS (tot standaard verklaard). Vaak gebruiken we het als synoniem 
+voor API-specificatie wat niet handig is aangezien niet iedere specificatie al tot standaard ‘is verheven’. API-standaarden worden door het College 
+van Dienstverlening of het Forum Standaardisatie vastgesteld. We kiezen er daarom voor ‘API-standaarden’ aan te duiden als ‘gestandaardiseerde 
+API-specificaties’. Niet-gestandaardiseerde specificaties zijn ‘gewoon’ ‘API-specificaties’.
+
 ### Ondersteunende API-documentatie
 Deze documentatie is aanvullend op de API-specificatie en staat over het algemeen eveneens in GitHub. Hiertoe kan behoren:
 *	Uitgangspunten;
@@ -62,12 +68,6 @@ Deze documentatie is aanvullend op de API-specificatie en staat over het algemee
 *	User Stories
 *	Release notes
 
-### API-specificatie
-In het woord 'API-standaard' lopen twee zaken door elkaar. Het WAT (API-specificatie) en de STATUS (tot standaard verklaard). Vaak gebruiken we het als synoniem 
-voor API-specificatie wat niet handig is aangezien niet iedere specificatie al tot standaard ‘is verheven’. API-standaarden worden door het College 
-van Dienstverlening of het Forum Standaardisatie vastgesteld. We kiezen er daarom voor ‘API-standaarden’ aan te duiden als ‘gestandaardiseerde 
-API-specificaties’. Niet-gestandaardiseerde specificaties zijn ‘gewoon’ ‘API-specificaties’.
-
 ## Navigatiestructuur
 
 ### Top-menu
@@ -75,7 +75,7 @@ De doorontwikkeling van StUF-standaarden staat op dit moment stil en in feite zi
 komt tot uitdrukking in het top-menu. API-specificaties zijn te vinden onder het menu-item ‘API-specificaties’ de  StUF-standaarden onder het 
 menu-item ‘StUF standaarden’.
 
-<img src="./Top%20menu.png" alt="Top menu" width="900"/>
+<img src="./Top%20menu.png" alt="Top menu" width="700"/>
 
 Binnen de API-specificaties onderkennen we nog API-specificaties die deel uitmaken van een groep van API-specificaties (bijv. die van ZGW) en 
 API-specificaties die geen deel uitmaken van een groep (bijv. de ORI API-specificatie). We spreken af dat API-specificaties die onderdeel uitmaken 
@@ -117,7 +117,7 @@ Onderwerpen die hier aan bod komen zijn:
 *	Bronnen;
 *	Privacy en Security;
 *	Werkingsgebied;
-*	Gerelateerde standaarden.
+*	Gerelateerde standaarden.<br/>Incl. de met de versies van de onderliggende specificatie compatibele versies.
 
 ***Productvisie***<br/>
 Een Productvisie bevat een beknopte beschrijving van het gewenste toekomstige eindresultaat van het product. Het dient als een richtlijn 
@@ -137,7 +137,8 @@ beoogde eindresultaat.
 Onderwerpen die in de beschrijving van de architectuur aan bod komen zijn:
 *	de inpassing van de API-specificaties in de totale gemeentelijke architectuur (GEMMA);
 *	de globale opzet van de API-specificaties;
-*	de gedachte achter de opzet van de API-specificaties.
+*	de gedachte achter de opzet van de API-specificaties.<br/>
+   Het gaat hier om de gedachtes achter de gekozen architectuur. Waarom is er juist voor die architectuur gekozen. Een soort van verantwoording voor de architectuur dus.
 *	verwijzing naar de pagina van de standaard op GEMMA online.<br/>De GEMMA standaardenlijst bevat een pagina voor de meeste API-specificaties
 en –standaarden. Nieuwe versies en statuswijzigingen in API-specificaties en StUF-standaarden moeten verwerkt worden in het GEMMA ArchiMate-
 model. Door hier een verwijzing op te nemen naar de pagina van de standaard op GEMMA online dwingen we onszelf de consistentie in het oog te
@@ -163,7 +164,8 @@ de titel de meervouds ‘s’.
 Indien er nog geen ‘In Gebruik’ versies van een (van de) API-specificatie(s) bestaat dan is dit menu-item optioneel.
 
 ***[Naam API-specificatie]***<br/>
-Bevat een korte eenduidige naam van de API-specificatie. In de naam komt de term ‘API’ of zelfs API-specificatie’ niet voor. Dus niet ‘Zaken 
+Bevat een korte eenduidige naam van de API-specificatie. In feite is dit de in GEMMA bij de standaard of specificatie aangegeven verkorte notatie. 
+In de naam komt de term ‘API’ of zelfs API-specificatie’ niet voor. Dus niet ‘Zaken 
 API-specificatie’ maar kortweg ‘Zaken’. Het menu-item geeft toegang tot de ‘In Gebruik’ of, als deze nog niet voorhanden is, de meest recente 
 ‘In Ontwikkeling’ versie van de API-specificatie.
 
@@ -197,7 +199,7 @@ Indien er geen sprake is van doorontwikkeling mag als titel voor dit menu-item o
 
 ***Contact***<br/>
 Bevat een overzicht van alle contactinformatie en links naar sites met aanvullende informatie zoals:
-*	Link(s) naar een community site;
+*	Link(s) naar een community site (Slack, Pleio, ...);
 *	Link(s) naar de gerelateerde GitHub repositories;
 *	standaarden.ondersteuning@vng.nl;
 *	Voor zover van toepassing de namen van de
@@ -206,9 +208,11 @@ Bevat een overzicht van alle contactinformatie en links naar sites met aanvullen
     * Bericht ontwerper(s)
     * Business analist
 
-### Nog niet ondergebrachte informatie
-*	Licentietekst
-*	Omgangsvormen
+***Omgangsvormen***<br/>
+Beschrijft hoe we bij de (door)ontwikkeling met elkaar omgaan teneinde een omgeving te creëren waarin ieders inbreng gewaardeerd wordt. 
+
+***Licentie***<br/>
+Beschrijft onder welke licentie de specificatie valt en voor welke onderdelen dat geldt.
 
 ## Pagina content
 Informatie op het 3e en evt. 4e niveau wordt zoals gezegd niet in het side-menu getoond maar op de bijbehorende pagina 
@@ -285,7 +289,7 @@ de volgende versies van de API-specificatie(s) wel in een oplossing voorzien.
 
 ### [Naam API-specificatie]
 ***Release notes***<br/>
-Beschrijving van de doorgevoerde wijzigingen (incl. De opgeloste fouten) die zijn aangebracht op de API-specificatie excl. de 
+Beschrijving van de doorgevoerde wijzigingen (incl. De opgeloste fouten met een eventuele link naar een issue) die zijn aangebracht op de API-specificatie excl. de 
 Release notes zelf. Let op! Dit is geen uitputtende lijst van alle wijzigingen in alle bestanden.
 
 ***User stories***<br/>
