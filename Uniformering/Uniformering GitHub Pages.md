@@ -62,8 +62,8 @@ Deze documentatie is aanvullend op de API-specificatie en staat over het algemee
 *	User Stories
 *	Release notes
 
-### API-specificatie
-In het woord 'API-standaard' lopen twee zaken door elkaar. Het WAT (API-specificatie) en de STATUS (tot standaard verklaard). Vaak gebruiken we het als synoniem 
+### API-standaard
+In dit woord lopen twee zaken door elkaar. Het WAT (API-specificatie) en de STATUS (tot standaard verklaard). Vaak gebruiken we het als synoniem 
 voor API-specificatie wat niet handig is aangezien niet iedere specificatie al tot standaard ‘is verheven’. API-standaarden worden door het College 
 van Dienstverlening of het Forum Standaardisatie vastgesteld. We kiezen er daarom voor ‘API-standaarden’ aan te duiden als ‘gestandaardiseerde 
 API-specificaties’. Niet-gestandaardiseerde specificaties zijn ‘gewoon’ ‘API-specificaties’.
