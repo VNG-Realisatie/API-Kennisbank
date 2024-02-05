@@ -137,7 +137,7 @@ beoogde eindresultaat.
 Onderwerpen die in de beschrijving van de architectuur aan bod komen zijn:
 *	de inpassing van de API-specificaties in de totale gemeentelijke architectuur (GEMMA);
 *	de globale opzet van de API-specificaties;
-*	de gedachte achter de opzet van de API-specificaties.
+*	de gedachte achter de opzet van de API-specificaties.<br/>
    Het gaat hier om de gedachtes achter de gekozen architectuur. Waarom is er juist voor die architectuur gekozen. Een soort van verantwoording voor de architectuur dus.
 *	verwijzing naar de pagina van de standaard op GEMMA online.<br/>De GEMMA standaardenlijst bevat een pagina voor de meeste API-specificaties
 en –standaarden. Nieuwe versies en statuswijzigingen in API-specificaties en StUF-standaarden moeten verwerkt worden in het GEMMA ArchiMate-
