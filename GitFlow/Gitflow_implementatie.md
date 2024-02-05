@@ -44,4 +44,4 @@ Feature branches zijn te herkennen aan hun naam, deze start nl. altijd met 'feau
 
 De resulterende flow kan er dan uiteindelijk als volgt uitzien:
 
-![Voorbeeld GitFlow workflow](https://github.com/VNG-Realisatie/API-Kennisbank/blob/master/GitFlow/GitFlow-workflow.jpg)
+![Voorbeeld GitFlow workflow](./GitFlow-workflow.jpg)
