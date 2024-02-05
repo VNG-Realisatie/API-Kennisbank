@@ -75,7 +75,7 @@ De doorontwikkeling van StUF-standaarden staat op dit moment stil en in feite zi
 komt tot uitdrukking in het top-menu. API-specificaties zijn te vinden onder het menu-item ‘API-specificaties’ de  StUF-standaarden onder het 
 menu-item ‘StUF standaarden’.
 
-<img src="./Top%20menu.png" alt="Top menu" width="900"/>
+<img src="./Top%20menu.png" alt="Top menu" width="500"/>
 
 Binnen de API-specificaties onderkennen we nog API-specificaties die deel uitmaken van een groep van API-specificaties (bijv. die van ZGW) en 
 API-specificaties die geen deel uitmaken van een groep (bijv. de ORI API-specificatie). We spreken af dat API-specificaties die onderdeel uitmaken 
