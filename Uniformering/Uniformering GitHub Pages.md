@@ -1,3 +1,8 @@
+---
+layout: page-with-side-nav
+title: Uniformering GitHub Pages
+---
+
 # Uniformering GitHub Pages
 
 Kenniscentrum Architectuur & Standaarden publiceert daar vervaardigde API-specificaties vanuit GitHub m.b.v. GitHub Pages. Teneinde dat op een 
