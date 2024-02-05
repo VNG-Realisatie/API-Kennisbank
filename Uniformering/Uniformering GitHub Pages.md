@@ -117,7 +117,7 @@ Onderwerpen die hier aan bod komen zijn:
 *	Bronnen;
 *	Privacy en Security;
 *	Werkingsgebied;
-*	Gerelateerde standaarden.
+*	Gerelateerde standaarden.<br/>Incl. de met de versies van de onderliggende specificatie compatibele versies.
 
 ***Productvisie***<br/>
 Een Productvisie bevat een beknopte beschrijving van het gewenste toekomstige eindresultaat van het product. Het dient als een richtlijn 
