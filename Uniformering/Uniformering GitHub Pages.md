@@ -289,7 +289,7 @@ de volgende versies van de API-specificatie(s) wel in een oplossing voorzien.
 
 ### [Naam API-specificatie]
 ***Release notes***<br/>
-Beschrijving van de doorgevoerde wijzigingen (incl. De opgeloste fouten) die zijn aangebracht op de API-specificatie excl. de 
+Beschrijving van de doorgevoerde wijzigingen (incl. De opgeloste fouten met een eventuele link naar een issue) die zijn aangebracht op de API-specificatie excl. de 
 Release notes zelf. Let op! Dit is geen uitputtende lijst van alle wijzigingen in alle bestanden.
 
 ***User stories***<br/>
