@@ -34,7 +34,7 @@ nauwkeurig (hoeven te) zijn. In de door ons geschreven teksten is nauwkeurigheid
 dus over API-specificatie, een beschrijving van een interface.
 
 Daarnaast speelt nog dat we m.b.t. API’s binnen VNG-R twee soorten API’s onderkennen:
-*	REST-API’s;
+*	JSON over HTTP;
 *	Webservices (SOAP-API’s).
 
 Als we het binnen VNG-R over API-specificaties hebben dan bedoelen we in feite REST-API-specificaties. SOAP-API-specificaties kennen we in 
