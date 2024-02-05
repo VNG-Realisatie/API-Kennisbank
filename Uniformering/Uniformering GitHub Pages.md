@@ -199,7 +199,7 @@ Indien er geen sprake is van doorontwikkeling mag als titel voor dit menu-item o
 
 ***Contact***<br/>
 Bevat een overzicht van alle contactinformatie en links naar sites met aanvullende informatie zoals:
-*	Link(s) naar een community site;
+*	Link(s) naar een community site (Slack, Pleio, ...);
 *	Link(s) naar de gerelateerde GitHub repositories;
 *	standaarden.ondersteuning@vng.nl;
 *	Voor zover van toepassing de namen van de
