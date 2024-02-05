@@ -75,7 +75,7 @@ De doorontwikkeling van StUF-standaarden staat op dit moment stil en in feite zi
 komt tot uitdrukking in het top-menu. API-specificaties zijn te vinden onder het menu-item ‘API-specificaties’ de  StUF-standaarden onder het 
 menu-item ‘StUF standaarden’.
 
-![Top menu](./Top%20menu.png)
+<img src="./Top%20menu.png" alt="Top menu" width="500"/>
 
 Binnen de API-specificaties onderkennen we nog API-specificaties die deel uitmaken van een groep van API-specificaties (bijv. die van ZGW) en 
 API-specificaties die geen deel uitmaken van een groep (bijv. de ORI API-specificatie). We spreken af dat API-specificaties die onderdeel uitmaken 
@@ -96,7 +96,7 @@ enkelvoudige van API-specificaties) en welke stadia (‘In Ontwikkeling’ of �
 mate ze dan gewenst zijn. De lichtblauwe ‘Groep’ kolom betreft de gemengde situatie waar er binnen een groep al minimaal een API-specificatie 
 voorkomt die ‘In Gebruik’ is maar er ook minimaal een API-specificatie nog ‘In Ontwikkeling’ is.
 
-![MoSCoW side menu](./MoSCoW-side-menu.JPG)
+<img src="./MoSCoW-side-menu.JPG" alt="MoSCoW side menu" width="500"/>
 
 We doorlopen, voor zover nodig, de diverse menu-items. Waar van toepassing wordt aangegeven als menu-items meerdere keren voor mogen komen.
 
@@ -225,7 +225,7 @@ m.b.v. de MoSCoW methode aangegeven welke paragrafen verplicht zijn en zo niet i
 deze tabel maken we geen onderscheid tussen enkelvoudige API-specificaties en API-specificaties die onderdeel uitmaken 
 van een groep.
 
-![MoSCoW pagina content](./MoSCoW-content.JPG)
+<img src="./MoSCoW-content.JPG" alt="MoSCoW pagina content" width="500"/>
 
 ### Informatiemodel
 De in deze pagina opgenomen paragrafen kunnen links bevatten naar de werkelijk met dat onderwerp betrekking hebbende 
@@ -345,7 +345,7 @@ daartoe kun je indienen bij de VNG-R GitHub administrators.
 De hieronder getoonde, in genoemde template repository uitgewerkte structuur, kun je ook naar reeds bestaande repositories kopiëren en 
 daarna naar eigen smaak aanpassen.
 
-![Repository structuur](./Repository%20structuur.png) 
+<img src="./Repository%20structuur.png" alt="Repository structuur" width="300"/>
 
 In deze structuur worden ook de template md documenten opgenomen met daarin de in dit document voor die md documenten voorgestelde onderwerpen.
 De redacteur van de GitHub Pages repository of de PO van de API-specificatie heeft dan een leidraad, is zich bewust van wat hij nog moet 
