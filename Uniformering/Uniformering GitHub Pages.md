@@ -186,7 +186,7 @@ naar beneden wordt gedrukt.
 1 of meer menu-items als onderdeel van een van de vrije menu-item blokken.
 
 ***Over***<br/>
-Biedt ruimte aan extra informatie zoals ‘Ontwikkeling’, ‘Beheer’ en ‘Contact’.
+Biedt ruimte aan extra informatie zoals ‘Ontwikkeling’, ‘Beheer’, ‘Contact’, 'Omgangsvormen' en 'Licentie'.
 
 ***Ontwikkeling***<br/>
 Pagina met uitgebreide informatie over (door)ontwikkeling van de API-specificatie(s). Geeft antwoord op vragen als:
