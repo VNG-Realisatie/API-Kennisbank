@@ -11,9 +11,7 @@ title: Uniformering GitHub Pages
   * [Top-menu](#Top-menu)
   * [Side-menu](#Side-menu)
 * [Pagina content](#Pagina-content)
-* [GitHub Pages Repository](#GitHub-Pages-Repository)
-* [Redoc en Swagger](#Redoc-en-Swagger)
-* [Template repository](#Template-repository)
+* [Techniek](#Techniek)
 
 Kenniscentrum Architectuur & Standaarden publiceert daar vervaardigde API-specificaties vanuit GitHub m.b.v. GitHub Pages. Teneinde dat op een 
 eenduidige wijze te doen zijn daar afspraken over gemaakt. Die afspraken zijn vooral technisch van aard en bieden dus nog veel vrijheid m.b.t. 
@@ -30,6 +28,8 @@ informatie minimaal aanwezig hoort te zijn en welke informatie facultatief is.
 Als afsluiting gaan we nog even in op enkele technische onderwerpen.
 
 ## Algemene naamgeving
+
+[Naar boven](#Inhoudsopgave)
 
 Bij het praten over API-specificaties bestaat de neiging een aantal termen door elkaar heen te halen. Dit is sterk afhankelijk van de persoon die 
 ze gebruikt of de personen waarmee het gesprek gevoerd wordt. Het veroorzaakt echter spraakverwarring wat weer leidt tot misverstanden. Om dat te 
@@ -80,7 +80,12 @@ Deze documentatie is aanvullend op de API-specificatie en staat over het algemee
 
 ## Navigatiestructuur
 
+[Naar boven](#Inhoudsopgave)
+
 ### Top-menu
+
+[Naar boven](#Inhoudsopgave)
+
 De doorontwikkeling van StUF-standaarden staat op dit moment stil en in feite zitten we in een transitie naar API-specificaties. Dat onderscheid 
 komt tot uitdrukking in het top-menu. API-specificaties zijn te vinden onder het menu-item ‘API-specificaties’ de  StUF-standaarden onder het 
 menu-item ‘StUF standaarden’.
@@ -97,6 +102,9 @@ API-specificatie wanneer deze opgenomen wordt. Opname is wel verplicht na ingebr
 van de groep.
 
 ### Side-menu
+
+[Naar boven](#Inhoudsopgave)
+
 Het side-menu bevat slechts 2 niveaus. Eventueel benodigde diepere niveaus worden in de pagina’s aangebracht, daarover meer in de paragraaf 
 ‘Inhoud’. De menu-items in het side-menu worden zoveel als mogelijk gesorteerd van abstract naar concreet. Architectuur staat dus bijvoorbeeld 
 boven het informatiemodel.
@@ -225,6 +233,9 @@ Beschrijft hoe we bij de (door)ontwikkeling met elkaar omgaan teneinde een omgev
 Beschrijft onder welke licentie de specificatie valt en voor welke onderdelen dat geldt.
 
 ## Pagina content
+
+[Naar boven](#Inhoudsopgave)
+
 Informatie op het 3e en evt. 4e niveau wordt zoals gezegd niet in het side-menu getoond maar op de bijbehorende pagina 
 van het tweede niveau. 
 
@@ -325,6 +336,9 @@ de diverse versies van het raw Yaml bestand.
 Een opgevraagd Redoc en Swagger document zal zonder de GitHub pages top- en side-menu worden getoond in een nieuw tabblad.
 
 ## Techniek
+
+[Naar boven](#Inhoudsopgave)
+
 Om hetgeen hierboven is geschetst toe te kunnen passen moet met het volgende rekening gehouden worden. 
 
 ### GitHub Pages Repository
