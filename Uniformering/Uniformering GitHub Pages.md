@@ -29,7 +29,7 @@ Als afsluiting gaan we nog even in op enkele technische onderwerpen.
 
 ## Algemene naamgeving
 
-[Naar boven](#inhoudsopgave)
+[Naar boven](#uniformering-gitHub-pages)
 
 Bij het praten over API-specificaties bestaat de neiging een aantal termen door elkaar heen te halen. Dit is sterk afhankelijk van de persoon die 
 ze gebruikt of de personen waarmee het gesprek gevoerd wordt. Het veroorzaakt echter spraakverwarring wat weer leidt tot misverstanden. Om dat te 
@@ -80,11 +80,11 @@ Deze documentatie is aanvullend op de API-specificatie en staat over het algemee
 
 ## Navigatiestructuur
 
-[Naar boven](#inhoudsopgave)
+[Naar boven](#uniformering-gitHub-pages)
 
 ### Top-menu
 
-[Naar boven](#inhoudsopgave)
+[Naar boven](#uniformering-gitHub-pages)
 
 De doorontwikkeling van StUF-standaarden staat op dit moment stil en in feite zitten we in een transitie naar API-specificaties. Dat onderscheid 
 komt tot uitdrukking in het top-menu. API-specificaties zijn te vinden onder het menu-item ‘API-specificaties’ de  StUF-standaarden onder het 
@@ -103,7 +103,7 @@ van de groep.
 
 ### Side-menu
 
-[Naar boven](#inhoudsopgave)
+[Naar boven](#uniformering-gitHub-pages)
 
 Het side-menu bevat slechts 2 niveaus. Eventueel benodigde diepere niveaus worden in de pagina’s aangebracht, daarover meer in de paragraaf 
 ‘Inhoud’. De menu-items in het side-menu worden zoveel als mogelijk gesorteerd van abstract naar concreet. Architectuur staat dus bijvoorbeeld 
@@ -234,7 +234,7 @@ Beschrijft onder welke licentie de specificatie valt en voor welke onderdelen da
 
 ## Pagina content
 
-[Naar boven](#inhoudsopgave)
+[Naar boven](#uniformering-gitHub-pages)
 
 Informatie op het 3e en evt. 4e niveau wordt zoals gezegd niet in het side-menu getoond maar op de bijbehorende pagina 
 van het tweede niveau. 
@@ -337,7 +337,7 @@ Een opgevraagd Redoc en Swagger document zal zonder de GitHub pages top- en side
 
 ## Techniek
 
-[Naar boven](#inhoudsopgave)
+[Naar boven](#uniformering-gitHub-pages)
 
 Om hetgeen hierboven is geschetst toe te kunnen passen moet met het volgende rekening gehouden worden. 
 
