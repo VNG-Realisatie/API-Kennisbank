@@ -8,70 +8,62 @@ Online documentatie:
 * [Hoe werkt Github?](https://guides.github.com/introduction/flow/)
 
 # Belangrijke concepten in github
-**git**
+**git**<br/>
 Versiebeheersysteem. Een versiebeheersysteem ondersteunt het beheerst en gecontroleerd doorvoeren van wijzigingen aan een product. Hieruit komen concepten als branches, forks, commits, tags en releases.
 
-**GitHub**
-Online voorziening (www.github.com) gericht op het samen ontwikkelen. Het gebruikt versiebeheertool git, maar biedt daarnaast workflows voor het open ontwikkelen (in ons geval van open standaarden), en tools voor samenwerking (issues).
+**GitHub**<br/>
+Online voorziening (www.github.com) gericht op het samen ontwikkelen. Het gebruikt het versiebeheertool git, maar biedt daarnaast workflows voor het open ontwikkelen (in ons geval van open standaarden), en tools voor samenwerking (issues).
 
 **repository**
 Verzamelbak voor zaken die onder versiebeheer vallen en/of gezamenlijk ontwikkeld worden.
-Een repository betreft één "product" die als zodanig beheerd en gereleased wordt. Voor een repository wordt één of enkele personen als beheerder aangewezen, die verantwoordelijk is voor het beheren van de repository (o.a. beslissen over pull requests, mergen van branches, sluiten van issues).
+Een repository betreft één "product" die als zodanig beheerd en gereleased wordt. Voor een repository wordt één of enkele personen als beheerder aangewezen, die verantwoordelijk is voor het beheren van de repository (o.a. beslissen over pull requests, mergen van branches, sluiten van issues). Daarnaast kunnen er nog personen aan toegevoegd worden met schrijf- of andere rechten.
 Elke standaard zal een of meer eigen repositories krijgen. Een belangrijk criteria daarbij is of er sprake dient te zijn van een eigen versieontwikkeling. Ook wanneer voor één standaard zowel een provider als een consumer worden ontwikkeld komen beide in een eigen repository.
 
-**branch**
-Om beheerst wijzigingen te kunnen doorvoeren, worden deze op een aparte "aftakking" ontwikkeld en beoordeeld. Pas wanneer er geoordeeld is dat de wijziging gewenst, klaar en goed is, wordt deze feitelijk doorgevoerd op de standaard.
-In Git zijn branches tijdelijke "afslagen" met de bedoeling een wijziging te maken, testen en beoordelen, en deze daarna weer samen te voegen met de "master".
+**branch**<br/>
+Om beheerst wijzigingen te kunnen doorvoeren, worden deze op een of meer aparte "aftakkingen" ontwikkeld en beoordeeld. Pas wanneer er geoordeeld is dat de wijziging gewenst, klaar en goed is, wordt deze feitelijk doorgevoerd op de standaard.
+In Git zijn branches tijdelijke "afslagen" met de bedoeling een wijziging te maken, testen en beoordelen, en deze daarna weer samen te voegen met de "main" branch.
 Er kunnen tegelijkertijd veel verschillende branches actief zijn, zodat verschillende wijzigingen los van elkaar kunnen worden ontwikkeld, beoordeeld en doorgevoerd (toegepast).
 Voor een standaard die releasematig wordt beheerd en gepubliceerd, zal er voor elke versie (incl. patchversies) een branch worden gemaakt, waarin de wijzigingen voor die versie worden toegepast.
-Voor iemand die een wijziging of toevoeging wil doorvoeren, is het verstandig voor elke wijziging/toevoeging een eigen branch te maken, zodat ook pull requests elk slechts één wijziging/toevoeging bevat.
+Voor iemand die een wijziging of toevoeging wil doorvoeren, is het verstandig voor elke wijziging/toevoeging een eigen branch te maken, zodat ook pull requests elk slechts één wijziging/toevoeging bevat. Binnen VNG-Realisatie werken wij volgens [GitFlow](https://vng-realisatie.github.io/API-Kennisbank/GitFlow/Gitflow_implementatie).
 
-**master**
-Er is één speciale branch, "master". Dit is de basis, de actueel geldende versie van de repository. Wijzigingen voeg je niet direct toe op de "master"-branch, maar op een aparte branch voor deze wijziging.
-Pas wanneer de wijziging klaar is en kan worden gepubliceerd, voeg je de branch met de wijziging samen met de master-branch (dit heet `merge`), zodat de wijzigingen worden doorgevoerd op de master.
+**main**<br/>
+Er is één speciale branch, "main", vroeger ook wel "master" genoemd. Dit is de basis, de actueel geldende versie van de repository. Wijzigingen voeg je niet direct toe op de "main"-branch, maar op een aparte branch voor deze wijziging.
+Pas wanneer de wijziging klaar is en is goedgekeurd en ter publicatie, voeg je de branch met de wijziging samen met de main-branch (dit heet `merge`), zodat de wijzigingen worden doorgevoerd op de main-branch.
 
-> Dit en het volgende concept zijn volgens mij een en dezelfde. Een van beide definities kunnen dus verwijderd worden.
+**fork**<br/>
+Kopie van een repository die apart wordt ontwikkeld maar wel administratief gekoppeld blijft aan de originele repository.
+Voor het bijdragen aan de ontwikkeling van een in een GitHub repository vastgelegd product kun je zoals hierboven gebruik maken van aparte branches. Je kunt echter ook een "fork" van die repository maken. Je hebt dan de vrijheid die "fork" van de repository naar gelieve aan te passen en uit te breiden. Wanneer je daarmee klaar bent kan je de betreffende wijziging aanbieden aan de oorspronkelijke repository via een "pull request".
 
-**master branch**
-Zie de definitie van het concept 'master'.
-
-Wijzigingen voeg je niet direct toe op de "master"-branch, maar op een aparte branch voor deze wijziging, typisch genaamd **feature/XXX**. Pas wanneer de wijziging klaar is en kan worden gepubliceerd, voeg je de branch met de wijziging samen met de master-branch (dit heet `merge`), zodat de wijzigingen worden doorgevoerd op de master.
-
-**fork**
-Afsplitsing van een repository die apart wordt ontwikkeld.
-Wanneer je in GitHub wil bijdragen aan een repository maak je een "fork" van die repository. Je hebt dan de vrijheid je eigen "fork" van de repository aan te passen en uit te breiden. Wanneer je daarmee klaar bent kan je de betreffende wijziging aanbieden aan de oorspronkelijke repository via een "pull request".
-
-**clone**
+**clone**<br/>
 Door het "clonen" (`git clone`) van een repository haal je deze op de eigen laptop of pc binnen. Deze "kloon" is gekoppeld aan de online versie van de repository (op Github). Met `pull` haal je de nieuwste wijzigingen op uit de online versie, en met `push` stuur je de wijzigingen van je eigen laptop of pc naar de online repository.
 
-Onze werkwijze schrijft voor dat we alleen de eigen fork clonen.
-
-**staging**
+**staging**<br/>
 Wanneer je wijzigingen doorvoert op een document op je eigen laptop of pc, zijn daarmee de wijzigingen nog niet doorgevoerd in git(hub). Voor je wijzigingen kan doorvoeren in het git versiebeheer, moet je aan git vertellen welke gewijzigde of toegevoegde bestanden moeten worden meegenomen. Dit doe je door deze bestanden toe te voegen aan "staging". Dit kan m.b.v. de opdracht `add` (toevoegen van bestand aan commit).
 
-**commit**
+**commit**<br/>
 Ook wanneer de gewijzigde documenten op je eigen laptop of pc zijn toegevoegd aan "staging" zijn de wijzigingen nog niet doorgevoerd in git(hub).
 
 Om de wijzigingen daadwerkelijk door te voeren in het git versiebeheer, geef je de opdracht `commit` (set aan wijzigingen doorvoeren).
 Het toevoegen van bestanden aan 'staging' en het 'committen' kun je in 1 commando combineren: `git commit -a -m "dit heb ik gedaan..."` (waar `-a` voor `add` staat en alle gewijzigde bestanden toevoegd, en `-m` gevolgd door een beschrijving van de commit).
 
-**pull**
+**pull**<br/>
 Wanneer je op je eigen laptop werkt aan bestanden van een GitHub repository, is het verstandig regelmatig je lokale kopie van de repository bij te werken met alle wijzigingen die misschien door iemand anders zijn doorgevoerd. Je hebt dan de meest actuele toestand van de repository op je laptop/pc staan. Dit doe je door de git opdracht `pull`, waarmee je de laatste wijzigingen "naar binnnen trekt".
 
-**push**
+**push**<br/>
 Wanneer je op je eigen laptop/pc werkt aan bestanden van een GitHub repository en je wilt deze doorgeven aan de repository op GitHub, dan stuur je deze via een git opdracht `push` (duwen).
 
-**Pull request**
+**Pull request**<br/>
 Wanneer je wijzigingen hebt doorgevoerd op je eigen "fork" van een repository, maar deze wilt doorgeven aan de repository van VNG Realisatie, dan doe je een "pull request". Je verzoekt dan aan de beheerder van de repository om je voorgestelde wijzigingen/toevoegingen te accepteren en "naar binnen te trekken".
 
-**origin**
+**origin**<br/>
 Wanneer je op je eigen laptop/pc werkt aan bestanden, is "origin" de alias voor je eigen GitHub (remote) repository waarop je wijzigingen kunt doorvoeren (via een `git push -u origin branchnaam`).
 
-**upstream**
+**upstream**<br/>
 Wanneer je op je eigen laptop/pc werkt aan bestanden, is "upstream" de alias voor de GitHub (remote) repository van VNG-Realisatie. Dit gebruik je wanneer je de lokale kopie van de repository wilt actualiseren met alle door anderen doorgevoerde wijzigingen (via een `git pull upstream master`).
 
 
-**lokale files excluden van commits** Hiervoor kan niet de .gitignore worden gebruikt omdat dit bestand ook wordt ingecheckt en dit zou er dan voor zorgen dat de GitHub Actions workflows de gegenereerde bestanden niet kan committen.
+**lokale files excluden van commits**<br/>
+Hiervoor kan niet de .gitignore worden gebruikt omdat dit bestand ook wordt ingecheckt en dit zou er dan voor zorgen dat de GitHub Actions workflows de gegenereerde bestanden niet kan committen.
 In een git repo kan je een .git/info/exclude file opnemen die hetzelfde werkt als de .gitignore. Alleen wordt deze niet gecommit waardoor het alleen voor de lokale repo geldt. De volgende regels moeten worden toegevoegd om de gegenereerde bestanden te excluden voor commit.
 
 Voorbeelden van te excluden mappen en bestanden:
