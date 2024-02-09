@@ -5,6 +5,16 @@ title: Uniformering GitHub Pages
 
 # Uniformering GitHub Pages
 
+## Inhoudsopgave
+* [Algemene naamgeving](#algemene-naamgeving)
+* [Navigatiestructuur](#Navigatiestructuur)
+  * [Top-menu](#Top-menu)
+  * [Side-menu](#Side-menu)
+* [Pagina content](#Pagina-content)
+* [GitHub Pages Repository](#GitHub-Pages-Repository)
+* [Redoc en Swagger](#Redoc-en-Swagger)
+* [Template repository](#Template-repository)
+
 Kenniscentrum Architectuur & Standaarden publiceert daar vervaardigde API-specificaties vanuit GitHub m.b.v. GitHub Pages. Teneinde dat op een 
 eenduidige wijze te doen zijn daar afspraken over gemaakt. Die afspraken zijn vooral technisch van aard en bieden dus nog veel vrijheid m.b.t. 
 de structuur en inhoud. De documentatie kan daardoor minder eenduidig aangeboden worden dan gewenst. Voor een correcte en volledige implementatie 
