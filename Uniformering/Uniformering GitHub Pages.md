@@ -337,7 +337,7 @@ Een opgevraagd Redoc en Swagger document zal zonder de GitHub pages top- en side
 
 ## Techniek
 
-[Naar boven](#uniformering-gitHub-pages)
+[Naar boven](.)
 
 Om hetgeen hierboven is geschetst toe te kunnen passen moet met het volgende rekening gehouden worden. 
 
