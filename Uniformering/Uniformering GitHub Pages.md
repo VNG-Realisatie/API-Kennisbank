@@ -133,9 +133,11 @@ een uitgebreidere toelichting op de status geplaatst.
 
 Onderwerpen die hier aan bod komen zijn:
 *	Bronnen;
+*	Stakeholders (verplicht);
 *	Privacy en Security;
 *	Werkingsgebied;
 *	Gerelateerde standaarden.<br/>Incl. de met de versies van de onderliggende specificatie compatibele versies.
+*	Afwijkingen van de DoD<br/>In de [Generieke Definition of Done (DoD) van een versie van een API-standaard](https://vvng.sharepoint.com/:w:/r/sites/UnitArchitectuurenStandaarden/_layouts/15/Doc.aspx?sourcedoc=%7B14B1304F-653E-44F8-BEAA-A74D00252D1A%7D&file=Definition%20of%20Done%20API-standaarden%20v0.92.docx&wdLOR=cD4B71D42-55E6-43E6-B201-DE61F8389E7E&action=default&mobileredirect=true) wordt beschreven waaraan een API-standaard moet voldoen. Indien daarvan toch wordt afgeweken wordt hier uitgelegd waarom dat het geval is;
 
 ***Productvisie***<br/>
 Een Productvisie bevat een beknopte beschrijving van het gewenste toekomstige eindresultaat van het product. Het dient als een richtlijn 
