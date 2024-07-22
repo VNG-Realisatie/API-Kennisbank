@@ -133,6 +133,7 @@ een uitgebreidere toelichting op de status geplaatst.
 
 Onderwerpen die hier aan bod komen zijn:
 *	Bronnen;
+*	Stakeholders;
 *	Privacy en Security;
 *	Werkingsgebied;
 *	Gerelateerde standaarden.<br/>Incl. de met de versies van de onderliggende specificatie compatibele versies.
