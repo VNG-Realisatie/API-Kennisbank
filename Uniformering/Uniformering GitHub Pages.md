@@ -71,6 +71,7 @@ API-specificaties’. Niet-gestandaardiseerde specificaties zijn ‘gewoon’ �
 Deze documentatie is aanvullend op de API-specificatie en staat over het algemeen eveneens in GitHub. Hiertoe kan behoren:
 *	Uitgangspunten;
 *	Genomen besluiten waaronder ontwerpbeslissingen;
+*	Afwijkingen van de DoD<br/>In de [Generieke Definition of Done (DoD) van een versie van een API-standaard](https://vvng.sharepoint.com/:w:/r/sites/UnitArchitectuurenStandaarden/_layouts/15/Doc.aspx?sourcedoc=%7B14B1304F-653E-44F8-BEAA-A74D00252D1A%7D&file=Definition%20of%20Done%20API-standaarden%20v0.92.docx&wdLOR=cD4B71D42-55E6-43E6-B201-DE61F8389E7E&action=default&mobileredirect=true) wortd beschreven waaraan een API-standaard moet voldoen. Indien daarvan toch wordt afgeweken wordt hier uitgelegd waarom dat get geval is;
 *	Tutorial;
 *	Getting Started;
 *	Testscript;
