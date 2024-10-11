@@ -1,3 +1,7 @@
+---
+layout: landing-page
+title: GitHub Pages implementatie voor VNG Realisatie
+---
 # GitHub Pages implementatie voor VNG Realisatie
 
 GitHub repositories bieden de ideale omgeving om samen te werken aan code (in welke vorm dan ook).
