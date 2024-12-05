@@ -1,3 +1,7 @@
+---
+layout: page-with-side-nav
+title: Haal Centraal GitHub Action workflows
+---
 # Haal Centraal GitHub Action workflows
 
 [GitHub Actions][1] is een feature van GitHub waarmee je workflows kan definieren voor een GitHub repository. Je kan met GitHub Actions bijvoorbeeld een complete Continuous Integration / Continuous Delivery workflow inrichten, maar je kan ook kleinere workflows definieren zoals het automatisch valideren van specifieke commits.
