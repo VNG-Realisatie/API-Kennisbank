@@ -1,5 +1,5 @@
 ---
-layout: page-with-side-nav
+layout: landing=page
 title: Haal Centraal GitHub Action workflows
 ---
 # Haal Centraal GitHub Action workflows
