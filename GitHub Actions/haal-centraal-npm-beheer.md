@@ -1,5 +1,5 @@
 ---
-layout: landing=page
+layout: landing-page
 title: Haal Centraal tooling
 ---
 # Haal Centraal tooling
