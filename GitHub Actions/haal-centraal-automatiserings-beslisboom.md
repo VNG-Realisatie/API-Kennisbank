@@ -1,3 +1,7 @@
+---
+layout: page-with-side-nav
+title: Automatiserings beslisboom
+---
 # Automatiserings beslisboom
 
 Teneinde goed te kunnen bepalen welke in de bestanden [Haal Centraal NPM beheer][1] en [Haal Centraal Actions][2] 
