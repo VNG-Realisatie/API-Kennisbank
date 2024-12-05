@@ -1,5 +1,5 @@
 ---
-layout: landing=page
+layout: landing-page
 title: Automatiserings beslisboom
 ---
 # Automatiserings beslisboom
