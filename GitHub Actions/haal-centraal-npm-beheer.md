@@ -1,3 +1,7 @@
+---
+layout: page-with-side-nav
+title: Haal Centraal tooling
+---
 # Haal Centraal tooling
 
 De Haal Centraal projecten gebruiken tooling voor het beheren van de OpenAPI specificaties:
