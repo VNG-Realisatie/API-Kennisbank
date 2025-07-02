@@ -1,3 +1,8 @@
+| Eigenaar | Ingevuld door |
+| --- | --- |
+| Kennis centrum Architectuur | Robert Melskens, Johan Boer |
+<hr/>
+
 # API Kennisbank
 
 In deze repository staan afspraken, werkinstructies, tutorials, enz. voor de co-creatie en het beheer van API standaarden bij organisatie VNG-Realisatie.
