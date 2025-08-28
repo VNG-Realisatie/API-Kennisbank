@@ -18,45 +18,49 @@ Een nieuwe versie van een API specificatie met een breaking change houdt dus nie
 
 # Landelijke API-strategie
 
-VNG conformeert zich aan de [Design Rules en de Rest-principes van de landelijke API-strategie](https://docs.geostandaarden.nl/api/API-Designrules/). Daar komen de onderstaande punten aan bod.
+VNG conformeert zich aan de [Design Rules en de Rest-principes van de landelijke API-strategie](https://gitdocumentatie.logius.nl/publicatie/api/adr/2.0.2/). Daar komen de onderstaande punten aan bod.
+
+2.1.1 List of functional rules
+/core/naming-resources: Use nouns to name resources
+/core/naming-collections: Use plural nouns to name collection resources                                         - _API principle: Use plural nouns to indicate resources_    - _3.5 API-05: Use plural nouns to indicate resources_
+/core/interface-language: Define interfaces in Dutch unless there is an official English glossary available     - _API principle: Define interfaces in Dutch unless there is an official English glossary_    - _3.4 API-04: Define interfaces in Dutch unless there is an official English glossary_
+/core/hide-implementation: Hide irrelevant implementation details
+/core/http-safety: Adhere to HTTP safety and idempotency semantics for operations                               - _API principle: operations are Safe and/or Idempotent_  - _3.1 API-01: Operations are Safe and/or Idempotent_
+/core/stateless: Do not maintain session state on the server                                                    - _API principle: do not maintain state information at the server_
+/core/nested-child: Use nested URIs for child resources
+/core/resource-operations: Model resource operations as a sub-resource or dedicated resource
+/core/doc-language: Publish documentation in Dutch unless there is existing documentation in English            - _API principle: Publish documentation in Dutch unless there is existing documentation in English or there is an official English glossary available_    - _3.10 API-17: Publish documentation in Dutch unless there is existing documentation in English or there is an official English glossary available_
+/core/deprecation-schedule: Include a deprecation schedule when deprecating features or versions                - _API principle: Include a deprecation schedule when publishing API changes_    - _3.11 API-18: Include a deprecation schedule when publishing API changes_
+/core/transition-period: Schedule a fixed transition period for a new major API version                         - _API principle: Allow for a (maximum) 1 year deprecation period to a new API version_    - _3.12 API-19: Allow for a maximum 1 year transition period to a new API version_
+/core/changelog: Publish a changelog for API changes between versions
+/core/geospatial: Apply the geospatial module for geospatial data
+
+2.1.2 List of technical rules
+/core/no-trailing-slash: Leave off trailing slashes from URIs                                                     - _API principle: Leave off trailing slashes from API endpoints_    - _3.14 API-48: Leave off trailing slashes from API endpoints_
+/core/http-methods: Only apply standard HTTP methods                                                              - _API principle: Only apply default HTTP operations_  - _3.3 API-03: Only apply default HTTP operations_
+/core/doc-openapi: Use OpenAPI Specification for documentation
+/core/publish-openapi: Publish OAS document at a standard location in JSON-format
+/core/uri-version: Include the major version number in the URI                                                    - _API principle: Include only the major version number in the URI_    - _3.13 API-20: Include the major version number only in ihe URI_
+/core/semver: Adhere to the Semantic Versioning model when releasing API changes
+/core/version-header: Return the full version number in a response header
+/core/transport-security: Apply the transport security module
 
 _RESTful principles_
 
-- _API principle: operations are Safe and/or Idempotent_
-- _API principle: do not maintain state information at the server_
-- _API principle: Only apply default HTTP operations_
-- _API principle: Leave off trailing slashes from API endpoints_
-- _API principle: Define interfaces in Dutch unless there is an official English glossary_
-- _API principle: Use plural nouns to indicate resources_
 - _API principle: Create relations of nested resources within the endpoint_
 - _API principle: Implement custom representation if supported_
 - _API principle: Implement operations that do not fit the CRUD model as sub-resources_
 - _API principle: Documentation conforms to OAS v3.0 or newer_
-- _API principle: Publish documentation in Dutch unless there is existing documentation in English or there is an official English glossary available_
-- _API principle: Include a deprecation schedule when publishing API changes_
 
 _Best practice(s)_
 - _API principle: Publish OAS at a base-URI in JSON-format_
-- _API principle: Allow for a (maximum) 1 year deprecation period to a new API version_
-- _API principle: Include only the major version number in the URI_
-
 
 _Normative API Principles_
-
-- _3.1 API-01: Operations are Safe and/or Idempotent_
 - _3.2 API-02: Do not maintain state information at the server_
-- _3.3 API-03: Only apply default HTTP operations_
-- _3.4 API-04: Define interfaces in Dutch unless there is an official English glossary_
-- _3.5 API-05: Use plural nouns to indicate resources_
 - _3.6 API-06: Create relations of nested resources within the endpoint_
 - _3.7 API-09: Implement custom representation if supported_
 - _3.8 API-10: Implement operations that do not fit the CRUD model as sub-resources_
 - _3.9 API-16: Use OAS 3.0 for documentation_
-- _3.10 API-17: Publish documentation in Dutch unless there is existing documentation in English or there is an official English glossary available_
-- _3.11 API-18: Include a deprecation schedule when publishing API changes_
-- _3.12 API-19: Allow for a maximum 1 year transition period to a new API version_
-- _3.13 API-20: Include the major version number only in ihe URI_
-- _3.14 API-48: Leave off trailing slashes from API endpoints_
 - _3.15 API-51: Publish OAS at the base-URI in JSON-format_
 
 De [niet-normatieve extensions van de landelijke API-strategie](https://docs.geostandaarden.nl/api/API-Designrules/) worden behandeld als richtlijnen bij het opstellen van API-specificaties. Als er binnen VNG Realisatie een aanscherping is gedaan is deze in het volgende hoofdstuk opgenomen als VNG Design Rule. Daarbij wordt ook een verwijzing opgenomen naar de betreffende extension.
