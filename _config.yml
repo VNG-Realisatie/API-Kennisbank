@@ -15,8 +15,8 @@ nav:
         path: /API Implementatie/Implementatie overwegingen
       - title: Gitflow
         path: /GitFlow/Gitflow_implementatie
-      - title: VNGR API Design Rules
-        path: /Design rules/inhoud
+#      - title: VNGR API Design Rules
+#        path: /Design rules/inhoud
 
 plugins:
   - jekyll-redirect-from
