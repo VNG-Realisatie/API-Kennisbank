@@ -1,3 +1,7 @@
+**WAARSCHUWING!**
+
+**Dit document is in ontwikkeling en is daarom nog aan wijzigingen onderhevig.**
+
 # Design Rules VNGRealisatie
 
 ## Inleiding
