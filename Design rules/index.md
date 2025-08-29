@@ -1,3 +1,7 @@
+**WAARSCHUWING!**
+
+**Dit document is in ontwikkeling en is daarom nog aan wijzigingen onderhevig.**
+
 # VNGR API Design Rules
 
 [1. Inleiding](./Design%20rules/Inleiding.md) 
