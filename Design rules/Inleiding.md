@@ -20,30 +20,42 @@ Een nieuwe versie van een API specificatie met een breaking change houdt dus nie
 
 VNG conformeert zich aan de [Design Rules en de Rest-principes van de landelijke API-strategie](https://gitdocumentatie.logius.nl/publicatie/api/adr/2.0.2/). Daar komen de onderstaande punten aan bod.
 
-2.1.1 List of functional rules
-/core/naming-resources: Use nouns to name resources
-/core/naming-collections: Use plural nouns to name collection resources                                         - _API principle: Use plural nouns to indicate resources_    - _3.5 API-05: Use plural nouns to indicate resources_
-/core/interface-language: Define interfaces in Dutch unless there is an official English glossary available     - _API principle: Define interfaces in Dutch unless there is an official English glossary_    - _3.4 API-04: Define interfaces in Dutch unless there is an official English glossary_
-/core/hide-implementation: Hide irrelevant implementation details
-/core/http-safety: Adhere to HTTP safety and idempotency semantics for operations                               - _API principle: operations are Safe and/or Idempotent_  - _3.1 API-01: Operations are Safe and/or Idempotent_
-/core/stateless: Do not maintain session state on the server                                                    - _API principle: do not maintain state information at the server_
-/core/nested-child: Use nested URIs for child resources
-/core/resource-operations: Model resource operations as a sub-resource or dedicated resource
-/core/doc-language: Publish documentation in Dutch unless there is existing documentation in English            - _API principle: Publish documentation in Dutch unless there is existing documentation in English or there is an official English glossary available_    - _3.10 API-17: Publish documentation in Dutch unless there is existing documentation in English or there is an official English glossary available_
-/core/deprecation-schedule: Include a deprecation schedule when deprecating features or versions                - _API principle: Include a deprecation schedule when publishing API changes_    - _3.11 API-18: Include a deprecation schedule when publishing API changes_
-/core/transition-period: Schedule a fixed transition period for a new major API version                         - _API principle: Allow for a (maximum) 1 year deprecation period to a new API version_    - _3.12 API-19: Allow for a maximum 1 year transition period to a new API version_
-/core/changelog: Publish a changelog for API changes between versions
-/core/geospatial: Apply the geospatial module for geospatial data
+**Lijst met functionele regels**
+* [/core/naming-resources: Use nouns to name resources](https://gitdocumentatie.logius.nl/publicatie/api/adr/2.0.2/#/core/naming-resources)
+* [/core/naming-collections: Use plural nouns to name collection resources](https://gitdocumentatie.logius.nl/publicatie/api/adr/2.0.2/#/core/naming-collections)<br/>
+  was _API principle: Use plural nouns to indicate resources_ en _3.5 API-05: Use plural nouns to indicate resources_
+* [/core/interface-language: Define interfaces in Dutch unless there is an official English glossary available](https://gitdocumentatie.logius.nl/publicatie/api/adr/2.0.2/#/core/interface-language)<br/>
+  was _API principle: Define interfaces in Dutch unless there is an official English glossary_ en _3.4 API-04: Define interfaces in Dutch unless there is an official English glossary_
+* [/core/hide-implementation: Hide irrelevant implementation details](https://gitdocumentatie.logius.nl/publicatie/api/adr/2.0.2/#/core/hide-implementation)
+* [/core/http-safety: Adhere to HTTP safety and idempotency semantics for operations](https://gitdocumentatie.logius.nl/publicatie/api/adr/2.0.2/#/core/http-safety)<br/>
+  was _API principle: operations are Safe and/or Idempotent_ en _3.1 API-01: Operations are Safe and/or Idempotent_
+* [/core/stateless: Do not maintain session state on the server](https://gitdocumentatie.logius.nl/publicatie/api/adr/2.0.2/#/core/stateless)<br/>
+  was _API principle: do not maintain state information at the server_
+* [/core/nested-child: Use nested URIs for child resources](https://gitdocumentatie.logius.nl/publicatie/api/adr/2.0.2/#/core/nested-child)
+* [/core/resource-operations: Model resource operations as a sub-resource or dedicated resource](https://gitdocumentatie.logius.nl/publicatie/api/adr/2.0.2/#/core/resource-operations)
+* [/core/doc-language: Publish documentation in Dutch unless there is existing documentation in English](https://gitdocumentatie.logius.nl/publicatie/api/adr/2.0.2/#/core/doc-language)<br/>
+  was _API principle: Publish documentation in Dutch unless there is existing documentation in English or there is an official English glossary available_ en _3.10 API-17: Publish documentation in Dutch unless there is existing documentation in English or there is an official English glossary available_
+* [/core/deprecation-schedule: Include a deprecation schedule when deprecating features or versions](https://gitdocumentatie.logius.nl/publicatie/api/adr/2.0.2/#/core/deprecation-schedule)<br/>
+  was _API principle: Include a deprecation schedule when publishing API changes_ en _3.11 API-18: Include a deprecation schedule when publishing API changes_
+* [/core/transition-period: Schedule a fixed transition period for a new major API version](https://gitdocumentatie.logius.nl/publicatie/api/adr/2.0.2/#/core/transition-period)<br/>
+  was _API principle: Allow for a (maximum) 1 year deprecation period to a new API version_  en _3.12 API-19: Allow for a maximum 1 year transition period to a new API version_
+* [/core/changelog: Publish a changelog for API changes between versions](https://gitdocumentatie.logius.nl/publicatie/api/adr/2.0.2/#/core/changelog)
+* [/core/geospatial: Apply the geospatial module for geospatial data](https://gitdocumentatie.logius.nl/publicatie/api/adr/2.0.2/#/core/geospatial)
 
-2.1.2 List of technical rules
-/core/no-trailing-slash: Leave off trailing slashes from URIs                                                     - _API principle: Leave off trailing slashes from API endpoints_    - _3.14 API-48: Leave off trailing slashes from API endpoints_
-/core/http-methods: Only apply standard HTTP methods                                                              - _API principle: Only apply default HTTP operations_  - _3.3 API-03: Only apply default HTTP operations_
-/core/doc-openapi: Use OpenAPI Specification for documentation
-/core/publish-openapi: Publish OAS document at a standard location in JSON-format
-/core/uri-version: Include the major version number in the URI                                                    - _API principle: Include only the major version number in the URI_    - _3.13 API-20: Include the major version number only in ihe URI_
-/core/semver: Adhere to the Semantic Versioning model when releasing API changes
-/core/version-header: Return the full version number in a response header
-/core/transport-security: Apply the transport security module
+**Lijst met technische regels**
+* [/core/no-trailing-slash: Leave off trailing slashes from URIs ](https://gitdocumentatie.logius.nl/publicatie/api/adr/2.0.2/#/core/no-trailing-slash)<br/>
+  was _API principle: Leave off trailing slashes from API endpoints_ en _3.14 API-48: Leave off trailing slashes from API endpoints_
+* [/core/http-methods: Only apply standard HTTP methods](https://gitdocumentatie.logius.nl/publicatie/api/adr/2.0.2/#/core/http-methods)<br/>
+  was _API principle: Only apply default HTTP operations_ en _3.3 API-03: Only apply default HTTP operations_
+* [/core/doc-openapi: Use OpenAPI Specification for documentation](https://gitdocumentatie.logius.nl/publicatie/api/adr/2.0.2/#/core/doc-openapi)
+* [/core/publish-openapi: Publish OAS document at a standard location in JSON-format](https://gitdocumentatie.logius.nl/publicatie/api/adr/2.0.2/#/core/publish-openapi)
+* [/core/uri-version: Include the major version number in the URI](https://gitdocumentatie.logius.nl/publicatie/api/adr/2.0.2/#/core/uri-version)<br/>
+  was _API principle: Include only the major version number in the URI_ en _3.13 API-20: Include the major version number only in ihe URI_
+* [/core/semver: Adhere to the Semantic Versioning model when releasing API changes](https://gitdocumentatie.logius.nl/publicatie/api/adr/2.0.2/#/core/semver)
+* [/core/version-header: Return the full version number in a response header](https://gitdocumentatie.logius.nl/publicatie/api/adr/2.0.2/#/core/version-header)
+* [/core/transport-security: Apply the transport security module](https://gitdocumentatie.logius.nl/publicatie/api/adr/2.0.2/#/core/transport-security)
+
+**Niet meer in de NL API Design Rules voorkomende regels**
 
 _RESTful principles_
 
