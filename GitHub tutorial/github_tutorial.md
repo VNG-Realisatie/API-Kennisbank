@@ -142,7 +142,7 @@ De beheerder van de standaard zal dus de volgende handelingen doen voor een vers
 	* Selecteer bij "base fork" de repository en bij "base" de branch waar het pull request op moet worden geplaatst. Dit is de 'master' branch van de repository bij VNG-Realisatie
 	* Selecteer bij "head fork" de repository en bij "compare" de branch waarin de wijziging is aangebracht
 	* Klik op "Create pull request" en ken er een naam aan toe. **Tip**: Als je de volgende conventie:
-	  'fixes [nummer issue]' toevoegt aan de naam van de pull request wordt bij het aanvaarden van de pull request het issue meteen gesloten. Indien een pull request betrekking heeft op slechts een deel van een issue neem je geen 'Fixes' op omdat het issue nl. nog niet geheel is opgelost als de pull request wordt goedgekeurd en dus niet afgesloten mag worden. Neem in dat geval 'Ref. #' gevolgd door het nummer van het issue op.
+	  'fixes #[nummer issue]' toevoegt aan de naam van de pull request wordt bij het aanvaarden van de pull request het issue meteen gesloten. Indien een pull request betrekking heeft op slechts een deel van een issue neem je geen 'Fixes' op omdat het issue nl. nog niet geheel is opgelost als de pull request wordt goedgekeurd en dus niet afgesloten mag worden. Neem in dat geval 'Ref. #' gevolgd door het nummer van het issue op.
 	* Scroll evt. naar beneden en klik op "Create pull request";
 	* Kies de eerste van de 3 opties 'Create a merge commit'
 	* Ken reviewers toe aan het pull request.
