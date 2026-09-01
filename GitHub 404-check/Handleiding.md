@@ -55,6 +55,8 @@ Dit maakt de inventarisatie gericht op de repositories die nog daadwerkelijk in 
 
 ## Een beperkte test uitvoeren
 
+Om dit te kunnen uitvoeren heb je rechten nodig tot de repository en dien je GitHub CLI (gh) geïnstalleerd te hebben.
+
 Open PowerShell en ga naar de map waar het script is opgeslagen:
 
 ```powershell
