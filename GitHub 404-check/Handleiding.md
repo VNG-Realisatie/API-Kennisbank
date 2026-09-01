@@ -9,7 +9,7 @@ De volgende repositories worden overgeslagen:
 - **gearchiveerd** zijn (`archived = true` in GitHub);
 - **private** zijn (`private = true` in GitHub).
 
-Het script staat [inventariseer-github-pages-v2.5.ps1](ook in deze repository).
+Het script staat [ook in deze repository](inventariseer-github-pages-v2.5.ps1).
 
 ## Hoe de filtering werkt
 
