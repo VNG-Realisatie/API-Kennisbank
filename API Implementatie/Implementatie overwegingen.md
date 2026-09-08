@@ -54,7 +54,7 @@ _**Ratio**_
 
 _**Links**_<br/>
 [Issue 44 HaalCentraal Common](https://github.com/VNG-Realisatie/Haal-Centraal-common/issues/44)<br/>
-[Issue 265 HaalCentraal BAG Bevragen](https://github.com/VNG-Realisatie/Haal-Centraal-BAG-bevragen/issues/265)<br/>
+[Issue 265 HaalCentraal BAG Bevragen](https://github.com/lvbag/BAG-Gemeentelijke-wensen-tav-BAG-Bevragingen/issues/265)<br/>
 [Issue 74 HaalCentraal Common](https://github.com/VNG-Realisatie/Haal-Centraal-common/pull/74)
 
 **Let op!** In API Designrule API-30 van de NL API Strategie staat dat de waarde van een field parameter altijd moet corresponderen met opzoekbare velden. 
@@ -108,4 +108,4 @@ _**Ratio**_
 Het voordeel hierrvan is dat er geen vertaling in de berichten hoeft te worden gedaan wanneer de API wordt gebruikt via een servicebus of API gateway.
 
 _**Links**_<br/>
-[Issue 234 HaalCentraal BAG Bevragen](https://github.com/VNG-Realisatie/Haal-Centraal-BAG-bevragen/issues/234)
+[Issue 234 HaalCentraal BAG Bevragen](https://github.com/lvbag/BAG-Gemeentelijke-wensen-tav-BAG-Bevragingen/issues/234)
